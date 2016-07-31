@@ -1,0 +1,40 @@
+.scrape-form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.panel {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.panel .panel-heading {
+
+}
+
+.rdio {
+	margin-bottom: 10px;
+}
+
+.alert {
+	background-color: #f0f8ff;
+	border-color:#c8d0df;
+}
+
+.lbl {
+	width: 90%;
+	margin: 10px auto 10px;
+}
+
+
+#add_class {
+    width: 320px;
+}
+
+#scrape_body .form-control { 
+	margin-bottom: 5px;	
+}
+
+#classify_body .form-inline {
+	margin-bottom: 5px;
+}
