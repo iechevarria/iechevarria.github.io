@@ -4,10 +4,17 @@
 	<title>Ivan Echevarria</title>
 	<link rel="stylesheet" type="text/css" href="css/photo.css">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script src="js/sss.min.js"></script>
 	<link rel="stylesheet" href="css/sss.css" type="text/css" media="all">
 	<script>jQuery(function($) {$('.slider').sss();});</script>
+	<script>
+     jQuery.noConflict();
+     // Use jQuery via jQuery() instead of via $()
+     jQuery(document).ready(function(){
+       jQuery("div").hide();
+     });  
+	</script>
 	</head>
 
 
