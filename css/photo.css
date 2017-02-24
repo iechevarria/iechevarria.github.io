@@ -42,12 +42,17 @@ iframe {
 	float: right;
 }
 
-
 .width_limit {
 	width: 100%;
 	max-width: 640px;
 	margin: 0 auto;
 	background: #fff;
 	margin-top: 5em;
-	margin-bottom: 5em;
+	margin-bottom: 4em;
+}
+
+.slides {
+	max-width: 1000px;
+	margin: 0 auto;
+
 }
