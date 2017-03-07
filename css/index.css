@@ -13,6 +13,10 @@ body {
 	min-width: 700px;
 }
 
+p {
+	font-size: 15px;
+}
+
 a {
 	color: #000;
 }
