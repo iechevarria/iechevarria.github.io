@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="../../../css/index.css">
 	</head>
 
-
 	<body>
 
 		<div class="width_limit">
@@ -32,7 +31,7 @@
 				For our final project, we decided to make a space battle between the star ship Enterprise and a Romulan Warbird. Our plans for the animation went through several iterations before coming to the sequence that we have today. 
 			</p>
 			<p>
-				The Enterprise is approaches a planet in the Neutral Zone, and it gets the attention of a cloaked Romuian Warbird. The Warbird stalks the Enterprise until it opens fire, and a space combat dogfight ensues. The Enterprise, though battered by the Warbird's disruptors, gets the better of the opposing ship and fires a photon torpedo that strikes a fatal blow. The Enterprise then enters maximum warp and leaves the Neutral Zone.
+				The Enterprise is approaches a planet in the Neutral Zone, and it gets the attention of a cloaked Romuian Warbird. The Warbird stalks the Enterprise until it opens fire, and a space combat dogfight ensues. The Enterprise, though battered by the Warbird's disruptors, gets the better of the opposing ship and fires a photon torpedo (using the <a href="http://memory-alpha.wikia.com/wiki/Picard_Maneuver">Picard Maneuver</a>) that strikes a fatal blow. The Enterprise then enters maximum warp and leaves the Neutral Zone.
 			</p>
 			<img src="warbird01.png" width=100%></img>
 			<P>
@@ -40,24 +39,37 @@
 			</P>
 			<img src="warbird02.jpg" width=100%></img>
 			<p>
-				I worked on planet model. I started out with a sphere, some flattened tori, and a spherical volume primitive to give the impression of an atmosphere. 
+				I worked on planet model. I started out with a sphere, some flattened pipes, and a spherical volume primitive to give the impression of an atmosphere. I then smoothed all the geometry a few times to prevent any facets from being visible even in close-ups.
 			</p>
 			<img src="planet01.png" width=100%></img>
 			<p>
-				From here, I added a mountain texture in a Blinn shader and then added noise to the mountain texture to give it distinctive swirls. This gave the impression of a watery ice planet.
+				From here, I added a mountain texture in a Blinn shader and then added noise to the mountain texture to give it distinctive swirls. This gave the impression of a watery ice planet. I used a gradient on the rings to the impression of varying intensity - when you look at images of Saturn, its rings exhibit this effect. 
 			</p>
 			<img src="planet02.png" width=100%></img>
+			<p> 
+				I also put a great deal of effort into getting the Romulan disruptor to look good. To avoid manually keyframing all the times it fires, I made a particle emitter that targeted a cube that surrounds the Enterprise that is invisible. This made performance better - the Enterprise's geometry is complex and worked poorly with the particles. An early video test of this method is below.
+			</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/3-loIfYGjbM" frameborder="0" allowfullscreen></iframe>
 			<p>
-				We used a combination of straight keyframes and motion paths to animate our scene. The opening shot (below) is a relatively simple motion path.
+				Michell worked hard on making the particle effects look good for our animation. Below is an explosion particle effect that plays when the Warbird is hit by the Enterprise. 
+			</p> 
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/bvpThuiz_iM" frameborder="0" allowfullscreen></iframe>
+			<p>
+				To get the the stars in our animation, we used an <a href="https://thefulldomeblog.com/2013/11/13/background-stars-v2">asset</a> provided by the Hayden Planetarium. 
+			</p>
+			<p>
+				I added sound effects to the animation to give some oomph to the pursuit and combat. Below is a cut of the animation without music.
+			</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/GSREFK5093Q" frameborder="0" allowfullscreen></iframe>
+			<p>
+				Below are three of the images from the final animation - because of the renders' instability, we saved individual images and turned them into videos later. 
 			</p>
 			<img src="screenshot01.jpg" width=100%></img>
-			<p>
-			</p>
 			<img src="screenshot02.jpg" width=100%></img>
-			<p>
-			</p>
 			<img src="screenshot03.jpg" width=100%></img>
-
+			<p>
+				We ran into some severe performance issues with this animation. Render times were in excess of a minute at low resolutions, so we had to pare down the lighting in the scene. As a consequence, the final animation isn't as pretty as some of the stills we got while getting it together. In addition, we were forced to use the hardware renderer for a few shots because Maya would crash if we attempted to render the frames with any other renderer. We spent a significant amount of time working out these kinks, but the animation largely reflects our original vision.
+			</p>
 		</div>
 
 	</body>
