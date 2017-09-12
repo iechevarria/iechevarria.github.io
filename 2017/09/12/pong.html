@@ -1,0 +1,33 @@
+<!-- index.html styling from Kelvin Abrokwa's https://github.com/kelvinabrokwa/nd-gol/blob/gh-pages/index.html -->
+<!-- project structure from Daniel X. Moore's https://www.html5rocks.com/en/tutorials/canvas/notearsgame/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100%;
+        width: 100%; 
+      }
+      canvas {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+    <title>Pong</title>
+    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" src="lib/jquery.hotkeys.js" type="text/javascript"></script>
+    <script language="javascript" src="lib/key_status.js" type="text/javascript"></script>
+    <script language="javascript" src="lib/util.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <script src="pong.js"></script>
+  </body>
+</html>
