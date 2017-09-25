@@ -13,18 +13,6 @@ var mouseClicked = false
 var canvas = document.getElementById('canvas')
 var context = canvas.getContext('2d')
 
-/*
-function shadeColor (color, percent) {
-  color = color.substr(1)
-  var num = parseInt(color, 16)
-  var amt = Math.round(2.55 * percent)
-  var R = (num >> 16) + amt
-  var G = (num >> 8 & 0x00FF) + amt
-  var B = (num & 0x0000FF) + amt
-  return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 + (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1)
-}
-**/
-
 function drawCube (x, y, stroke, lColor, rColor, tColor) {
   context.beginPath()
   context.moveTo(x, y)
@@ -106,7 +94,6 @@ function drawGrid (y) {
 
   context.fillStyle = 'rgba(0, 0, 0, 0.4)'
   context.fill()
-
   context.beginPath()
 
   for (var i = 0; i < 21; i++) {
@@ -159,13 +146,17 @@ function draw () {
   context.beginPath()
   context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 
-  context.fillStyle = '#fff'
-  context.font = '14px Courier'
-  context.fillText('x: ' + mouseLoc[0].toString(), 25, 30)
-  context.fillText('y: ' + mouseLoc[1].toString(), 25, 50)
-
   if (renderMode === 'draw') {
+    context.fillStyle = '#fff'
+    context.font = '14px Courier'
+    context.fillText('click: set voxel', 25, 30)
+    context.fillText('   up: move drawing plane up', 25, 50)
+    context.fillText(' down: move drawing plane down', 25, 70)
+    context.fillText('    d: toggle between drawing and erasing', 25, 90)
+    context.fillText('    v: toggle between drawing mode and viewing mode', 25, 110)
+
     drawGrid(0)
+
     for (var k = 0; k <= 20; k++) {
       if (k === elevation) {
         drawGrid(elevation)
@@ -238,21 +229,21 @@ window.onkeyup = function (e) {
     elevation = Math.max(0, elevation - 1)
     mouseClick()
     draw()
-  // e: erase
-  } else if (key === 69) {
-    cursorMode = 'erase'
-    draw()
-  // w: write
-  } else if (key === 87) {
-    cursorMode = 'draw'
-    draw()
-  // s: set rendermode to showing
-  } else if (key === 83) {
-    renderMode = 'view'
-    draw()
-  // d: set rendermode to drawing
+  // d: toggle cursorMode
   } else if (key === 68) {
-    renderMode = 'draw'
+    if (cursorMode === 'erase') {
+      cursorMode = 'draw'
+    } else {
+      cursorMode = 'erase'
+    }
+    draw()
+  // v: toggle renderMode
+  } else if (key === 86) {
+    if (renderMode === 'view') {
+      renderMode = 'draw'
+    } else {
+      renderMode = 'view'
+    }
     draw()
   }
 }
