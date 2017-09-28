@@ -23,6 +23,10 @@ a {
 	color: #00f;
 }
 
+table {
+	font-size: 15px;
+}
+
 a:hover {
 	color: #f00;
 }
@@ -49,7 +53,7 @@ a:hover {
 }
 
 .page_content {
-	padding-top: 80px
+	padding-top: 80px;
 }
 
 .width_limit {
