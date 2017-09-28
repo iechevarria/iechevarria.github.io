@@ -3,6 +3,7 @@ html {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
+	background-color: #ffffff;
 }
 
 body {
@@ -13,8 +14,8 @@ body {
 	min-width: 700px;
 }
 
-p {
-	font-size: 15px;
+td {
+    padding:0 15px 0 0px;
 }
 
 a {
@@ -24,14 +25,6 @@ a {
 
 a:hover {
 	color: #f00;
-}
-
-iframe {
-	margin-left: 5%;
-}
-
-.header {
-	margin-bottom: 2em;
 }
 
 .header a {
@@ -46,11 +39,23 @@ iframe {
 	float: right;
 }
 
+.header_left {
+	float: left;
+}
+
+.proj_title {
+	font-style: italic;
+	float: right;
+}
+
+.page_content {
+	padding-top: 80px
+}
+
 .width_limit {
 	width: 100%;
-	max-width: 640px;
+	max-width: 700px;
 	margin: 0 auto;
-	background: #fff;
 	margin-top: 5em;
 	margin-bottom: 5em;
 }
