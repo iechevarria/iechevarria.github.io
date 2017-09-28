@@ -50,7 +50,8 @@ a:hover {
 }
 
 .proj_descrip {
-	float: left;
+	float: center;
+	font-size: 15px;
 }
 
 .page_content {
