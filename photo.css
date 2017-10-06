@@ -4,15 +4,16 @@
     padding: 0;
   }
   html {
-    font: 18px sans-serif;
+    font: 14px sans-serif;
     background: #fff;
   }
   .sticky {
-    width: 20%;
-    text-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 200px;
+    text-align: left;
     font-size: 16px;
-    background: #fff;
-    line-height: 100%;
+    line-height: 150%;
   }
   .wrap {
     display: -webkit-box;
@@ -25,18 +26,24 @@
     margin: auto;
   }
   button {
-    width: 30px;
+    width: 5%;
     border: none;
     background: transparent;
-    color: #888;
-    font-size: 40px;
-    outline: none;
-    opacity: 0.5;
+    color: #00f;
+    font-size: 30px;
     -webkit-transition: opacity 300ms ease-out;
     transition: opacity 300ms ease-out;
   }
   button:hover {
-    opacity: 1;
+    color: #f00;
+  }
+  a {
+    font-size: 20px;
+    color: #00f;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #f00;
   }
   .scroller {
     -webkit-box-flex: 1;
@@ -45,8 +52,8 @@
     overflow: hidden;
   }
   .items {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     height: 100%;
     list-style-type: none;
     white-space: nowrap;
