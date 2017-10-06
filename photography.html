@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<title>Ivan Echevarria</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	</head>
-	<body>
+<!-- https://codepen.io/anon/pen/RLxYeb -->
 
-		<div class="width_limit">
-			<div class="header">
-				<div class="header_left">
-					<a id="home" href="index.html">Ivan Echevarria</a>
-				</div>
-				<div class="header_right">
-					<a href="projects/index.html">projects</a>											
-					<a href="photography.html">photography</a>
-					<a href="about.html">about</a>
-					<a href="resume.pdf">resume</a>
-				</div>
-			</div>
-		
-			<div class="page_content">
-                <p style="float: center;">coming soon</p>
-                <p style="float: center;">in the meantime, I'm on <a href="https://www.instagram.com/ieechevarria/">instagram</a> and <a href="https://www.flickr.com/photos/134964219@N07/">flickr</a></p>
-            </div>
-		</div>
+<link rel="stylesheet" type="text/css" href="photo.css">
 
-	</body>
-</html>
+<div class="wrap">
+  <button onclick="prev()">&laquo;</button>
+  <div class="sticky"></div>
+  <div class="scroller">
+    <ul class="items">
+      <li class="item" style="background-image:url(https://farm6.staticflickr.com/5076/14164379250_71c3a5b32a_b.jpg);">HAMBURG</li>
+      <li class="item" style="background-image:url(https://farm3.staticflickr.com/2937/14371160993_186df4a083_b.jpg);">URBAN LIGHTS</li>
+      <li class="item" style="background-image:url(https://farm3.staticflickr.com/2914/14185397280_e51c40b1df_b.jpg);">SOUNDS</li>
+    </ul>
+  </div>
+  <button onclick="next()">&raquo;</button>
+</div>
+
+<script type="text/javascript" src="photo.js"></script>
+
