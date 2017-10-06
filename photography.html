@@ -4,16 +4,19 @@
 
 <div class="wrap">
   <div class="sticky">
-	  <a href="">Ivan Echevarria</a> 
-	  <br><br>
-	  <a href="">photos</a>
-	  <br>
-	  <a href="projects.html">code</a>
-	  <br>	  
-	  <a href="about.html">about</a>
-	  <br>
-	  <a href="resume.pdf">resume</a>
-	  
+    <ul>
+      <li><a href="">Ivan Echevarria</a></li>
+      <br>
+      <li><a onclick="showGalleries()">photos</a></li>
+      <ul class="galleries">
+        <li><a href="" class="nested" style="color: #f00";>california</a></li>
+        <li><a href="" class="nested">virginia</a></li>
+        <li><a href="" class="nested">people</a></li>
+      </ul>
+      <li><a href="">code</a></li>
+      <li><a href="">about</a></li>
+      <li><a href="">resume</a></li>
+    </ul>
   </div>
   <button onclick="prev()"><</button>  		  
   <div class="scroller">

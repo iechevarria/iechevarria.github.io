@@ -13,7 +13,7 @@
     width: 200px;
     text-align: left;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 160%;
   }
   .wrap {
     display: -webkit-box;
@@ -37,8 +37,14 @@
   button:hover {
     color: #f00;
   }
+  ul {
+    list-style-type: none; 
+  }
+  .nested {
+    margin-left: 20px;
+  }
   a {
-    font-size: 20px;
+    font-size: 18px;
     color: #00f;
     text-decoration: none;
   }
@@ -55,7 +61,6 @@
     padding-top: 30px;
     padding-bottom: 30px;
     height: 100%;
-    list-style-type: none;
     white-space: nowrap;
     line-height: 0;
   }
