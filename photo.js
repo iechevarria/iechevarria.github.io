@@ -11,12 +11,12 @@ function setTransform() {
 }
 
 function prev() {
-  pos = Math.max(pos - 1, 0)
+  pos = (pos - 1 + itemCount) % itemCount
   setTransform()
 }
 
 function next() {
-  pos = Math.min(pos + 1, itemCount - 1)
+  pos = (pos + 1) % itemCount
   setTransform()
 }
 
