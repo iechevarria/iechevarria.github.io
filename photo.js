@@ -1,24 +1,32 @@
 var d = document
-var wrap = d.querySelector('.wrap')
-var items = d.querySelector('.items')
 var itemCount = d.querySelectorAll('.item').length
-var scroller = d.querySelector('.scroller')
 var galleries = d.querySelector('.galleries')
 var pos = 0
-var transform = Modernizr.prefixed('transform')
 
-function setTransform () {
-  items.style[transform] = 'translate3d(' + (-pos * items.offsetWidth) + 'px,0,0)'
+function showImg () {
+  document.getElementById(getImgStr()).style.display = 'inline-block'
+}
+
+function hideImg () {
+  document.getElementById(getImgStr()).style.display = 'none'
+}
+
+function getImgStr () {
+  var posStr = '' + pos
+  var pad = '00'
+  return 'img' + pad.substring(0, pad.length - posStr.length) + posStr
 }
 
 function prev () {
+  hideImg()
   pos = (pos - 1 + itemCount) % itemCount
-  setTransform()
+  showImg()
 }
 
 function next () {
+  hideImg()
   pos = (pos + 1) % itemCount
-  setTransform()
+  showImg()
 }
 
 function showGalleries () {
@@ -29,4 +37,4 @@ function showGalleries () {
   }
 }
 
-window.addEventListener('resize', setTransform)
+showImg()

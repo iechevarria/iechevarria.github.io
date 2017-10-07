@@ -13,7 +13,7 @@
     width: 200px;
     text-align: left;
     font-size: 16px;
-    line-height: 160%;
+    line-height: 150%;
   }
   .wrap {
     display: -webkit-box;
@@ -23,6 +23,7 @@
         -ms-flex-align: stretch;
             align-items: stretch;
     width: 100%;
+    height: 100%;
     margin: auto;
   }
   button {
@@ -63,16 +64,16 @@
     height: 100%;
     white-space: nowrap;
     line-height: 0;
+    transition: transform 1s ease-in-out;    
   }
   .item {
-    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 100%;
     height: 100%;
+    display: none;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-  }
-  .item:nth-child(2) {
-    color: #fff;
   }
   
