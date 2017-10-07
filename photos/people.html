@@ -1,0 +1,37 @@
+<!-- https://codepen.io/anon/pen/RLxYeb -->
+
+<link rel="stylesheet" type="text/css" href="photo.css">
+
+<div class="wrap">
+  <div class="sticky">
+    <ul>
+      <li><a href="">Ivan Echevarria</a></li>
+      <br>
+      <li><a onclick="showGalleries()">photos</a></li>
+      <ul class="galleries">
+        <li><a href="california.html" class="nested";>california</a></li>
+        <li><a href="virginia.html" class="nested">virginia</a></li>
+        <li><a class="nested" style="color: #f00">people</a></li>
+      </ul>
+      <li><a href="">code</a></li>
+      <li><a href="">about</a></li>
+      <li><a href="">resume</a></li>
+    </ul>
+  </div>
+  <button onclick="prev()"><</button>  		  
+  <div class="scroller">
+    <ul class="items">
+      <li class="item" id="img00" style="background-image:url(img/pe01.jpg);"></li>
+      <li class="item" id="img01" style="background-image:url(img/pe02.jpg);"></li>
+      <li class="item" id="img02" style="background-image:url(img/pe03.jpg);"></li>
+      <li class="item" id="img03" style="background-image:url(img/pe04.jpg);"></li>
+      <li class="item" id="img04" style="background-image:url(img/pe05.jpg);"></li>
+      <li class="item" id="img05" style="background-image:url(img/pe06.jpg);"></li>
+      <li class="item" id="img06" style="background-image:url(img/pe07.jpg);"></li>
+      <li class="item" id="img07" style="background-image:url(img/pe08.jpg);"></li>
+    </ul>
+  </div>
+  <button onclick="next()">></button>
+</div>
+
+<script type="text/javascript" src="photo.js"></script>
