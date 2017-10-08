@@ -1,41 +1,44 @@
-<!-- https://codepen.io/anon/pen/RLxYeb -->
-
-<link rel="stylesheet" type="text/css" href="photo.css">
-
-<div class="wrap">
-  <div class="sticky">
-    <ul>
-      <li><a href="">Ivan Echevarria</a></li>
-      <br>
-      <li><a onclick="showGalleries()">photos</a></li>
-      <ul class="galleries">
-        <li><a href="california.html" class="nested";>california</a></li>
-        <li><a class="nested" style="color: #f00">virginia</a></li>
-        <li><a href="people.html" class="nested">people</a></li>
+<head>
+  <title>virginia</title>
+  <link rel="stylesheet" type="text/css" href="photo.css">
+</head>
+  
+<body>        
+  <div class="wrap">
+    <div class="sticky">
+      <ul>
+        <li><a href="">Ivan Echevarria</a></li>
+        <br>
+        <li><a onclick="showGalleries()">photos</a></li>
+        <ul class="galleries">
+          <li><a href="california.html" class="nested";>california</a></li>
+          <li><a class="nested" style="color: #f00">virginia</a></li>
+          <li><a href="people.html" class="nested">people</a></li>
+        </ul>
+        <li><a href="">code</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">resume</a></li>
       </ul>
-      <li><a href="">code</a></li>
-      <li><a href="">about</a></li>
-      <li><a href="">resume</a></li>
-    </ul>
+    </div>
+    <button onclick="prev()"><</button>  		  
+    <div class="scroller">
+      <ul class="items">
+        <li class="item" id="img00" style="background-image:url(img/va01.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img01" style="background-image:url(img/va02.jpg);"><div>falls church, va, 2017</div></li>
+        <li class="item" id="img02" style="background-image:url(img/va03.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img03" style="background-image:url(img/va04.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img04" style="background-image:url(img/va05.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img05" style="background-image:url(img/va06.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img06" style="background-image:url(img/va07.jpg);"><div>williamsburg, va, 2017</div></li>
+        <li class="item" id="img07" style="background-image:url(img/va08.jpg);"><div>crystal city, va, 2017</div></li>
+        <li class="item" id="img08" style="background-image:url(img/va09.jpg);"><div>williamsburg, va, 2017</div></li>
+        <li class="item" id="img09" style="background-image:url(img/va10.jpg);"><div>williamsburg, va, 2017</div></li>
+        <li class="item" id="img10" style="background-image:url(img/va11.jpg);"><div>richmond, va, 2017</div></li>
+        <li class="item" id="img11" style="background-image:url(img/va12.jpg);"><div>richmond, va, 2017</div></li>
+      </ul>
+    </div>
+    <button onclick="next()">></button>
   </div>
-  <button onclick="prev()"><</button>  		  
-  <div class="scroller">
-    <ul class="items">
-      <li class="item" id="img00" style="background-image:url(img/va01.jpg);"></li>
-      <li class="item" id="img01" style="background-image:url(img/va02.jpg);"></li>
-      <li class="item" id="img02" style="background-image:url(img/va03.jpg);"></li>
-      <li class="item" id="img03" style="background-image:url(img/va04.jpg);"></li>
-      <li class="item" id="img04" style="background-image:url(img/va05.jpg);"></li>
-      <li class="item" id="img05" style="background-image:url(img/va06.jpg);"></li>
-      <li class="item" id="img06" style="background-image:url(img/va07.jpg);"></li>
-      <li class="item" id="img07" style="background-image:url(img/va08.jpg);"></li>
-      <li class="item" id="img08" style="background-image:url(img/va09.jpg);"></li>
-      <li class="item" id="img09" style="background-image:url(img/va10.jpg);"></li>
-      <li class="item" id="img10" style="background-image:url(img/va11.jpg);"></li>
-      <li class="item" id="img11" style="background-image:url(img/va12.jpg);"></li>
-    </ul>
-  </div>
-  <button onclick="next()">></button>
-</div>
+</body>
 
 <script type="text/javascript" src="photo.js"></script>

@@ -37,4 +37,13 @@ function showGalleries () {
   }
 }
 
+window.onkeyup = function (e) {
+  var key = e.keyCode ? e.keyCode : e.which
+  if (key === 37) {
+    prev()
+  } else if (key === 39) {
+    next()
+  }
+}
+
 showImg()
