@@ -40,11 +40,14 @@
   a:hover {
     color: #f00;
   }
+  p {
+    line-height: 200%;
+  }
   .content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding-top: 35px;
+    padding-top: 30px;
   }  
   .title {
     font-style: italic;
@@ -54,5 +57,15 @@
     padding: 0 15px 0 0px;
     font-size: 15px;
     line-height: 150%;
+  }
+  .about {
+    display: inline-block;
+  }
+  .portrait {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: block;
+    margin: auto;
   }
   
