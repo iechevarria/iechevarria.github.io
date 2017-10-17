@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 40px;
+}
+td {
+  height: 400px;
+  min-width: 400px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;  
+}
+#content {
+  min-width: 100%;
+  display: inline-block;
+}
+.container {
+  margin: 0 auto;
+}
+.container table {
+  margin: 0 auto;
+}
