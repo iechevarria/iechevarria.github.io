@@ -1,12 +1,12 @@
-var d = document
-var galleries = d.querySelector('.galleries')
+var d = document;
+var galleries = d.querySelector('.galleries');
 
 function showGalleries () {
   if (galleries.style.display === 'none') {
-    galleries.style.display = 'block'
+    galleries.style.display = 'block';
   } else {
-    galleries.style.display = 'none'
+    galleries.style.display = 'none';
   }
 }
 
-showGalleries()
+showGalleries();
