@@ -24,19 +24,19 @@ Board.prototype.copy = function (board) {
       this.arr[i][j].value = board.getValue(i, j);
     }
   }
-}
+};
 
 Board.prototype.getSquare = function (i, j) {
   return this.arr[i][j];
-}
+};
 
 Board.prototype.getValue = function (i, j) {
   return this.arr[i][j].value;
-}
+};
 
 Board.prototype.setValue = function (i, j, val) {
   this.arr[i][j].value = val;
-}
+};
 
 Board.prototype.equals = function (board) {
   for (var i = 0; i < this.size; i++) {
@@ -45,15 +45,18 @@ Board.prototype.equals = function (board) {
     }
   }
   return true;
-}
+};
 
 
 var State = {
   size: 4,
   score: 0,
+  validMoveExists: true,
 
   reset: function () {
+    if (this.getHighScore() === null) { this.setHighScore(0); }
     this.score = 0;
+    this.validMoveExists = true;
     this.board = new Board(this.size);
     Logic.addSquare();
   },
@@ -69,11 +72,24 @@ var State = {
   setValue: function (i, j, val) {
     this.board.setValue(i, j, val);
   },
+
+  incrementScore: function (score) {
+    this.score += score;
+    if (parseInt(this.getHighScore(), 10) < this.score) { this.setHighScore(this.score); }
+  },
+
+  getHighScore: function () {
+    return localStorage.getItem('high_score');
+  },
+
+  setHighScore: function (score) {
+    localStorage.setItem('high_score', score.toString());
+  },
     
   print: function () {
     console.log('score: ' + this.score); 
     for (var i = 0; i < this.size; i++) {
-      var myStr = '';      
+      var myStr = '';
       for (var j = 0; j < this.size; j++) {
         if (this.getValue(i, j) != 0) { myStr += this.getValue(i, j) + ' '; }
         else { myStr += '. '; }
@@ -89,17 +105,20 @@ var State = {
 
 
 var Logic = {
+  reset: function () {
+    State.reset();
+  },
+
   step: function (direction) {
     var tmp = new Board(State.size);
     tmp.copy(State.board);
-    State.score += this.move(direction, State.board);
+    State.incrementScore(this.move(direction, State.board));
     if (!tmp.equals(State.board)) {
       this.addSquare();
       State.print();  
       if (!this.validMoveExists()) {
-        State.reset(); 
+        State.validMoveExists = false;
         State.print();  
-        console.log("No valid moves");
       }
       return true;
     }
@@ -223,7 +242,16 @@ function draw () {
     }
   }
 
-  document.getElementById('score').innerHTML = State.score.toString();
+  if (!State.validMoveExists) {
+    context.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    context.fillStyle = '#000';
+    context.font = '40px Courier';
+    context.fillText('Game over.', CANVAS_WIDTH * 0.5, CANVAS_HEIGHT * 0.4);
+    context.fillText('Press r to restart.', CANVAS_WIDTH * 0.5, CANVAS_HEIGHT * 0.6);
+  }
+
+  document.getElementById('score').innerHTML = 'Current: ' + State.score.toString() + '&nbsp&nbsp&nbsp&nbsp High: ' + State.getHighScore();
 }
 
 
@@ -234,6 +262,7 @@ var upPressed = false;
 var downPressed = false;
 var leftPressed = false;
 var rightPressed = false;
+var rPressed = false;
 
 window.onkeydown = function (e) {
   var update = false;
@@ -250,7 +279,11 @@ window.onkeydown = function (e) {
   } else if (key === 40 && !downPressed) {
     update = Logic.step('d');
     downPressed = true;
-  } 
+  } else if (key === 82 && !rPressed) {
+    update = true;
+    rPressed = true;
+    Logic.reset();
+  }
   if (update) { draw(); } 
 };
 
@@ -260,6 +293,7 @@ window.onkeyup = function (e) {
   else if (key === 38) { upPressed = false; } 
   else if (key === 39) { rightPressed = false; } 
   else if (key === 40) { downPressed = false; }
+  else if (key === 82) { rPressed = false; }
 };
 
 
