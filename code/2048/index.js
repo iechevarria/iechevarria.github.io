@@ -1,5 +1,6 @@
 /* State */
 
+
 function Square () {
   this.value = 0;
   this.combined = false;
@@ -85,6 +86,7 @@ var State = {
 
 
 /* Logic */
+
 
 var Logic = {
   step: function (direction) {
@@ -191,12 +193,14 @@ var Logic = {
 };
 
 
-/* View */
+/* Graphics */
+
 
 var context = document.getElementById('canvas').getContext('2d');
-var CANVAS_WIDTH = 600;
-var CANVAS_HEIGHT = 600;
+var CANVAS_WIDTH = 800;
+var CANVAS_HEIGHT = 800;
 var border = 10;
+
 
 function draw () {
   context.fillStyle = '#888';
@@ -218,7 +222,13 @@ function draw () {
       }
     }
   }
+
+  document.getElementById('score').innerHTML = State.score.toString();
 }
+
+
+/* Input */
+
 
 var upPressed = false;
 var downPressed = false;
@@ -251,6 +261,9 @@ window.onkeyup = function (e) {
   else if (key === 39) { rightPressed = false; } 
   else if (key === 40) { downPressed = false; }
 };
+
+
+/* Initialization */
 
 
 State.reset();

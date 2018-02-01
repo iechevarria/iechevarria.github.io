@@ -1,7 +1,4 @@
-<!-- index.html styling from Kelvin Abrokwa's https://github.com/kelvinabrokwa/nd-gol/blob/gh-pages/index.html -->
-
 <!DOCTYPE html>
-
 <html>
   <head>
     <style>
@@ -11,22 +8,30 @@
         height: 100%;
         width: 100%; 
       }
-      canvas {
+      div {
+        font-family: Courier New, Courier, monospace;
+        font-size: 30px;
+        text-align: center;
         position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
+        top: 45%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 600px;
+      }
+      canvas {
         border-style: solid;
+        border-width: 3px;
         border-color: #000;
+        width: 600px;
       }
     </style>
     <title>2048</title>
   </head>
   <body>
-    <canvas id="canvas" width="600px" height="600px"></canvas>
+    <div>
+      <p id="score"></p>
+      <canvas id="canvas" width="800px" height="800px"></canvas>
+    </div>
     <script src="index.js"></script>    
   </body>
 </html>
