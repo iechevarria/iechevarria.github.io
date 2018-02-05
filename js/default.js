@@ -1,5 +1,4 @@
-var d = document;
-var galleries = d.querySelector('.galleries');
+var galleries = document.querySelector('.galleries');
 
 function showGalleries () {
   if (galleries.style.display === 'none') {
