@@ -1,6 +1,5 @@
-var d = document;
-var itemCount = d.querySelectorAll('.item').length;
-var galleries = d.querySelector('.galleries');
+var itemCount = document.querySelectorAll('.item').length;
+var galleries = document.querySelector('.galleries');
 var pos = 0;
 
 function showImg () {

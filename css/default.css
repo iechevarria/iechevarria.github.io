@@ -36,6 +36,7 @@
   }
   a:hover {
     color: #f00;
+    cursor: pointer;
   }
   p {
     line-height: 200%;
