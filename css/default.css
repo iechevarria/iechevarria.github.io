@@ -56,6 +56,11 @@
   .about {
     display: inline-block;
   }
+  .image {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    display: inline-block;
+  }
   .portrait {
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -63,4 +68,15 @@
     display: block;
     margin: auto;
   }
-  
+  h1 {
+    margin: 0px 0px 20px 0px;
+  }
+  p {
+    margin: 0px 0px 20px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  i {
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+  }
