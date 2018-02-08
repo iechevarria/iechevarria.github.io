@@ -1,4 +1,4 @@
-var itemCount = document.querySelectorAll('.item').length;
+var itemCount = document.querySelectorAll('.slide').length;
 var galleries = document.querySelector('.galleries');
 var pos = 0;
 

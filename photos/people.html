@@ -1,6 +1,7 @@
 <head>
   <title>virginia - Ivan Echevarria</title>
   <base href="../">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
   <link rel="stylesheet" type="text/css" href="css/photo.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113461902-1"></script>
@@ -13,8 +14,8 @@
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="sticky">
+  <div class="wrapper">
+    <div class="nav">
       <ul>
         <li><a href="index.html"><b>Ivan Echevarria</b></a></li>
         <br>
@@ -29,20 +30,20 @@
         <li><a href="resume.pdf">resume</a></li>
       </ul>
     </div>
-    <button onclick="prev()"><</button>  		  
-    <div class="scroller">
-      <ul class="items">
-        <li class="item" id="img00" style="background-image:url(img/photos/pe01.jpg);"><div>dad, 2017</div></li>
-        <li class="item" id="img01" style="background-image:url(img/photos/pe02.jpg);"><div>bennett, 2017</div></li>
-        <li class="item" id="img02" style="background-image:url(img/photos/pe03.jpg);"><div>isabel, 2016</div></li>
-        <li class="item" id="img03" style="background-image:url(img/photos/pe04.jpg);"><div>mom & dad, 2017</div></li>
-        <li class="item" id="img04" style="background-image:url(img/photos/pe05.jpg);"><div>devin, 2017</div></li>
-        <li class="item" id="img05" style="background-image:url(img/photos/pe06.jpg);"><div>mom, dad, & isabel, 2017</div></li>
-        <li class="item" id="img06" style="background-image:url(img/photos/pe07.jpg);"><div>myles, 2017</div></li>
-        <li class="item" id="img07" style="background-image:url(img/photos/pe08.jpg);"><div>dad & isabel, 2017</div></li>
+    <button class="slider-button" onclick="prev()"><</button>  		  
+    <div class="image-slider">
+      <ul class="slider-helper">
+        <li class="slide" id="img00" style="background-image:url(img/photos/pe01.jpg);"><div class="slide-label">dad, 2017</div></li>
+        <li class="slide" id="img01" style="background-image:url(img/photos/pe02.jpg);"><div class="slide-label">bennett, 2017</div></li>
+        <li class="slide" id="img02" style="background-image:url(img/photos/pe03.jpg);"><div class="slide-label">isabel, 2016</div></li>
+        <li class="slide" id="img03" style="background-image:url(img/photos/pe04.jpg);"><div class="slide-label">mom & dad, 2017</div></li>
+        <li class="slide" id="img04" style="background-image:url(img/photos/pe05.jpg);"><div class="slide-label">devin, 2017</div></li>
+        <li class="slide" id="img05" style="background-image:url(img/photos/pe06.jpg);"><div class="slide-label">mom, dad, & isabel, 2017</div></li>
+        <li class="slide" id="img06" style="background-image:url(img/photos/pe07.jpg);"><div class="slide-label">myles, 2017</div></li>
+        <li class="slide" id="img07" style="background-image:url(img/photos/pe08.jpg);"><div class="slide-label">dad & isabel, 2017</div></li>
       </ul>
     </div>
-    <button onclick="next()">></button>
+    <button class="slider-button" onclick="next()">></button>
   </div>
 </body>
 

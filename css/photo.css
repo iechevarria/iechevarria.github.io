@@ -1,86 +1,61 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font: 14px sans-serif;
-    background: #fff;
-  }
-  .sticky {
-    padding-top: 30px;
-    padding-left: 30px;
-    width: 200px;
-    height: 100%;
-    text-align: left;
-    font-size: 18px;
-    line-height: 140%;
-  }
-  .wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-  button {
-    width: 5%;
-    border: none;
-    background: transparent;
-    color: #00f;
-    font-size: 30px;
-  }
-  button:hover {
-    color: #f00;
-  }
-  button:focus {
-    outline: none;
-  }
-  ul {
-    list-style-type: none; 
-  }
-  li > div {
-    font: 16px "Georgia", serif;
-    position: absolute;
-    bottom: -30;
-    left: 0;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
-  .nested {
-    margin-left: 20px;
-  }
-  a {
-    color: #00f;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #f00;
-  }
-  .scroller {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .items {
-    padding-top: 30px;
-    padding-bottom: 60px;
-    height: 100%;
-  }
-  .item {
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 100%;
-    height: 100%;
-    display: none;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-  }
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.slider-button {
+  width: 5%;
+  border: none;
+  background: transparent;
+  color: #00f;
+  font-size: 30px;
+}
+
+.slider-button:hover {
+  color: #f00;
+}
+
+.slider-button:focus {
+  outline: none;
+}
+
+.image-slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.image-slider .slider-helper {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  height: 100%;
+}
+.image-slider .slider-helper .slide {
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+.image-slider .slide .slide-label {
+  font: 16px "Georgia", serif;
+  position: absolute;
+  bottom: -30;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
   
