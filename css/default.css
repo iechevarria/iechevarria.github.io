@@ -88,3 +88,20 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 200%;
   }
+
+  .glyph {
+    width: 16px;
+    -webkit-filter: url(#blue);
+    filter: url(#blue);
+  }
+
+  .glyph:hover {
+    -webkit-filter: url(#red);
+    filter: url(#red);
+  }
+
+  .glyph-filters {
+    position: absolute;
+    height: 0; width: 0;
+    overflow: none;  
+  }
