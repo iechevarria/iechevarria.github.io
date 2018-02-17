@@ -16,32 +16,27 @@ document.getElementById("main-wrapper").innerHTML +=
 </filter> \
 </svg>';
 
-var itemCount = document.querySelectorAll('.slide').length;
+var slides = document.querySelectorAll('.slide');
+var slideCount = slides.length;
 var pos = 0;
 
 function showImg () {
-  document.getElementById(getImgStr()).style.display = 'inline-block';
+  slides[pos].style.display = 'inline-block';
 }
 
 function hideImg () {
-  document.getElementById(getImgStr()).style.display = 'none';
-}
-
-function getImgStr () {
-  var posStr = '' + pos;
-  var pad = '00';
-  return 'img' + pad.substring(0, pad.length - posStr.length) + posStr;
+  slides[pos].style.display = 'none';
 }
 
 function prev () {
   hideImg();
-  pos = (pos - 1 + itemCount) % itemCount;
+  pos = (pos - 1 + slideCount) % slideCount;
   showImg();
 }
 
 function next () {
   hideImg();
-  pos = (pos + 1) % itemCount;
+  pos = (pos + 1) % slideCount;
   showImg();
 }
 
