@@ -16,9 +16,14 @@ document.getElementById("main-wrapper").innerHTML +=
 </filter> \
 </svg>';
 
-var slides = document.querySelectorAll('.slide');
-var slideCount = slides.length;
-var pos = 0;
+let slideshow = document.querySelector(".slideshow");
+for (let i = 0; i < images.length; i++) {
+  slideshow.innerHTML += ('<div class="slide" style="background-image: url(' + images[i].url + ')">' + '<div class="slide-label">' + images[i].label + '</div></div>');
+}
+
+let slides = document.querySelectorAll('.slide');
+let slideCount = slides.length;
+let pos = 0;
 
 function showImg () {
   slides[pos].style.display = 'inline-block';
@@ -41,7 +46,7 @@ function next () {
 }
 
 window.onkeyup = function (e) {
-  var key = e.keyCode ? e.keyCode : e.which;
+  let key = e.keyCode ? e.keyCode : e.which;
   if (key === 37) {
     prev();
   } else if (key === 39) {
