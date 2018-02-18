@@ -9,31 +9,52 @@
     background: #fff;
   }
 
+  a {
+    color: #00f;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #f00;
+    text-decoration: underline;
+  }
+
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 53em;
+    flex-direction: column;
     min-height: 100%;
     padding: 1.5em 1.5em 1.5em 1.5em;
-    margin: auto;
+    margin: 0 auto;
+  }
+
+  .nav .social-links {
+    display: inline-block;
   }
 
   .nav {
-    padding-right: 1em;
-    min-width: 10em;
     height: 100%;
     text-align: left;
     font-size: 1.2em;
     line-height: 140%;
   }
 
-  .nav ul {
-    list-style-type: none; 
+  .nav a {
+    margin-right: 1em;
+    margin-top: 0.5em;
   }
 
-  .nav br {
-    line-height: 90%;
+  .nav .social-links a{
+    display: inline-block;
+  }
+
+  .nav .spacer {
+    display: inline-block;
+  }
+
+  .nav .galleries {
+    text-align: center;
   }
 
   .nav .nested {
@@ -51,18 +72,9 @@
     filter: url(#red);
   }
 
-  a {
-    color: #00f;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #f00;
-  }
-
   .content {
+    flex: 1;
     padding-top: 3em;
-    min-width: 38em;
   }
 
   .title {
@@ -76,16 +88,6 @@
     line-height: 150%;
   }
 
-  .about {
-    display: inline-block;
-  }
-
-  .image {
-    width: 100%;
-    margin: 0 0 1.2 0em;
-    display: inline-block;
-  }
-
   .portrait {
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -94,19 +96,37 @@
     margin: auto;
   }
 
-  h1 {
-    margin: 0 0 1.5 0em;
-  }
-
-  p {
-    margin: 0 0 20 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 200%;
-  }
-
   .glyph-filters {
     position: absolute;
     height: 0; 
     width: 0;
     overflow: none;  
+  }
+
+  @media (min-width: 40em) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 10em 1fr;
+      grid-template-rows: 1fr;
+      max-width: 52em;
+    }
+
+    .nav a {
+      display: block;
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+    .nav .spacer {
+      height: 1em;
+      display: block;
+    }
+
+    .nav .social-links {
+      display: block;
+    }
+
+    .nav .galleries {
+      text-align: left;
+    }
   }
