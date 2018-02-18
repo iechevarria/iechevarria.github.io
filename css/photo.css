@@ -1,22 +1,5 @@
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  flex-direction: unset;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
 .slider-button {
-  width: 5%;
-  border: none;
-  background: transparent;
-  color: #00f;
-  font-size: 2em;
+  display: none;
 }
 
 .slider-button:hover {
@@ -34,16 +17,18 @@
 }
 
 .slideshow .slideshow-helper {
+  margin-top: 1em;
   padding-bottom: 1.5em;
   height: 100%;
+  list-style-type: none;
 }
 
 .slideshow .slideshow-helper .slide {
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
+  margin-bottom: 1em;
+  padding-left: 0;
+  padding-right: 0;
   height: 100%;
-  display: none;
+  width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -51,12 +36,52 @@
 }
 
 .slideshow .slide .slide-label {
-  font: 1em "Georgia", serif;
-  position: absolute;
-  bottom: -30;
-  left: 0;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
+  display: none;
 }
-  
+
+@media (min-width: 52em) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    flex-direction: unset;
+    min-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .slider-button {
+    display: inline-block;
+    width: 5%;
+    border: none;
+    background: transparent;
+    color: #00f;
+    font-size: 2em;
+  }
+
+  .slideshow .slideshow-helper .slide {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    display: none;
+  }
+
+  .slideshow .slide .slide-label {
+    font: 1em "Georgia", serif;
+    position: absolute;
+    bottom: -30;
+    left: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .slideshow .slideshow-helper {
+    margin-top: 0;
+  }
+}

@@ -34,7 +34,6 @@
   }
 
   .nav {
-    height: 100%;
     text-align: left;
     font-size: 1.2em;
     line-height: 140%;
@@ -42,7 +41,7 @@
 
   .nav a {
     margin-right: 1em;
-    margin-top: 0.5em;
+    margin-bottom: 1em;
   }
 
   .nav .social-links a{
@@ -53,12 +52,8 @@
     display: inline-block;
   }
 
-  .nav .galleries {
-    text-align: center;
-  }
-
   .nav .nested {
-    margin-left: 1em;
+    margin-left: 0;
   }
 
   .nav .glyph {
@@ -114,7 +109,7 @@
     .nav a {
       display: block;
       margin-right: 0;
-      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .nav .spacer {
@@ -128,5 +123,9 @@
 
     .nav .galleries {
       text-align: left;
+    }
+
+    .nav .nested {
+      margin-left: 1em;
     }
   }
