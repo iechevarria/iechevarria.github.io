@@ -36,7 +36,7 @@
   .nav {
     text-align: left;
     font-size: 1.2em;
-    line-height: 140%;
+    line-height: 200%;
   }
 
   .nav a {
@@ -104,6 +104,10 @@
       grid-template-columns: 10em 1fr;
       grid-template-rows: 1fr;
       max-width: 52em;
+    }
+
+    .nav {
+      line-height: 140%;
     }
 
     .nav a {
