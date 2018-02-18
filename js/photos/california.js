@@ -16,5 +16,5 @@ let images = [
   {"url": "img/photos/ca15.jpg", "label": "san luis reservoir, ca, 2017"},
   {"url": "img/photos/ca16.jpg", "label": "rancho san antonio, ca, 2017"},
   {"url": "img/photos/ca17.jpg", "label": "san francisco international airport, ca, 2017"},
-  {"url": "img/photos/ca18.jpg", "label": "san jose, ca, 2017"},
+  {"url": "img/photos/ca18.jpg", "label": "san jose, ca, 2017"}
 ];
