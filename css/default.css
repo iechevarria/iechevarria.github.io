@@ -44,16 +44,16 @@
     margin-bottom: 1em;
   }
 
+  .nav b {
+    margin-right: 1em;
+  }
+
   .nav .social-links a{
     display: inline-block;
   }
 
   .nav .spacer {
     display: inline-block;
-  }
-
-  .nav .nested {
-    margin-left: 0;
   }
 
   .nav .glyph {
@@ -87,6 +87,7 @@
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
+    width: 20em;
     display: block;
     margin: auto;
   }
@@ -114,6 +115,10 @@
       display: block;
       margin-right: 0;
       margin-bottom: 0;
+    }
+
+    .nav b {
+      margin-right: 0;
     }
 
     .nav .spacer {
