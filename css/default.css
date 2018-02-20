@@ -1,148 +1,171 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  html {
-    font: 1em sans-serif;
-    background: #fff;
-  }
+html {
+  font: 1em sans-serif;
+  background: #fff;
+}
 
-  a {
-    color: #00f;
-    text-decoration: none;
-  }
+a {
+  color: #00f;
+  text-decoration: none;
+}
 
-  a:hover {
-    color: #f00;
-    text-decoration: underline;
-  }
+a:hover {
+  color: #f00;
+  text-decoration: underline;
+}
 
-  img {
-    max-width: 100%;
-    margin-bottom: 1em;
-    margin-top: 1em;
-  }
+img {
+  max-width: 100%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+}
+
+.nav .social-links {
+  display: inline-block;
+}
+
+.nav {
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 200%;
+}
+
+.nav a {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.nav b {
+  margin-right: 1em;
+}
+
+.nav .social-links a{
+  display: inline-block;
+}
+
+.nav .spacer {
+  display: inline-block;
+}
+
+.nav .glyph {
+  width: 0.9em;
+  -webkit-filter: url(#blue);
+  filter: url(#blue);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nav .glyph:hover {
+  -webkit-filter: url(#red);
+  filter: url(#red);
+}
+
+.content {
+  flex: 1;
+  padding-top: 3em;
+}
+
+.blog-post img {
+  padding-bottom: 1em;
+}
+
+.blog-post h3 {
+  padding-top: 2em;
+}
+
+.blog-post p {
+  padding-bottom: 1em;
+  line-height: 140%;
+}
+
+.blog-post ul {
+  line-height: 150%;
+  margin-left: 1em;
+}
+
+.blog-post .footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.title {
+  font-style: italic;
+  float: right;
+}
+
+td {
+  padding: 0em 1em 0em 0em;
+  font-size: 0.95em;
+  line-height: 150%;
+}
+
+.portrait {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 20em;
+  display: block;
+  margin: auto;
+}
+
+.glyph-filters {
+  position: absolute;
+  height: 0; 
+  width: 0;
+  overflow: none;  
+}
+
+@media (min-width: 40em) {
   .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    padding: 1.5em 1.5em 1.5em 1.5em;
-    margin: 0 auto;
-  }
-
-  .nav .social-links {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    grid-template-rows: 1fr;
+    max-width: 54em;
   }
 
   .nav {
-    text-align: left;
-    font-size: 1.2em;
-    line-height: 200%;
+    line-height: 140%;
   }
 
   .nav a {
-    margin-right: 1em;
-    margin-bottom: 1em;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .nav b {
-    margin-right: 1em;
-  }
-
-  .nav .social-links a{
-    display: inline-block;
+    margin-right: 0;
   }
 
   .nav .spacer {
-    display: inline-block;
-  }
-
-  .nav .glyph {
-    width: 0.9em;
-    -webkit-filter: url(#blue);
-    filter: url(#blue);
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  .nav .glyph:hover {
-    -webkit-filter: url(#red);
-    filter: url(#red);
-  }
-
-  .content {
-    flex: 1;
-    padding-top: 3em;
-  }
-
-  .title {
-    font-style: italic;
-    float: right;
-  }
-
-  td {
-    padding: 0em 1em 0em 0em;
-    font-size: 0.95em;
-    line-height: 150%;
-  }
-
-  .portrait {
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    width: 20em;
+    height: 1em;
     display: block;
-    margin: auto;
   }
 
-  .glyph-filters {
-    position: absolute;
-    height: 0; 
-    width: 0;
-    overflow: none;  
+  .nav .social-links {
+    display: block;
   }
 
-  @media (min-width: 40em) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 10em 1fr;
-      grid-template-rows: 1fr;
-      max-width: 52em;
-    }
-
-    .nav {
-      line-height: 140%;
-    }
-
-    .nav a {
-      display: block;
-      margin-right: 0;
-      margin-bottom: 0;
-    }
-
-    .nav b {
-      margin-right: 0;
-    }
-
-    .nav .spacer {
-      height: 1em;
-      display: block;
-    }
-
-    .nav .social-links {
-      display: block;
-    }
-
-    .nav .galleries {
-      text-align: left;
-    }
-
-    .nav .nested {
-      margin-left: 1em;
-    }
+  .nav .galleries {
+    text-align: left;
   }
+
+  .nav .nested {
+    margin-left: 1em;
+  }
+}
