@@ -112,11 +112,6 @@ img {
   padding-bottom: 4em;
 }
 
-.title {
-  font-style: italic;
-  float: right;
-}
-
 td {
   padding: 0em 1em 0em 0em;
   font-size: 0.95em;
@@ -139,16 +134,37 @@ td {
   overflow: none;  
 }
 
+.project {
+  margin-bottom: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1em;
+}
+
+.project-info .date {
+  float: right;
+  color: #888;
+}
+
+.project img {
+  width: 100%;
+}
+
 @media (min-width: 40em) {
   .wrapper {
     display: grid;
     grid-template-columns: 10em 1fr;
     grid-template-rows: 1fr;
     max-width: 54em;
+    padding-top: 0;
   }
 
   .nav {
+    padding-top: 1.5em;
+    height: 10em;
     line-height: 140%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   .nav a {
@@ -176,5 +192,10 @@ td {
 
   .nav .nested {
     margin-left: 1em;
+  }
+
+  .content {
+    padding-top: 5em;
+    padding-left: 1em;
   }
 }
