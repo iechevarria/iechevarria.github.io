@@ -15,15 +15,3 @@ document.querySelector(".wrapper").innerHTML +=
             0 0 0 1 0" />\
 </filter> \
 </svg>';
-
-var galleries = document.querySelector('.galleries');
-
-function showGalleries () {
-  if (galleries.style.display === 'none') {
-    galleries.style.display = 'block';
-  } else {
-    galleries.style.display = 'none';
-  }
-}
-
-showGalleries();

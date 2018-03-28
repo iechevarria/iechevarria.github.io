@@ -4,6 +4,7 @@
 
 .slider-button:hover {
   color: #f00;
+  cursor: pointer;
 }
 
 .slider-button:focus {

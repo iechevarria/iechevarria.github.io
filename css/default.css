@@ -30,8 +30,32 @@ a:hover {
 
 img {
   max-width: 100%;
-  margin-bottom: 1em;
-  margin-top: 1em;
+}
+
+.container {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: #00f;
+  transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -webkit-transition: border .25s ease-in-out;
+}
+
+.container:hover {
+  color: #f00;
+}
+
+.container:hover {
+  border-left: 5px solid #f00;
+}
+
+.centered {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrapper {
@@ -91,6 +115,8 @@ img {
 
 .blog-post img {
   padding-bottom: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .blog-post h3 {
@@ -146,7 +172,8 @@ td {
 }
 
 .project img {
-  width: 100%;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 @media (min-width: 40em) {
