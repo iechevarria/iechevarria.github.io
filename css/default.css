@@ -108,6 +108,9 @@ img {
 
 .blog-post ul {
   line-height: 150%;
+}
+
+.blog-post ul ul {
   margin-left: 1em;
 }
 
