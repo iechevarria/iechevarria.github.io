@@ -84,7 +84,6 @@ img {
 .nav .glyph:hover {
   -webkit-filter: url(#red);
   filter: url(#red);
-  transform: translate(0px, -3px);
 }
 
 .content {
