@@ -16,32 +16,32 @@ document.querySelector(".wrapper").innerHTML +=
 </filter> \
 </svg>';
 
-let slideshow = document.querySelector(".slideshow");
+const slideshow = document.querySelector(".slideshow");
 for (let i = 0; i < images.length; i++) {
   slideshow.innerHTML += ('<div class="slide" style="background-image: url(' + images[i].url + ')">' + '<div class="slide-label">' + images[i].label + '</div></div>');
 }
 
-let slides = document.querySelectorAll('.slide');
-let slideCount = slides.length;
-let pos = 0;
+const slides = document.querySelectorAll('.slide');
+const slideCount = slides.length;
+let idx = 0;
 
 function showImg () {
-  slides[pos].style.display = 'inline-block';
+  slides[idx].setAttribute('class', 'slide-active')
 }
 
 function hideImg () {
-  slides[pos].style.display = 'none';
+  slides[idx].setAttribute('class', 'slide')
 }
 
 function prev () {
   hideImg();
-  pos = (pos - 1 + slideCount) % slideCount;
+  idx = (idx - 1 + slideCount) % slideCount;
   showImg();
 }
 
 function next () {
   hideImg();
-  pos = (pos + 1) % slideCount;
+  idx = (idx + 1) % slideCount;
   showImg();
 }
 
