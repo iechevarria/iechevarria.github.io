@@ -65,25 +65,8 @@ img {
   font-weight: 700;
 }
 
-.nav .social-links a{
-  display: inline-block;
-}
-
 .nav .spacer {
   display: inline-block;
-}
-
-.nav .glyph {
-  width: 0.9em;
-  -webkit-filter: url(#blue);
-  filter: url(#blue);
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.nav .glyph:hover {
-  -webkit-filter: url(#red);
-  filter: url(#red);
 }
 
 .content {
@@ -226,10 +209,6 @@ td {
 
   .nav .spacer {
     height: 1em;
-    display: block;
-  }
-
-  .nav .social-links {
     display: block;
   }
 
