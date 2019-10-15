@@ -1,21 +1,3 @@
-document.querySelector(".wrapper").innerHTML += 
-'<svg class="glyph-filters"> \
-<filter id="blue" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%"> \
-  <feColorMatrix type="matrix" \
-    values="1 0 0 0 0  \
-            1 0 0 0 0  \
-            1 0 0 0 1  \
-            0 0 0 1 0" /> \
-</filter> \
-<filter id="red" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%"> \
-  <feColorMatrix type="matrix" \
-    values="0 1 0 0 1 \
-            0 1 0 0 0 \
-            0 1 0 0 0 \
-            0 0 0 1 0" />\
-</filter> \
-</svg>';
-
 const slideshow = document.querySelector(".slideshow");
 for (let i = 0; i < images.length; i++) {
   slideshow.innerHTML += ('<div class="slide" style="background-image: url(' + images[i].url + ')">' + '<div class="slide-label">' + images[i].label + '</div></div>');
