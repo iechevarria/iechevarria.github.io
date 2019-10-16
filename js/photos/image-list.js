@@ -10,5 +10,5 @@ const images = [
   {"url": "img/photos/v1/09.jpg", "label": "half moon bay, ca, 2017"},
   {"url": "img/photos/v1/10.jpg", "label": "hays, ks, 2018"},
   {"url": "img/photos/v1/11.jpg", "label": "tysons, va, 2017"},
-  {"url": "img/photos/v1/12.jpg", "label": "barstow, ca, 2019"},
+  {"url": "img/photos/v1/12.jpg", "label": "mojave, ca, 2019"},
 ]
