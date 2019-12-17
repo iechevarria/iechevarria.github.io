@@ -1,0 +1,12 @@
+<svg role="img" height="210" width="210" xmlns="http://www.w3.org/2000/svg">
+<line x1="153" y1="186.6" x2="57" y2="23.2" stroke-width="9.5" stroke="red" stroke-linecap="round"/>
+<path d="M 175 200 A 25 25 0 0 1 153 186.6" fill="transparent" stroke="red" stroke-linecap="round" stroke-width="9.5"/>
+<line x1="51.32" y1="23.44" x2="147.33" y2="186.6" stroke-width="1" stroke="black"/>
+<line x1="23.44" y1="51.32" x2="186.6" y2="147.33" stroke-width="1" stroke="black"/>
+<line x1="62.67" y1="23.4" x2="158.68" y2="186.56" stroke-width="1" stroke="black"/>
+<line x1="23.4" y1="62.67" x2="186.56" y2="158.68" stroke-width="1" stroke="black"/>
+<circle cx="35" cy="35" r="20" fill="transparent" stroke="black"/>
+<circle cx="35" cy="35" r="30" fill="transparent" stroke="black"/>
+<circle cx="175" cy="175" r="20" fill="transparent" stroke="black"/>
+<circle cx="175" cy="175" r="30" fill="transparent" stroke="black"/>
+</svg>

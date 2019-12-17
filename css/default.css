@@ -41,6 +41,9 @@ h3 {
 }
 
 img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   max-width: 100%;
 }
 
@@ -84,6 +87,11 @@ img {
 .content {
   flex: 1;
   padding-top: 3em;
+}
+
+.blog-list a {
+  display: block;
+  padding-bottom: 0.5em;
 }
 
 .blog-post img {

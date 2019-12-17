@@ -1,0 +1,86 @@
+<head>
+  <title>A sorting visualization - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113461902-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113461902-1');
+  </script>
+</head>
+
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="code/index.html">code</a>
+      <a href="blog/index.html">blog</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+
+      <div class="blog-post">
+        <h1>A sorting visualization</h1>
+        <!-- <div style="width: 100%; height: 360px; overflow: hidden;">
+            <img 
+              src="./blog/a-sorting-visualization/quicksort_hoare.svg"
+              alt="Quicksort using the Hoare partition scheme"
+            />
+        </div> -->
+        <p>
+          I was recently re-reading <a href="https://bost.ocks.org/mike/">Mike Bostock</a>'s excellent 2014
+          post <a href="https://bost.ocks.org/mike/algorithms/#sorting">Visualizing Algorithms</a>
+          when his <a href="https://bl.ocks.org/mbostock/6dcc9a177065881b1bc4">static quicksort visualization</a>
+          (based on <a href="https://corte.si/">Aldo Cortesi</a>'s 2007
+          <a href="https://corte.si/posts/code/visualisingsorting/index.html">work</a>)
+          caught my eye. In this visualization, each row represents the state of an array after
+          a swap operation is performed. I thought it would be an interesting exercise to reproduce
+          it, so I wrote a quick proof-of-concept. The following is some example
+          output from my first attempt:
+        </p>
+        <img src="./blog/a-sorting-visualization/proof_of_concept.svg" alt="sorting visualization proof-of-concept"/>
+        <p>
+          It's clear that this version doesn't look nearly as nice as Mike Bostock's.
+          The main issue aside from color is that the swap paths in mine lack curvature on their
+          outer corners. I considered reproducing this using lines with round ends, but hubris got
+          the best of me, and I decided I could do even better.
+        <p>
+          Instead of just having a curve on the outer corner of the swaps paths, I thought I
+          could use arcs to get curves on both the inside and outside of the swap paths.
+          After a bit of experimentation, I found that the shape I wanted to use could be defined
+          by arcs on the surface of two circles connected by an inner tangent line between the two
+          circles. The following  is some output for validation from when I was writing code to make
+          the swap paths:
+        </p>  
+        <img src="./blog/a-sorting-visualization/tangent_test.svg" alt="Quicksort using the Hoare partition scheme"/>
+        <p>
+          I spent some time tuning the curvature of the swap connections by fiddling with the
+          radius of the circles used to define the arcs. I couldn't find a radius that looked
+          right or worked for all the connections - radii that made swaps between distant indices
+          work looked too sharp for the close swaps. Meanwhile, radii that looked great for close
+          swaps completely broke the math for the long swaps. Eventually, I landed on a solution: 
+          varying the radii of the circles that defined the arcs based on the distance between 
+          the indices of the elements being swapped.
+        </p>
+        <p>
+          I'm pleased with the final product. The resulting images are less vertically compact 
+          than they would be with sharp corners, but I think the tradeoff is worthwhile.
+          Swaps between nearby indices make an especially pleasing braid-like pattern.
+        </p>
+        <p>
+          The source (Python) is on <a href="https://github.com/iechevarria/sorting-visualizations">GitHub</a>.
+          The code is not my best, but it works. Here's an example of visualization for quicksort:
+        </p>
+        <img src="./blog/a-sorting-visualization/quicksort_hoare.svg" alt="Quicksort using the Hoare partition scheme"/>
+        <p class="footer">Ivan Echevarria - December 16, 2019</p>
+      </div>
+
+    </div>
+  </div>
+</body>
