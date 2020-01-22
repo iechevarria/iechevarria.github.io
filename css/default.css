@@ -99,6 +99,11 @@ img {
   margin-bottom: 1em;
 }
 
+.blog-post .img-no-pad {
+  padding-bottom: 0em;
+  margin-bottom: 1em;
+}
+
 .blog-post h3 {
   padding-top: 2em;
 }

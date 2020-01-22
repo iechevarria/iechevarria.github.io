@@ -1,0 +1,98 @@
+<head>
+  <title>Variational autoencoder trained on Lego faces - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113461902-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113461902-1');
+  </script>
+</head>
+
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="code/index.html">code</a>
+      <a href="blog/index.html">blog</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+
+      <div class="blog-post">
+        <h1>Variational autoencoder for Lego faces</h1>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-1.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-2.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
+        <p><em>
+          Note: this post contains affiliate links. All affiliate links are
+          labeled "affiliate link". A non-affiliate link labeled
+          "non-affiliate link" immediately follows each affiliate link.
+        </em></p>
+        <p>
+          I spent some of my time off this winter reading 
+          <a href="https://github.com/davidADSP">David Foster</a>'s excellent book
+          <em>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play</em>
+          (<a href="https://amzn.to/2RBqkBl">affiliate link</a>,
+          <a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1492041947">non-affiliate link</a>)
+          and working through some of the exercises in it.
+        </p>
+  
+        <h3>Building the training set</h3>
+        <p>
+          I threw together some quick scripts to pull images of Lego faces from
+          two sources: Bricklink and Quartz.
+        </p>
+  
+        <h3>The high-level, handy-wavy explanation of how a VAE works</h3>
+        <p>
+          An autoencoder (AE) has two main parts: an encoder and a decoder. The
+          encoder takes input (in this case, images of Lego faces each 
+          represented as 64x64x3 matrices) and outputs a vector that represents
+          that input. The decoder takes a vector as input and yields output
+          in the form of the input of the encoder (again, in this case, images
+          of Lego faces represented as 64x64x3 matrices). 
+        </p>
+  
+        <h3>Results</h3>
+        <p>
+          The following are random images from the training set 
+        </p>
+  
+        <div style="text-align: center;">
+          <video width="120" height="120" autoplay loop>
+            <source src="./blog/lego-face-vae/face-morph-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+          <video width="120" height="120" autoplay loop>
+            <source src="./blog/lego-face-vae/face-morph-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+          <video width="120" height="120" autoplay loop>
+            <source src="./blog/lego-face-vae/face-morph-3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+          <video width="120" height="120" autoplay loop>
+            <source src="./blog/lego-face-vae/face-morph-4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+          <video width="120" height="120" autoplay loop>
+            <source src="./blog/lego-face-vae/face-morph-5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>   
+        </div>
+        
+        <p class="footer">Ivan Echevarria - January 20, 2020 </p>
+      </div>
+    </div>
+  </div>
+</body>
+	  
