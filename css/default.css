@@ -57,10 +57,6 @@ img {
   margin: 0 auto;
 }
 
-.nav .social-links {
-  display: inline-block;
-}
-
 .nav {
   text-align: left;
   font-size: 1.2em;
@@ -89,9 +85,17 @@ img {
   padding-top: 3em;
 }
 
-.blog-list a {
-  display: block;
+.post-info {
+  display: grid;
+  grid-template-columns: 1fr min-content;
   padding-bottom: 0.5em;
+}
+
+.post-info .link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1em; 
 }
 
 .blog-post img {
