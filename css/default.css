@@ -113,7 +113,7 @@ img {
 }
 
 .blog-post p {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .blog-post ul {
@@ -122,6 +122,17 @@ img {
 
 .blog-post ul ul {
   margin-left: 1em;
+}
+
+.blog-post .note {
+  font-style: italic;
+  background-color: rgb(255, 251, 193);
+  border-color: rgb(200, 196, 160);
+  border-width: 0.0825em;
+  border-radius: 0.5em;
+  border-style: solid;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 2em 0em 2em 0em;
 }
 
 .blog-post .footer {

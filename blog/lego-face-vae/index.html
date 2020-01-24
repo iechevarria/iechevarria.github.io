@@ -24,11 +24,11 @@
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
-        <p><em>
+        <p class="note">
           Note: this post contains affiliate links. All affiliate links are
           labeled "affiliate link". A non-affiliate link labeled
           "non-affiliate link" immediately follows each affiliate link.
-        </em></p>
+        </p>
         <p>
           I spent some of my time off this winter reading 
           <a href="https://github.com/davidADSP">David Foster</a>'s excellent book
@@ -37,21 +37,37 @@
           <a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1492041947">non-affiliate link</a>)
           and working through some of the exercises in it.
         </p>
-  
+    
+        <h3>The high-level, handy-wavy explanation of how a VAE works</h3>
+        <p>
+          An autoencoder (AE) has two main parts: an encoder and a decoder. The
+          encoder takes high-dimensional input (e.g., an image) and compresses
+          it into a low-dimenstional vector representation called which I'll
+          refer to as a latent vector. Meanwhile, the decoder takes a latent
+          vector as input and expands it back to form of the original input.
+        </p>
+        <p>
+          For training, the encoder and decoder are connected, and their weights
+          are optimized to minimize the difference between each piece of
+          training data that enters the encoder and each piece of reconstructed
+          data that exits the decoder. The following diagram shows the process
+          of an image being encoded as a latent vector and being reconstructed
+          by a decoder:
+        </p>
+        <img src="./blog/lego-face-vae/vae.svg" alt="Diagram of an autoencoder"/>
+        <p>
+          Variational autoencoders work almost identically to 
+        </p>
+
         <h3>Building the training set</h3>
         <p>
           I threw together some quick scripts to pull images of Lego faces from
           two sources: Bricklink and Quartz.
         </p>
-  
-        <h3>The high-level, handy-wavy explanation of how a VAE works</h3>
+
+        <h3>Model implementation</h3>
         <p>
-          An autoencoder (AE) has two main parts: an encoder and a decoder. The
-          encoder takes input (in this case, images of Lego faces each 
-          represented as 64x64x3 matrices) and outputs a vector that represents
-          that input. The decoder takes a vector as input and yields output
-          in the form of the input of the encoder (again, in this case, images
-          of Lego faces represented as 64x64x3 matrices). 
+
         </p>
   
         <h3>Results</h3>
@@ -81,7 +97,12 @@
             Your browser does not support the video tag.
           </video>   
         </div>
-        
+
+        <h3>Takeaways</h3>
+        <p>
+
+        </p>
+
         <p class="footer">Ivan Echevarria - January 20, 2020 </p>
       </div>
     </div>
