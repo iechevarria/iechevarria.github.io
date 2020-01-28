@@ -87,7 +87,7 @@ img {
 
 .post-info {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr max-content;
   padding-bottom: 0.5em;
 }
 
@@ -95,7 +95,6 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 1em; 
 }
 
 .blog-post img {
