@@ -42,35 +42,60 @@
         <p>
           An autoencoder (AE) has two main parts: an encoder and a decoder. The
           encoder takes high-dimensional input (e.g., an image) and compresses
-          it into a low-dimenstional vector representation called which I'll
-          refer to as a latent vector. Meanwhile, the decoder takes a latent
-          vector as input and expands it back to form of the original input.
+          it into a low-dimenstional vector representation which I'll refer to
+          as a latent vector. Meanwhile, the decoder takes a latent vector as
+          input and expands it back to form of the original input.
         </p>
         <p>
           For training, the encoder and decoder are connected, and their weights
-          are optimized to minimize the difference between each piece of
-          training data that enters the encoder and each piece of reconstructed
-          data that exits the decoder. The following diagram shows the process
-          of an image being encoded as a latent vector and being reconstructed
-          by a decoder:
+          are optimized to minimize the difference between
+          training image that enters the encoder and each reconstructed
+          image that exits the decoder. The following diagram shows the process
+          of an image being compressed into a latent vector by the encoder and
+          then being reconstructed by the decoder:
         </p>
         <img src="./blog/lego-face-vae/vae.svg" alt="Diagram of an autoencoder"/>
         <p>
-          Variational autoencoders work almost identically to 
+          A variational autencoder (VAE) changes things up by having the encoder
+          define a distribution from which the latent vector will be randomly
+          drawn. When a VAE trains, it not only minimizes the difference between
+          input images and reconstructions, but it also minimizes the divergence
+          between the encoder's distribution and the normal distribution.
+        </p>
+        <p>
+          The upshot of all this is that when two nearby vectors are put into a
+          VAE's decoder, the reconstructed images are also similar. No such
+          assurance exists for a vanilla AE. This property gives us the ability
+          to do some fun stuff with a VAE, including morphing between images and
+          generating plausible new images that the VAE hasn't seen before.
+        </p>
+        <p>
+          If you're looking for a bit more detail, check out 
+          <a href="http://kvfrans.com/">Kevin Frans</a>'
+          <a href="http://kvfrans.com/variational-autoencoders-explained/">blog post</a>.
+          If you want a more in-depth discussion of the theory and math behind
+          VAEs, 
+          <em><a href="https://arxiv.org/abs/1606.05908">Tutorial on Variational Autoencoders</a></em>
+          by <a href="http://www.carldoersch.com/">Carl Doersch</a> is quite
+          thorough.
         </p>
 
-        <h3>Building the training set</h3>
+
+        <h3>The training set</h3>
         <p>
           I threw together some quick scripts to pull images of Lego faces from
           two sources: Bricklink and Quartz.
         </p>
 
-        <h3>Model implementation</h3>
+        <h3>Results</h3>
         <p>
-
+          The following are random images from the training set 
         </p>
   
         <h3>Results</h3>
+        <p>
+          I trained a VAE for an hour or so on Google Colab.
+        </p>
         <p>
           The following are random images from the training set 
         </p>
