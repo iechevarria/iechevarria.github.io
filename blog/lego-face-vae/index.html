@@ -1,5 +1,5 @@
 <head>
-  <title>Variational autoencoder trained on Lego faces - echevarria.io</title>
+  <title>Variational autoencoder for Lego faces - echevarria.io</title>
   <base href="../../"/>
   <link rel="stylesheet" type="text/css" href="css/default.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,22 +23,25 @@
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-2.png" alt="Lego face morph visualization"/>
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
         <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
-        <p class="note">
-          Note: this post contains affiliate links. All affiliate links are
-          labeled "affiliate link". A non-affiliate link labeled
-          "non-affiliate link" immediately follows each affiliate link.
-        </p>
+        <img src="./blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
         <p>
           I spent some of my time off this winter reading 
           <a href="https://github.com/davidADSP">David Foster</a>'s excellent book
-          <em>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play</em>
-          (<a href="https://amzn.to/2RBqkBl">affiliate link</a>,
-          <a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1492041947">non-affiliate link</a>)
+          <a href="https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/"><em>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play</em></a>
           and working through some of the exercises in it.
         </p>
+        <p>
+          I learn best by doing, so I decided to try to write my own code to
+          build a Variational Autoencoder.
+        </p>
+        <p>
+          At a certain point, working with <a href="">MNIST</a>, the hello-world
+          of machine learning, or any other pre-made training set gets old.
+          The result is assured from the start, which is great when just
+          starting out, so there are few surprises.
+        </p>
     
-        <h3>The high-level, handy-wavy explanation of how a VAE works</h3>
+        <h2>The high-level, handy-wavy explanation of how a variational autoencoder works</h2>
         <p>
           An autoencoder (AE) has two main parts: an encoder and a decoder. The
           encoder takes high-dimensional input (e.g., an image) and compresses
@@ -56,6 +59,9 @@
         </p>
         <img src="./blog/lego-face-vae/vae.svg" alt="Diagram of an autoencoder"/>
         <p>
+          You can think of the latent vector as a point in space.
+        </p>
+        <p>
           A variational autencoder (VAE) changes things up by having the encoder
           define a distribution from which the latent vector will be randomly
           drawn. When a VAE trains, it not only minimizes the difference between
@@ -63,7 +69,7 @@
           between the encoder's distribution and the normal distribution.
         </p>
         <p>
-          The upshot of all this is that when two nearby vectors are put into a
+          The upshot here is that when two nearby vectors are put into a
           VAE's decoder, the reconstructed images are also similar. No such
           assurance exists for a vanilla AE. This property gives us the ability
           to do some fun stuff with a VAE, including morphing between images and
@@ -81,23 +87,57 @@
         </p>
 
 
-        <h3>The training set</h3>
+        <h2>The training set</h2>
         <p>
           I threw together some quick scripts to pull images of Lego faces from
           two sources: Bricklink and Quartz.
         </p>
-
-        <h3>Results</h3>
-        <p>
-          The following are random images from the training set 
-        </p>
   
-        <h3>Results</h3>
+        <h2>Results</h2>
         <p>
-          I trained a VAE for an hour or so on Google Colab.
+          The following image shows randomly selected raw input images the top
+          row and the model's reconstructions on the bottom row:
+        </p>
+
+        <h3>Image reconstructions</h3>
+        <p>
+          The following image shows randomly selected raw input images the top
+          row and the model's reconstructions on the bottom row:
+        </p>
+        <img class="img-no-pad" src="./blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
+        <p>
+          The results are okay! At a high level, it looks like the model gets
+          that a minifig's face should have eyes, eyebrows, and a mouth. It
+          also renders the shape, color, and lighting of the heads with fair
+          accuracy.
         </p>
         <p>
-          The following are random images from the training set 
+          More interesting than what the model gets right is what it gets wrong.
+          Across the board, it has trouble with expressions. Take the first
+          raw image - it's an angry, mustached, and goateed face. Meanwhile, its
+          reconstruction lacks any kind of facial hair, and it has a an
+          expression that's closer to
+          <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DreamWorksFace">DreamWorks Face</a>
+          than anger.
+        </p>
+        <p>
+          The last raw image and reconstruction go in the opposite direction:
+          from happy to angry, or at least displeased. The raw image is a simple
+          smiley face with eyebrows. You'd think it'd be hard to mess up, but
+          its reconstruction is much sterner, with a frown that approaches a
+          sneer.
+        </p>
+
+        <h3>Generating new faces</h3>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-1.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-2.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-3.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-4.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-5.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-6.png" alt="Randomly generated Lego faces"/>
+
+        <h3>Face morphing</h3>
+        <p>
         </p>
   
         <div style="text-align: center;">
@@ -123,12 +163,19 @@
           </video>   
         </div>
 
-        <h3>Takeaways</h3>
+        <h2>Parting thoughts</h2>
         <p>
-
         </p>
 
-        <p class="footer">Ivan Echevarria - January 20, 2020 </p>
+        <p class="note">
+          If you want to buy the book <em>Generative Deep Learning</em> from 
+          Amazon and you want to throw a buck my way, here's an 
+          <a href="https://amzn.to/2RBqkBl">affiliate link</a>. This post wasn't
+          written to sell you anything, I just liked the book. None of the other
+          links in this post are affiliate links, 
+        </p>
+
+        <p class="footer">Ivan Echevarria - January 29, 2020 </p>
       </div>
     </div>
   </div>

@@ -33,10 +33,12 @@ h1 {
 }
 
 h2 {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
 h3 {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -104,11 +106,15 @@ img {
 
 .blog-post .img-no-pad {
   padding-bottom: 0em;
-  margin-bottom: 1em;
 }
 
-.blog-post h3 {
-  padding-top: 2em;
+.blog-post .img-really-no-pad {
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+}
+
+.blog-post h4 {
+  margin-bottom: 1em;
 }
 
 .blog-post p {
@@ -124,7 +130,6 @@ img {
 }
 
 .blog-post .note {
-  font-style: italic;
   background-color: rgb(255, 251, 193);
   border-color: rgb(200, 196, 160);
   border-width: 0.0825em;
