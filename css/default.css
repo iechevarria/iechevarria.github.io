@@ -113,6 +113,13 @@ img {
   margin-bottom: 0em;
 }
 
+.blog-post .img-horiz {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
 .blog-post h4 {
   margin-bottom: 1em;
 }
