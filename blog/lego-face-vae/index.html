@@ -31,35 +31,50 @@
           and working through some of the exercises in it.
         </p>
         <p>
-          I learn best by doing, so I decided to try to write my own code to
-          build a Variational Autoencoder.
+          I decided to try write a model from the book from scratch, and I went with
+          a variational autoencoder (VAE) because they train fairly quickly so I
+          could figure out whether I had done it right or mangled it without
+          waiting too long.
         </p>
         <p>
-          At a certain point, working with <a href="">MNIST</a>, the hello-world
-          of machine learning, or any other pre-made training set gets old.
-          The result is assured from the start, which is great when just
-          starting out, so there are few surprises.
+          I also wanted to do something kind of novel with the model, so I
+          compiled a data set: 3800 images of Lego minifig faces.
+          At a certain point, working with <a href="">MNIST</a>
+          or any other pre-made training set isn't fun.
+          The result is assured from the start, so there's little to no
+          adventure.
         </p>
-    
-        <h2>The high-level, handy-wavy explanation of how a variational autoencoder works</h2>
+
+        <!-- <p>Table of contents:</p>
+        <ul>
+          <li><a href="./blog/lego-face-vae/index.html#vae-explained">VAEs explained</a></li>
+          <li><a href="./blog/lego-face-vae/index.html#training-set">Training set</a></li>
+          <li><a href="./blog/lego-face-vae/index.html#results">Results</a></li>
+          <li><a href="./blog/lego-face-vae/index.html#image-reconstructions">Image reconstructions</a></li>
+          <li><a href="./blog/lego-face-vae/index.html#face-morphing">Face morphing</a></li>
+          <li><a href="./blog/lego-face-vae/index.html#generating-new-faces">Generating new faces</a></li>
+        </ul> -->
+  
+        <h2 id="vae-explained">The high-level, handy-wavy explanation of how a variational autoencoder works</h2>
         <p>
           An autoencoder (AE) has two main parts: an encoder and a decoder. The
           encoder takes high-dimensional input (e.g., an image) and compresses
-          it into a low-dimenstional vector representation which I'll refer to
-          as a latent vector. You can think of a latent vector as a point
-          in a space that it shares with other latent vectors. I'll refer to
-          this space as the latent space. Meanwhile, the decoder takes a latent
-          vector as input and expands it back to form of the original input.
-        </p>
-        <em>need to explain latent space better</em>
-        <p>
-          The following image shows Lego faces and their positions in latent
-          space. This is a simplified example. While this graph only shows two
-          dimensions, we'd actually likely use many more in a real autoencoder.
+          it into a low-dimenstional vector representation called a latent or
+          representation vector. You can think of a latent vector as a point
+          in a space. I'll refer to this space as the latent space. The
+          following image depicts how an encoder might map images in latent
+          space:
         </p>
         <div style="text-align: center;">
           <img style="width: 25em;" src="./blog/lego-face-vae/tsne-example.jpg" alt="t-SNE plot"/>
         </div>
+        <div class="img-caption">
+          <b>Above</b>: this shows 
+        </div>
+        <p>
+          Meanwhile, the decoder takes a latent vector as input and expands it
+          back to form of the original input.  
+        </p>
         <p>
           During training, the encoder and decoder are connected, and their
           weights are optimized to minimize the difference between training
@@ -96,8 +111,7 @@
           thorough.
         </p>
 
-
-        <h2>The training set</h2>
+        <h2 id="training-set">The training set</h2>
         <p>
           I threw together some quick scripts to pull images of Lego faces from
           two sources: Bricklink and Quartz. For the uninitiated, Bricklink is
@@ -120,13 +134,23 @@
         </p>
         <p>
           Once I had all the images in one place, I made some quick scripts to
-        </p>
-        <p>
-          The scripts I used to pull and process the images are in the 
+          make them uniform. For example, several hundred of the Bricklink
+          images contained two or three photos side-by-side, so I made a script
+          to identify and split them into individual photos. The scripts I used
+          to pull and process the images are in the 
           <a href="https://github.com/iechevarria/lego-face-VAE/tree/master/dataset_scripts">dataset_scripts directory</a>
           in my project repo.
         </p>
-        <h2>Results</h2>
+        <p>
+          I eventually reached the end of what I could reasonably automate and
+          had to manually pick through the images. I removed several hundred
+          images for quality issues including bad lighting and strange angles.
+          Several hundred others did not contain faces. In the end, I came out
+          with a 3800 image training set, and I had some concern that its small
+          size would preclude me from doing anything interesting with it.
+        </p>
+        
+        <h2 id="results">Results</h2>
         <p>
           I trained the model on images from the training set downsized from
           128x128 to 64x64 (only 4 MB of training data total). The VAE's encoder
@@ -139,15 +163,27 @@
         <p>
           I made no special effort to improve the VAE's performance or to choose
           an optimal architecture. I recognize the the number of layers and the
-          size of the latent vector is probably overkill for this, but 
+          size of the latent vector is probably overkill for this task. My sole
+          aim was to get a usable model to do the fun stuff below.
         </p>
 
-        <h3>Image reconstructions</h3>
+        <h3 id="image-reconstructions">Image reconstructions</h3>
         <p>
-          The following image shows randomly selected raw input images the top
-          row and the model's reconstructions on the bottom row:
+          The following image shows images and their reconstructions:
         </p>
         <img class="img-no-pad" src="./blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
+        <div class="img-caption">
+          <ul>
+            <li>
+              <b>Top</b>: raw input images
+            </li>
+            <li>
+              <b>Bottom</b>: reconstructions created by converting the raw
+              input image into a latent vector with the VAE encoder and then
+              converting this latent vector into an image with the VAE decoder 
+            </li>
+          </ul>
+        </div>
         <p>
           The results are okay! At a high level, it looks like the model gets
           that a minifig's face should have eyes, eyebrows, and a mouth. It
@@ -157,8 +193,8 @@
         <p>
           More interesting than what the model gets right is what it gets wrong.
           Across the board, it has trouble with expressions. Take the first
-          raw image - it's an angry, mustached, goateed face. Meanwhile, its
-          reconstruction lacks any kind of facial hair, and it has a an
+          raw image - the face is an angry, mustached, and goateed. Meanwhile,
+          its reconstruction lacks any kind of facial hair, and it has a an
           expression that's closer to
           <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DreamWorksFace">DreamWorks Face</a>
           than anger.
@@ -171,13 +207,13 @@
           sneer.
         </p>
         <p>
-          If your initial reaction to all this is "okay, so managed to take 4 MB
-          of images and store it into 10 MB of model and still end up with
-          terrible reproductions" - you're right. Luckily for us, VAEs can do
+          If your initial reaction to all this is "okay, so you managed to take
+          4 MB of images and store it in 10 MB of model and still end up with
+          terrible reproductions" - you're right! Luckily for us, VAEs can do
           more than encode and decode single images.
         </p>
 
-        <h3>Face morphing</h3>
+        <h3 id="face-morphing">Face morphing</h3>
         <p>
           Look at the five following images. Seriously, look at them for a
           bit. Hopefully you noticed that they're morphing between two different
@@ -216,15 +252,24 @@
           to generate images. The following image depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz" style="width: 18em;" src="./blog/lego-face-vae/morph-example-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 18em;" src="./blog/lego-face-vae/morph-example-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-1.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-2.jpg" alt="t-SNE plot"/>
         </div>
-        <p>
-          The left image shows the two initial images being assigned latent
-          vectors by the VAE's encoder. It also shows the process of choosing
-          points in between these two images. The right image shows the VAE
-          decoder's output for each of the points.
-        </p>
+        <div class="img-caption">
+          <ul>
+            <li>
+              <b>Left</b> (top on mobile): two initial images are assigned
+              latent vectors by the VAE's encoder. We then choose several 
+              intermediate vectors (each represented by
+              <b style="color: blue;">o</b>) between these two images'
+              latent vectors
+            </li>
+            <li>
+              <b>Right</b> (bottom on mobile): the VAE's decoder turns the
+              chosen vectors into images
+            </li>
+          </ul>
+        </div>
         <p>
           Note that none of the faces in the transition between the two input
           faces exist in the training set. These are brand new Lego faces that
@@ -234,7 +279,7 @@
           The randomness ensures that it's a smooth transition
         </p>
 
-        <h3>Generating new faces</h3>
+        <h3 id="generating-new-faces">Generating new faces</h3>
         <p>
           Generating new faces follows a similar process to face morphing.
           Instead of starting out with the encoder, though, we jump right into
@@ -244,21 +289,51 @@
           depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz" style="width: 18em;" src="./blog/lego-face-vae/generative-example-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 18em;" src="./blog/lego-face-vae/generative-example-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-1.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-2.jpg" alt="t-SNE plot"/>
         </div>
-        <p>The image on the left show how we randomly sample points</p>
+        <div class="img-caption">
+          <ul>
+            <li>
+              <b>Left</b> (top on mobile): we choose random vectors in
+              the latent space (each represented by <b style="color: blue;">o</b>)
+            <li>
+              <b>Right</b> (bottom on mobile): the VAE's decoder turns the
+              chosen vectors into images
+            </li>
+          </ul>
+        </div>
         <p>
-          So how well does this really work? The results range from nightmarish
-          to fairly convincing.
+          So how well does this work in practice? The results range from
+          nightmarish to somewhat convincing. The following are faces generated
+          randomly by the process described above:
         </p>
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-1.png" alt="Randomly generated Lego faces"/>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-2.png" alt="Randomly generated Lego faces"/>
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-3.png" alt="Randomly generated Lego faces"/>
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-4.png" alt="Randomly generated Lego faces"/>
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-5.png" alt="Randomly generated Lego faces"/>
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-6.png" alt="Randomly generated Lego faces"/>
-
+        <p>
+          Nearly all the generated images have the standard features of a Lego
+          face: eyes, eyebrows, and a mouth. They the shape of a Lego head
+          right, too. 
+        </p>
+  
+        <h3 id="generating-new-faces">Visualizing the latent space</h3>
+        <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
+        <p>
+          The following are some crops from the full plot that demnstrate how
+          faces with similar features cluster together:
+        </p>
+        <div style="text-align: center;">
+          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
+        </div>
+        <p>
+          The <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
+          has other little clusters like these.
+        </p>
 
         <h2>Parting thoughts</h2>
         <p>

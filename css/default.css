@@ -117,6 +117,7 @@ img {
   display: inline-block;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
@@ -136,11 +137,22 @@ img {
   margin-left: 1em;
 }
 
+.blog-post .img-caption {
+  border-color: rgb(100, 100, 100);
+  border-width: 0.0625em;
+  border-style: solid;
+  padding: 0.5em 1em 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+.blog-post .img-caption li {
+  list-style-type: none;
+}
+
 .blog-post .note {
   background-color: rgb(255, 251, 193);
   border-color: rgb(200, 196, 160);
-  border-width: 0.0825em;
-  border-radius: 0.5em;
+  border-width: 0.0625em;
   border-style: solid;
   padding: 0.5em 1em 0.5em 1em;
   margin: 2em 0em 2em 0em;
