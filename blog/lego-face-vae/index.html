@@ -73,10 +73,9 @@
           <img style="width: 25em;" src="./blog/lego-face-vae/tsne-example.jpg" alt="t-SNE plot"/>
         </div>
         <div class="img-caption">
-          <b>Above</b>: In this example, each face in
+          <b>Above</b>: This graph represents the latent space. In this example, each face in
           put into the encoder, and the encoder outputs two coordinates. The
-          face is then plotted at these assigned coordinates. The
-          graph where all the faces are plotted is the latent space.
+          face is then plotted at these assigned coordinates.
         </div>
         <p>
           Meanwhile, the decoder takes a latent vector from the latent space as
@@ -288,9 +287,17 @@
           nobody has ever seen before!
         </p>
         <p>
-          The randomness ensures that it's a smooth transition
+          Let's take a closer look at two of these morphs.
         </p>
-
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
+        <p>
+          bla bla bla discussion
+        </p>
+        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
+        <p>
+          yep sure is a face haha yep
+        </p>
+        
         <h3 id="generating-new-faces">Generating new faces</h3>
         <p>
           Generating new faces follows a similar process to face morphing.
@@ -347,7 +354,10 @@
           while minimizing the amount of information we lose.
         </p>
         <p>
-          The following image contains all the images in the training set:
+          I put all the images in the training set through the VAE encoder to
+          get their 200 dimension latent vectors. I then used t-SNE to turn
+          these 200 dimension vectors into 2-dimensional vectors. Finally, I
+          plotted the input images at the 2D coordinates:
         </p>
         <a href="./blog/lego-face-vae/tsne-all-lg.jpg">
           <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
