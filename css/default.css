@@ -129,12 +129,13 @@ img {
   margin-bottom: 1em;
 }
 
-.blog-post ul {
-  line-height: 150%;
-}
-
 .blog-post ul ul {
   margin-left: 1em;
+}
+
+.blog-post li{
+  line-height: 150%;
+  margin-bottom: 0.25em;
 }
 
 .blog-post .img-caption {
@@ -154,8 +155,8 @@ img {
   border-color: rgb(200, 196, 160);
   border-width: 0.0625em;
   border-style: solid;
-  padding: 0.5em 1em 0.5em 1em;
-  margin: 2em 0em 2em 0em;
+  padding: 0.75em 1em 0.75em 1em;
+  margin: 1.5em 0em 1.5em 0em;
 }
 
 .blog-post .footer {
