@@ -53,7 +53,7 @@
             <li>
               <a href="./blog/lego-face-vae/index.html#implementation">Implementation details</a>
               (<a href="./blog/lego-face-vae/index.html#training-set">training set</a>,
-                <a href="./blog/lego-face-vae/index.html#model-training">model training</a>)
+                <a href="./blog/lego-face-vae/index.html#model-details">model details</a>)
             </li>
             <li>
               <a href="./blog/lego-face-vae/index.html#applications">Model applications</a>
@@ -81,9 +81,9 @@
           to a point in a low-dimensional space. The point is called a latent
           vector, and the low-dimensional space is called the latent space.
           Ideally, each coordinate in the latent space encodes some kind of
-          information - you could imagine that for the case of images of Lego
+          information. You could imagine that for the case of images of Lego
           faces, one coordinate might indicate face color while another might
-          indicate whether or not a face has glasses, and so on. The following
+          indicate eye size, and so on. The following
           shows an example of how an AE's encoder might map images to a latent space:
         </p>
         <div style="text-align: center;">
@@ -91,9 +91,8 @@
         </div>
         <div class="img-caption">
           <li>
-            <b>Above</b>: this graph represents the latent space, and the images
-            are in positions output by the encoder. Each image's
-            position is defined by a latent vector.
+            <b>Above</b>: in this simplified example, each image has been assigned a
+            position (latent vector) on the graph (latent space) by the encoder
           </li>
         </div>
         <p>
@@ -124,6 +123,13 @@
           similar. No such assurance exists for a vanilla AE. This property
           gives you the ability to do some fun stuff with a VAE that I'll get
           into later.
+        </p>
+        <p>
+          One last important note before you move on is that the meaning of the latent
+          space's coordinates varies from
+          model to model. There is no canonincal set of features that's encoded
+          into the latent space. Instead, the model is free to choose what to encode and
+          how to encode it so long as it minimizes its loss function.
         </p>
         <p>
           If you want a bit more detail, check out 
@@ -157,7 +163,7 @@
             An
             <a href="https://qz.com/1405657/how-are-lego-emotions-changing-help-us-find-out/">article/piece of interactive software</a>
             by <a href="https://twitter.com/sadbumblebee">Daniel Wolfe</a>
-            about the changing emotions of Lego faces. It included 1600 photos of Lego faces
+            about the changing emotions of Lego faces. It includes 1600 photos of Lego faces
             taken by
             <a href="http://www.bartneck.de/">Christoph Bartneck, Ph.D</a>, a
             researcher and Lego fan, and they're all excellent. Fortunately, the
@@ -170,7 +176,7 @@
           Once I had all the images in one place, I wrote some quick scripts to
           make them uniform. For example, several hundred of the Bricklink
           images contained two or three photos side-by-side, so I made a script
-          to identify and split them into individual photos. The scripts I used
+          to identify these and split them into individual photos. The scripts I used
           to pull and process the images are in the 
           <a href="https://github.com/iechevarria/lego-face-VAE/tree/master/dataset_scripts">dataset_scripts directory</a>
           in my project repo.
@@ -246,7 +252,7 @@
         <p>
           More interesting than what the model gets right is what it gets wrong.
           Across the board, it has trouble with expressions. Take the first
-          raw image - the face is an angry, mustached, and goateed. Meanwhile,
+          raw image: the face is an angry, mustached, and goateed. Meanwhile,
           its reconstruction lacks any kind of facial hair, and it has a an
           expression that's closer to
           <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DreamWorksFace">DreamWorks Face</a>
@@ -338,7 +344,8 @@
         </div>
         <br>
         <p>
-          The process of morphing between images is a little different from generating new images - instead
+          The process of morphing between images is a little different from
+          generating new images. Instead
           of jumping straight into the decoder, you actually need to use the
           encoder, too. There are four main steps:
           <ol>
