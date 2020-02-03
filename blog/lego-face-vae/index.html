@@ -27,23 +27,25 @@
         <p>
           I spent some of my time off this winter reading 
           <a href="https://github.com/davidADSP">David Foster</a>'s excellent book
-          <a href="https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/"><em>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play</em></a>
-          and working through some of the exercises in it.
+          <a href="https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/"><em>Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play</em></a>.
         </p>
         <p>
-          I decided to try write a model from the book from scratch, and I went with
-          a variational autoencoder (VAE) because they train fairly quickly so I
-          could figure out whether I had done it right or mangled it without
-          waiting too long.
+          I decided to try write a model described in the book on my own, and I
+          went with a variational autoencoder (VAE) because they train
+          relatively quickly. Because of this, I could figure out whether I had
+          made the model right or mangled it without waiting too long.
         </p>
         <p>
           I also wanted to do something kind of novel with the model, so I
-          compiled a data set: 3800 images of Lego minifig faces.
-          At a certain point, working with <a href="">MNIST</a>
-          or any other pre-made training set isn't fun.
-          The result is assured from the start, so there's little to no
-          adventure.
+          compiled a new data set for the model to train on: 3800 images of Lego
+          minifig faces.
         </p>
+        <p>
+          All of the data and code I used to make the model, plots, and animations
+          in this post are publicly available in the project
+          <a href="https://github.com/iechevarria/lego-face-VAE">repo</a>.
+        </p>
+
 
         <!-- <p>Table of contents:</p>
         <ul>
@@ -58,22 +60,27 @@
         <h2 id="vae-explained">The high-level, handy-wavy explanation of how a variational autoencoder works</h2>
         <p>
           An autoencoder (AE) has two main parts: an encoder and a decoder. The
-          encoder takes high-dimensional input (e.g., an image) and compresses
-          it into a low-dimenstional vector representation called a latent or
-          representation vector. You can think of a latent vector as a point
-          in a space. I'll refer to this space as the latent space. The
-          following image depicts how an encoder might map images in latent
-          space:
+          encoder takes high-dimensional input (in this case an image) maps it
+          to a point in a low-dimensional space. The point is called a latent
+          vector, and the low-dimensional space is called the latent space.
+          Ideally, each coordinate in the latent space encodes some kind of
+          information - we could imagine that for the case of Lego faces, one
+          coordinate might indicate face color while another might indicate
+          whether or not a face has glasses. The following shows an example of
+          how an AE's encoder might map faces to a latent space:
         </p>
         <div style="text-align: center;">
           <img style="width: 25em;" src="./blog/lego-face-vae/tsne-example.jpg" alt="t-SNE plot"/>
         </div>
         <div class="img-caption">
-          <b>Above</b>: this shows 
+          <b>Above</b>: In this example, each face in
+          put into the encoder, and the encoder outputs two coordinates. The
+          face is then plotted at these assigned coordinates. The
+          graph where all the faces are plotted is the latent space.
         </div>
         <p>
-          Meanwhile, the decoder takes a latent vector as input and expands it
-          back to form of the original input.  
+          Meanwhile, the decoder takes a latent vector from the latent space as
+          input and expands it back to form of the original input.  
         </p>
         <p>
           During training, the encoder and decoder are connected, and their
@@ -109,6 +116,11 @@
           <em><a href="https://arxiv.org/abs/1606.05908">Tutorial on Variational Autoencoders</a></em>
           by <a href="http://www.carldoersch.com/">Carl Doersch</a> is quite
           thorough.
+        </p>
+        <p>
+          My VAE implementation and some associated utilities are in the
+          <a href="https://github.com/iechevarria/lego-face-VAE/tree/master/ml">ml</a>
+          directory of my project repo.
         </p>
 
         <h2 id="training-set">The training set</h2>
@@ -169,7 +181,7 @@
 
         <h3 id="image-reconstructions">Image reconstructions</h3>
         <p>
-          The following image shows images and their reconstructions:
+          The following shows images and their reconstructions:
         </p>
         <img class="img-no-pad" src="./blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
         <div class="img-caption">
@@ -315,30 +327,70 @@
         <img class="img-really-no-pad" src="./blog/lego-face-vae/random-6.png" alt="Randomly generated Lego faces"/>
         <p>
           Nearly all the generated images have the standard features of a Lego
-          face: eyes, eyebrows, and a mouth. They the shape of a Lego head
-          right, too. 
+          face: eyes, eyebrows, and a mouth. They almost all get the shape of a
+          Lego head right, too.
         </p>
   
-        <h3 id="generating-new-faces">Visualizing the latent space</h3>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
+        <h3 id="visualizing-latent-space">Visualizing the latent space</h3>
+        <p>
+          It would be neat to see all the Lego faces' positions in the latent
+          space, but it has 200 dimensions. It's usually inadvisable to plot
+          data in three dimensions, let alone 200.
+        </p>
+        <p>
+          Fortunately, there exist many methods for dimensionality reduction.
+          One such method is <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a>
+          (t-distributed stochastic neighbor embedding). I'm not going to get
+          into the details of how it works because that's well out of scope for
+          this post, but the upshot is this: we can use t-SNE to take
+          200-dimensional vectors and to turn them into 2-dimensional vectors
+          while minimizing the amount of information we lose.
+        </p>
+        <p>
+          The following image contains all the images in the training set:
+        </p>
+        <a href="./blog/lego-face-vae/tsne-all-lg.jpg">
+          <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
+        </a>
         <p>
           The following are some crops from the full plot that demnstrate how
           faces with similar features cluster together:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
         </div>
         <p>
-          The <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
+          In the first image, you can see that faces with black hair and
+          mustaches are in a group. In the second image, four heads
+          with dark balaclavas and white headbands sit close to one another. In
+          the last image, heads with orange visors (and a jack-o-lantern?) are
+          clustered together. The
+          <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
           has other little clusters like these.
+        </p>
+        <p>
+          A word of caution: it's important not to assign too much meaning to
+          this visualization or any made using t-SNE. Because the latent vectors
+          have been compressed so severely, we are unable to see many of the
+          distinctions that the model actually makes. Still, we can begin to
+          build some intuition about what the model understands about faces.
+          And I think it looks neat, too!
         </p>
 
         <h2>Parting thoughts</h2>
         <p>
+          I hope this was an interesting look at variational autoencoders! Again,
+          all of the data and code I used to make the model, plots, and animations
+          in this post are publicly available in the project
+          <a href="https://github.com/iechevarria/lego-face-VAE">repo</a>.
+          The project repo also includes a quickstart guide to running the code
+          on <a href="https://colab.research.google.com/">Google Colab</a>, a
+          free environment to run Jupyter Notebooks with free optional GPU/TPU
+          instances.
         </p>
-
+        
         <p class="note">
           If you want to buy the book <em>Generative Deep Learning</em> from 
           Amazon and you want to throw a buck my way, here's an 
