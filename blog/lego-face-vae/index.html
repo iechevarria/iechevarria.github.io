@@ -61,7 +61,7 @@
                 <a href="./blog/lego-face-vae/index.html#visualizing-latent-space">visualizing the latent space</a>)
             </li>
             <li>
-              <a href="./blog/lego-face-vae/index.html#model-applications">Model applications</a>
+              <b><a href="./blog/lego-face-vae/index.html#model-applications">The fun stuff</a></b>
               (<a href="./blog/lego-face-vae/index.html#generating-new-images">generating new images</a>,
                 <a href="./blog/lego-face-vae/index.html#image-morphing">image morphing</a>)
             </li>
@@ -130,10 +130,11 @@
         </p>
         <p>
           One last important note before you move on is that the meaning of the latent
-          space's coordinates varies from
-          model to model. There is no canonical set of features that's encoded
-          into the latent space. Instead, the model is free to choose what to encode and
-          how to encode it so long as it improves its performance. By optimizing
+          space's dimensions varies from
+          model to model. There is no canonical set of image features that's encoded
+          into the latent space (for example, the first dimension doesn't always control
+          color). Instead, the model is free to choose which features to encode and
+          how to encode them so long as it improves its performance. By optimizing
           in this way, the model gains a deep understanding of the underlying
           structure of the data. With this understanding, the model can take on
           complex tasks, including generating novel images it hasn't encountered before.
@@ -169,7 +170,7 @@
           <li>
             An
             <a href="https://qz.com/1405657/how-are-lego-emotions-changing-help-us-find-out/">article/piece of interactive software</a>
-            by <a href="https://twitter.com/sadbumblebee">Daniel Wolfe</a>
+            by <a href="http://www.sadbumblebee.com/">Daniel Wolfe</a>
             about the changing emotions of Lego faces. It includes 1600 photos of Lego faces
             taken by
             <a href="http://www.bartneck.de/">Christoph Bartneck, Ph.D</a>, a
@@ -191,7 +192,7 @@
         <p>
           I eventually reached the end of what I could reasonably automate and
           had to manually pick through the images. I removed several hundred
-          images for quality issues including bad lighting and strange angles.
+          images for quality issues including bad lighting and strange camera angles.
           Several hundred others did not contain faces. In the end, I had
           a 3800 image training set, and I was a bit concerned that its small
           size would preclude me from doing anything interesting with it.
@@ -319,9 +320,9 @@
           faces with similar features cluster together:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="crop from t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="crop from t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="crop from t-SNE plot"/>
         </div>
         <p>
           In the first image, you can see that faces with black hair and
@@ -341,7 +342,7 @@
           faces. And I think it looks neat, too!
         </p>
 
-        <h2 id="model-applications">Model applications</h2>
+        <h2 id="model-applications">Model applications (the fun stuff)</h2>
         <p>
           This section covers two of neat things that you can do with the trained
           VAE: generating new images and morphing between existing images.
@@ -357,8 +358,8 @@
           following image depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-1.jpg" alt="how new images are generated"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-2.jpg" alt="how new images are generated"/>
         </div>
         <div class="img-caption">
           <ul>
@@ -442,8 +443,8 @@
           The following image depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-1.jpg" alt="how a face morph works"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-2.jpg" alt="how a face morph works"/>
         </div>
         <div class="img-caption">
           <ul>
