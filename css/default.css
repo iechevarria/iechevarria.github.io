@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+em {
+  line-height: 150%;
+}
+
 a:hover {
   color: #f00;
   text-decoration: underline;
@@ -129,6 +133,14 @@ img {
   margin-bottom: 1em;
 }
 
+.blog-post ul {
+  margin-left: 1em;
+}
+
+.blog-post ol {
+  margin-left: 1em;
+}
+
 .blog-post ul ul {
   margin-left: 1em;
 }
@@ -144,6 +156,10 @@ img {
   border-style: solid;
   padding: 0.5em 1em 0.5em 1em;
   margin-bottom: 1em;
+}
+
+.blog-post .img-caption ul {
+  margin-left: 0;
 }
 
 .blog-post .img-caption li {

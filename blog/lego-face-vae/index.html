@@ -39,7 +39,7 @@
           relatively quickly. Because of this, I wouldn't have to wait long to
           figure out if I had made the model right or mangled it.
           I also wanted to do something kind of novel with the model, so I
-          compiled a new data set for the it to train on: 3800 images of Lego
+          compiled a new data set for it to train on: 3800 images of Lego
           minifig faces. The end product can be used for interesting
           applications including generating new Lego faces and morphing smoothly
           between Lego faces.
@@ -56,11 +56,14 @@
                 <a href="./blog/lego-face-vae/index.html#model-details">model details</a>)
             </li>
             <li>
-              <a href="./blog/lego-face-vae/index.html#applications">Model applications</a>
+              <a href="./blog/lego-face-vae/index.html#model-evaluation">Model evaulation</a>
               (<a href="./blog/lego-face-vae/index.html#image-reconstruction">image reconstruction</a>,
-                <a href="./blog/lego-face-vae/index.html#generating-new-images">generating new images</a>,
-                <a href="./blog/lego-face-vae/index.html#image-morphing">image morphing</a>,
                 <a href="./blog/lego-face-vae/index.html#visualizing-latent-space">visualizing the latent space</a>)
+            </li>
+            <li>
+              <a href="./blog/lego-face-vae/index.html#model-applications">Model applications</a>
+              (<a href="./blog/lego-face-vae/index.html#generating-new-images">generating new images</a>,
+                <a href="./blog/lego-face-vae/index.html#image-morphing">image morphing</a>)
             </li>
           </ul>
         </p>
@@ -80,9 +83,9 @@
           encoder takes high-dimensional input, an image in this case, and maps it
           to a point in a low-dimensional space. The point is called a latent
           vector, and the low-dimensional space is called the latent space.
-          Ideally, each coordinate in the latent space encodes some kind of
+          Ideally, each dimension in the latent space contains some kind of
           information. You could imagine that for the case of images of Lego
-          faces, one coordinate might indicate face color while another might
+          faces, one dimension might indicate face color while another might
           indicate eye size, and so on. The following
           shows an example of how an AE's encoder might map images to a latent space:
         </p>
@@ -97,7 +100,8 @@
         </div>
         <p>
           The decoder, on the other hand, takes a latent vector from the latent
-          space as input and expands it back to form of the original input.  
+          space as input and expands it back to the form of the original input
+          (in this case, an image).
         </p>
         <p>
           During training, the encoder and decoder are connected, and their
@@ -127,9 +131,12 @@
         <p>
           One last important note before you move on is that the meaning of the latent
           space's coordinates varies from
-          model to model. There is no canonincal set of features that's encoded
+          model to model. There is no canonical set of features that's encoded
           into the latent space. Instead, the model is free to choose what to encode and
-          how to encode it so long as it minimizes its loss function.
+          how to encode it so long as it improves its performance. By optimizing
+          in this way, the model gains a deep understanding of the underlying
+          structure of the data. With this understanding, the model can take on
+          complex tasks, including generating novel images it hasn't encountered before.
         </p>
         <p>
           If you want a bit more detail, check out 
@@ -144,7 +151,7 @@
 
         <h2 id="implementation">Implementation details</h2>
         <p>
-          This section covers the specifics of the VAE I made for images of Lego faces.
+          This section covers the specifics of the trained VAE model I made for images of Lego faces.
           It includes a description of how I obtained and curated the training set.
           It also includes some discussion of the model's structure and how I trained it.
         </p>
@@ -202,7 +209,7 @@
         </p>
         <p>
           I made no special effort to improve the VAE's performance or to choose
-          an optimal architecture. I recognize the the number of layers and the
+          an optimal architecture. I recognize that the number of layers and the
           size of the latent vector is probably overkill for this task. My sole
           aim was to get a usable model to do the fun stuff below.
         </p>
@@ -216,19 +223,18 @@
           directory of my project repo.
         </p>
 
-
-        <h2 id="applications">Model applications</h2>
+        <h2 id="model-evaluation">Model evaluation</h2>
         <p>
-          This section covers the neat things that you can do with the trained
-          VAE, including generating new images and morphing between existing
-          images.
+          This section covers two ways to informally evaluate the
+          model's performance and its understanding of the underlying
+          structure of the training set.
         </p>
-  
+
         <h3 id="image-reconstruction">Image reconstruction</h3>
         <p>
-          A quick way to assess the quality of a VAE is to compare raw images
-          with their reconstructed counterparts. The following shows images of
-          Lego faces and their reconstructions:
+          A quick way to assess the quality of a trained VAE model is to compare
+          raw images with their reconstructed counterparts. The following shows
+          images of Lego faces and their reconstructions:
         </p>
         <img class="img-no-pad" src="./blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
         <div class="img-caption">
@@ -268,8 +274,77 @@
         <p>
           If your initial reaction to all this is "okay, so you managed to take
           4 MB of images and store it in 10 MB of model and still end up with
-          terrible reproductions" - you're right! Luckily, VAEs can do a lot
-          more than encode and decode single images.
+          terrible reproductions" - you're right! Luckily, VAEs can do
+          more than encode and decode single images, and I'll get to that in the
+          <a href="./blog/lego-face-vae/index.html#model-applications">model applications</a>
+          section.
+        </p>
+  
+        <h3 id="visualizing-latent-space">Visualizing the latent space</h3>
+        <p>
+          Another way to build some understanding of a trained VAE model is to see where
+          in the latent space it thinks each of the images belongs. If we can
+          plot each image's location in the latent space, we can begin to
+          understand which images the model thinks are similar.
+        <p>
+          You can start by putting all the images into the VAE's encoder and getting
+          latent vectors out (which each represent an image's location in the latent space).
+          However, each of the latent vectors have 200 dimensions. It's
+          inadvisable to plot data in three dimensions, let alone 200.
+        </p>
+        <p>
+          Fortunately, there exist many methods for dimensionality reduction.
+          One such method is <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a>
+          (t-distributed stochastic neighbor embedding). I'm not going to get
+          into the details of how it works because that's well out of scope for
+          this post, but the upshot is this: you can use t-SNE to take
+          200-dimensional vectors and to turn them into 2-dimensional vectors
+          while minimizing the amount of information you lose.
+        </p>
+        <p>
+          I put all the images in the training set through the VAE encoder to
+          get their 200 dimension latent vectors. I then used t-SNE to turn
+          these 200 dimension vectors into 2-dimensional vectors. Finally, I
+          plotted the input images at these coordinates:
+        </p>
+        <a href="./blog/lego-face-vae/tsne-all-lg.jpg">
+          <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
+        </a>
+        <div style="margin-bottom: 1em; text-align: center;">
+          <em>click the image above to see a full-size version</em>
+        </div>
+        
+        <p>
+          The following are some crops from the full plot that demonstrate how
+          faces with similar features cluster together:
+        </p>
+        <div style="text-align: center;">
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
+        </div>
+        <p>
+          In the first image, you can see that faces with black hair and
+          mustaches are in a group. In the second image, four heads
+          with dark balaclavas and white headbands sit close to one another. In
+          the last image, heads with orange visors (and a jack-o-lantern?) are
+          clustered together. The
+          <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
+          has other little clusters like these.
+        </p>
+        <p>
+          A word of warning: it's important that you don't to assign too much
+          meaning to this visualization or really any made using t-SNE. Because the
+          latent vectors have been compressed so severely, you are unable to see
+          many of the distinctions that the model actually makes. Still, you can
+          begin to build some intuition about what the model understands about
+          faces. And I think it looks neat, too!
+        </p>
+
+        <h2 id="model-applications">Model applications</h2>
+        <p>
+          This section covers two of neat things that you can do with the trained
+          VAE: generating new images and morphing between existing images.
         </p>
   
         <h3 id="generating-new-images">Generating new images</h3>
@@ -277,7 +352,7 @@
           A VAE is called a generative model because you can use it to create new
           images it's never seen before. So let's make some! The mechanics are
           pretty simple. First, you choose a random vector from the latent space.
-          Then you pass this vector into the VAE's decoder and get a brand new 
+          You then pass this vector into the VAE's decoder and get a brand new 
           image out that most likely does not exist in the training set. The
           following image depicts this process:
         </p>
@@ -413,58 +488,6 @@
           shown above - I specifically chose these because they look good. Still, if you
           run through some combinations on your own, it's likely that you can find morphs
           that look even better than these.
-        </p>
-
-
-        <h3 id="visualizing-latent-space">Visualizing the latent space</h3>
-        <p>
-          It would be neat to see all the Lego faces' positions in the latent
-          space, but the latent space has 200 dimensions. It's
-          inadvisable to plot data in three dimensions, let alone 200.
-        </p>
-        <p>
-          Fortunately, there exist many methods for dimensionality reduction.
-          One such method is <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a>
-          (t-distributed stochastic neighbor embedding). I'm not going to get
-          into the details of how it works because that's well out of scope for
-          this post, but the upshot is this: you can use t-SNE to take
-          200-dimensional vectors and to turn them into 2-dimensional vectors
-          while minimizing the amount of information you lose.
-        </p>
-        <p>
-          I put all the images in the training set through the VAE encoder to
-          get their 200 dimension latent vectors. I then used t-SNE to turn
-          these 200 dimension vectors into 2-dimensional vectors. Finally, I
-          plotted the input images at these coordinates:
-        </p>
-        <a href="./blog/lego-face-vae/tsne-all-lg.jpg">
-          <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
-        </a>
-        <p>
-          The following are some crops from the full plot that demnstrate how
-          faces with similar features cluster together:
-        </p>
-        <div style="text-align: center;">
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="t-SNE plot"/>
-        </div>
-        <p>
-          In the first image, you can see that faces with black hair and
-          mustaches are in a group. In the second image, four heads
-          with dark balaclavas and white headbands sit close to one another. In
-          the last image, heads with orange visors (and a jack-o-lantern?) are
-          clustered together. The
-          <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
-          has other little clusters like these.
-        </p>
-        <p>
-          A word of warning: it's important that you don't to assign too much
-          meaning to this visualization or really any made using t-SNE. Because the
-          latent vectors have been compressed so severely, you are unable to see
-          many of the distinctions that the model actually makes. Still, you can
-          begin to build some intuition about what the model understands about
-          faces. And I think it looks neat, too!
         </p>
 
         <h2>Closing thoughts</h2>
