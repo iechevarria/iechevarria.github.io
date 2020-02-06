@@ -158,6 +158,12 @@ img {
   margin-bottom: 1em;
 }
 
+.blog-post .img-note {
+  margin-bottom: 1em;
+  text-align: center;
+  font-style: italic;
+}
+
 .blog-post .img-caption ul {
   margin-left: 0;
 }
