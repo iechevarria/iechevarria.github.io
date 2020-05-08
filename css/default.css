@@ -126,6 +126,7 @@ img {
 }
 
 .blog-post h4 {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -170,6 +171,11 @@ img {
 
 .blog-post .img-caption li {
   list-style-type: none;
+}
+
+.blog-post .quote {
+  padding: 0em 2em 0em 2em;
+  font-style: italic;
 }
 
 .blog-post .note {
