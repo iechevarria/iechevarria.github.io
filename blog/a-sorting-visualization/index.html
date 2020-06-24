@@ -19,12 +19,6 @@
 
       <div class="blog-post">
         <h1>A sorting visualization</h1>
-        <!-- <div style="width: 100%; height: 360px; overflow: hidden;">
-            <img 
-              src="./blog/a-sorting-visualization/quicksort_hoare.svg"
-              alt="Quicksort using the Hoare partition scheme"
-            />
-        </div> -->
         <p>
           I was recently re-reading <a href="https://bost.ocks.org/mike/">Mike Bostock</a>'s excellent 2014
           post <a href="https://bost.ocks.org/mike/algorithms/#sorting">Visualizing Algorithms</a>
@@ -36,7 +30,7 @@
           it, so I wrote a quick proof-of-concept. The following is some example
           output from my first attempt:
         </p>
-        <img src="./blog/a-sorting-visualization/proof_of_concept.svg" alt="sorting visualization proof-of-concept"/>
+        <img src="blog/a-sorting-visualization/proof_of_concept.svg" alt="sorting visualization proof-of-concept"/>
         <p>
           It's clear that this version doesn't look nearly as nice as Mike Bostock's.
           The main issue aside from color is that the swap paths in mine lack curvature on their
@@ -50,7 +44,7 @@
           circles. The following  is some output for validation from when I was writing code to make
           the swap paths:
         </p>  
-        <img src="./blog/a-sorting-visualization/tangent_test.svg" alt="Quicksort using the Hoare partition scheme"/>
+        <img src="blog/a-sorting-visualization/tangent_test.svg" alt="Quicksort using the Hoare partition scheme"/>
         <p>
           I spent some time tuning the curvature of the swap connections by fiddling with the
           radius of the circles used to define the arcs. I couldn't find a radius that looked
@@ -69,7 +63,7 @@
           The source (Python) is on <a href="https://github.com/iechevarria/sorting-visualizations">GitHub</a>.
           The code is not my best, but it works. Here's an example of visualization for quicksort:
         </p>
-        <img src="./blog/a-sorting-visualization/quicksort_hoare.svg" alt="Quicksort using the Hoare partition scheme"/>
+        <img src="blog/a-sorting-visualization/quicksort_hoare.svg" alt="Quicksort using the Hoare partition scheme"/>
         <p class="footer">Ivan Echevarria - December 16, 2019</p>
       </div>
 

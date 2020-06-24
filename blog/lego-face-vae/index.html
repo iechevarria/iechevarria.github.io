@@ -18,11 +18,11 @@
     <div class="content">
       <div class="blog-post">
         <h1>Variational autoencoder for Lego faces</h1>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-1.png" alt="Lego face morph visualization"/>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-2.png" alt="Lego face morph visualization"/>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
-        <img src="./blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-1.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-2.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
+        <img src="blog/lego-face-vae/face-morph-5.png" alt="Lego face morph visualization"/>
         <p>
           I spent some of my time off this winter reading 
           <a href="https://github.com/davidADSP">David Foster</a>'s excellent book
@@ -48,22 +48,22 @@
           This post will cover the following topics:
           <ul>
             <li>
-              <a href="./blog/lego-face-vae/index.html#vae-explained">Background information about VAEs</a>
+              <a href="blog/lego-face-vae/index.html#vae-explained">Background information about VAEs</a>
             </li>
             <li>
-              <a href="./blog/lego-face-vae/index.html#implementation">Implementation details</a>
-              (<a href="./blog/lego-face-vae/index.html#training-set">training set</a>,
-                <a href="./blog/lego-face-vae/index.html#model-details">model details</a>)
+              <a href="blog/lego-face-vae/index.html#implementation">Implementation details</a>
+              (<a href="blog/lego-face-vae/index.html#training-set">training set</a>,
+                <a href="blog/lego-face-vae/index.html#model-details">model details</a>)
             </li>
             <li>
-              <a href="./blog/lego-face-vae/index.html#model-evaluation">Model evaulation</a>
-              (<a href="./blog/lego-face-vae/index.html#image-reconstruction">image reconstruction</a>,
-                <a href="./blog/lego-face-vae/index.html#visualizing-latent-space">visualizing the latent space</a>)
+              <a href="blog/lego-face-vae/index.html#model-evaluation">Model evaulation</a>
+              (<a href="blog/lego-face-vae/index.html#image-reconstruction">image reconstruction</a>,
+                <a href="blog/lego-face-vae/index.html#visualizing-latent-space">visualizing the latent space</a>)
             </li>
             <li>
-              <b><a href="./blog/lego-face-vae/index.html#model-applications">The fun stuff</a></b>
-              (<a href="./blog/lego-face-vae/index.html#generating-new-images">generating new images</a>,
-                <a href="./blog/lego-face-vae/index.html#image-morphing">image morphing</a>)
+              <b><a href="blog/lego-face-vae/index.html#model-applications">The fun stuff</a></b>
+              (<a href="blog/lego-face-vae/index.html#generating-new-images">generating new images</a>,
+                <a href="blog/lego-face-vae/index.html#image-morphing">image morphing</a>)
             </li>
           </ul>
         </p>
@@ -90,7 +90,7 @@
           shows an example of how an AE's encoder might map images to a latent space:
         </p>
         <div style="text-align: center;">
-          <img style="width: 25em;" src="./blog/lego-face-vae/tsne-example.jpg" alt="t-SNE plot"/>
+          <img style="width: 25em;" src="blog/lego-face-vae/tsne-example.jpg" alt="t-SNE plot"/>
         </div>
         <div class="img-caption">
           <li>
@@ -111,7 +111,7 @@
           of an image being compressed into a latent vector by the encoder and
           then being reconstructed by the decoder:
         </p>
-        <img src="./blog/lego-face-vae/vae.svg" alt="Diagram of an autoencoder"/>
+        <img src="blog/lego-face-vae/vae.svg" alt="Diagram of an autoencoder"/>
         <p>
           A vanilla AE's encoder is connected directly and deterministically to
           the latent vector. Variational autencoders (VAEs) change things up by
@@ -237,7 +237,7 @@
           raw images with their reconstructed counterparts. The following shows
           images of Lego faces and their reconstructions:
         </p>
-        <img class="img-no-pad" src="./blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/reconstruction.png" alt="Lego face reconstructions"/>
         <div class="img-caption">
           <ul>
             <li>
@@ -277,7 +277,7 @@
           4 MB of images and store it in 10 MB of model and still end up with
           terrible reproductions" - you're right! Luckily, VAEs can do
           more than encode and decode single images, and I'll get to that in the
-          <a href="./blog/lego-face-vae/index.html#model-applications">model applications</a>
+          <a href="blog/lego-face-vae/index.html#model-applications">model applications</a>
           section.
         </p>
   
@@ -308,8 +308,8 @@
           these 200 dimension vectors into 2-dimensional vectors. Finally, I
           plotted the input images at these coordinates:
         </p>
-        <a href="./blog/lego-face-vae/tsne-all-lg.jpg">
-          <img class="img-really-no-pad" src="./blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
+        <a href="blog/lego-face-vae/tsne-all-lg.jpg">
+          <img class="img-really-no-pad" src="blog/lego-face-vae/tsne-all-sm.jpg" alt="t-SNE plot of all the images"/>
         </a>
         <div class="img-note">click the image above to see a full-size version</div>
         
@@ -318,9 +318,9 @@
           faces with similar features cluster together:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-1.jpg" alt="crop from t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-2.jpg" alt="crop from t-SNE plot"/>
-          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="./blog/lego-face-vae/tsne-crop-3.jpg" alt="crop from t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="blog/lego-face-vae/tsne-crop-1.jpg" alt="crop from t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="blog/lego-face-vae/tsne-crop-2.jpg" alt="crop from t-SNE plot"/>
+          <img class="img-horiz" style="width: 11em; border: 1px solid black;" src="blog/lego-face-vae/tsne-crop-3.jpg" alt="crop from t-SNE plot"/>
         </div>
         <p>
           In the first image, you can see that faces with black hair and
@@ -328,7 +328,7 @@
           with dark balaclavas and white headbands sit close to one another. In
           the last image, heads with orange visors (and a jack-o-lantern?) are
           clustered together. The
-          <a href="./blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
+          <a href="blog/lego-face-vae/tsne-all-lg.jpg">full-size image</a>
           has other little clusters like these.
         </p>
         <p>
@@ -356,8 +356,8 @@
           following image depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-1.jpg" alt="how new images are generated"/>
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/generative-example-2.jpg" alt="how new images are generated"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="blog/lego-face-vae/generative-example-1.jpg" alt="how new images are generated"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="blog/lego-face-vae/generative-example-2.jpg" alt="how new images are generated"/>
         </div>
         <div class="img-caption">
           <ul>
@@ -375,11 +375,11 @@
           nightmarish to somewhat convincing. The following are faces generated
           randomly by the process described above:
         </p>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-1.png" alt="Randomly generated Lego faces"/>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-3.png" alt="Randomly generated Lego faces"/>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-4.png" alt="Randomly generated Lego faces"/>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-5.png" alt="Randomly generated Lego faces"/>
-        <img class="img-really-no-pad" src="./blog/lego-face-vae/random-6.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="blog/lego-face-vae/random-1.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="blog/lego-face-vae/random-3.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="blog/lego-face-vae/random-4.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="blog/lego-face-vae/random-5.png" alt="Randomly generated Lego faces"/>
+        <img class="img-really-no-pad" src="blog/lego-face-vae/random-6.png" alt="Randomly generated Lego faces"/>
         <p>
           Nearly all the generated images have the standard features of a Lego
           face: eyes, eyebrows, and a mouth. They almost all get the shape of a
@@ -396,23 +396,23 @@
         </p>
         <div style="text-align: center;">
           <video width="120" height="120" autoplay loop muted playsinline>
-            <source src="./blog/lego-face-vae/face-morph-1.mp4" type="video/mp4">
+            <source src="blog/lego-face-vae/face-morph-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
           <video width="120" height="120" autoplay loop muted playsinline>
-            <source src="./blog/lego-face-vae/face-morph-2.mp4" type="video/mp4">
+            <source src="blog/lego-face-vae/face-morph-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
           <video width="120" height="120" autoplay loop muted playsinline>
-            <source src="./blog/lego-face-vae/face-morph-3.mp4" type="video/mp4">
+            <source src="blog/lego-face-vae/face-morph-3.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
           <video width="120" height="120" autoplay loop muted playsinline>
-            <source src="./blog/lego-face-vae/face-morph-4.mp4" type="video/mp4">
+            <source src="blog/lego-face-vae/face-morph-4.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
           <video width="120" height="120" autoplay loop muted playsinline>
-            <source src="./blog/lego-face-vae/face-morph-5.mp4" type="video/mp4">
+            <source src="blog/lego-face-vae/face-morph-5.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>  
         </div>
@@ -443,8 +443,8 @@
           The following image depicts this process:
         </p>
         <div style="text-align: center;">
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-1.jpg" alt="how a face morph works"/>
-          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="./blog/lego-face-vae/morph-example-2.jpg" alt="how a face morph works"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="blog/lego-face-vae/morph-example-1.jpg" alt="how a face morph works"/>
+          <img class="img-horiz img-really-no-pad" style="width: 18em;" src="blog/lego-face-vae/morph-example-2.jpg" alt="how a face morph works"/>
         </div>
         <div class="img-caption">
           <ul>
@@ -469,7 +469,7 @@
         <p>
           Let's take a closer look at two of these morphs:
         </p>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-3.png" alt="Lego face morph visualization"/>
         <p>
           Notice how every single intermediate face is completely plausible on
           its own. I don't think I'd be able to guess which of these is real
@@ -477,7 +477,7 @@
           to right, you can see the mouth naturally close and the eyebrows
           widen.
         </p>
-        <img class="img-no-pad" src="./blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
+        <img class="img-no-pad" src="blog/lego-face-vae/face-morph-4.png" alt="Lego face morph visualization"/>
         <p>
           I think this morph is particularly neat because you can see the first
           face's eyebrows move up and spread out to become hair. Additionally,
