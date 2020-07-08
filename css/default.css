@@ -59,7 +59,7 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 1.5em 1.5em 1.5em 1.5em;
+  padding: 1.5em 1.5em 4em 1.5em;
   margin: 0 auto;
 }
 
