@@ -137,6 +137,7 @@ img {
 
 .blog-post ul {
   margin-left: 1em;
+  margin-bottom: 1em;
 }
 
 .blog-post ol {
@@ -168,6 +169,7 @@ img {
 
 .blog-post .img-caption ul {
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .blog-post .img-caption li {
