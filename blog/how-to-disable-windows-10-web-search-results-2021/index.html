@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>How to disable web search results in Windows 10 (as of 2021) - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="code/index.html">projects</a>
+      <a href="blog/index.html">writing</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+      <div class="blog-post">
+        <h1>How to disable web search results in Windows 10 (as of 2021)</h1>
+        <p>Windows 10 includes web/Bing search results in its local search. Not great! There used to be a simple toggle to turn off web results. As of April 2021, that simple toggle is gone. Really not great!</p>
+        <p>This method from <a href="https://www.tenforums.com/tutorials/25016-turn-off-search-online-include-web-results-windows-10-a-10.html">a recent reply</a> to an old thread in a random Windows forum is the only way I was able to turn off web results.</p>
+        <h3>Steps to disable web results:</h3>
+        <ol>
+        <li>Open the Registry Editor (regedit)</li>
+        <li>Navigate to "Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search"</li>
+        <li>Create a new "DWORD (32-bit) Value" and name it "BingSearchEnabled" by either right-clicking in the Registry Editor window or by clicking "Edit &gt; New &gt; ..."</li>
+        </ol>
+        <p><img alt="Creating a new DWORD" src="blog/how-to-disable-windows-10-web-search-results-2021/create-new-dword.png" /></p>
+        <ol start="4">
+            <li>Make sure the value data for "BingSearchEnabled" is set to 0</li>
+            <li>Either (1) restart the File Explorer process or (2) restart your computer</li>
+            <li>Your Windows search bar should now be free of web/Bing search results</li>
+        </ol>
+
+        <p><img alt="No web results in the search bar now" src="blog/how-to-disable-windows-10-web-search-results-2021/no-web-results.png" /></p>
+        <p class="footer">Ivan Echevarria - April 25, 2021</p>
+      </div>
+    </div>
+  </div>
+  <script data-goatcounter="https://ivan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
