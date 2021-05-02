@@ -53,6 +53,10 @@ img {
   max-width: 100%;
 }
 
+.bandcamp-player {
+  margin-bottom: 1em;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
