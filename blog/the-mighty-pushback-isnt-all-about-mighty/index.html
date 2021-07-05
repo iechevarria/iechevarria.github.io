@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Mighty pushback isn't all about Mighty - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="code/index.html">projects</a>
+      <a href="blog/index.html">writing</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+      <div class="blog-post">
+        <h1>The Mighty pushback isn't all about Mighty</h1>
+        <p>Two months ago, <a href="https://www.mightyapp.com/">Mighty</a> launched with its <a href="https://blog.mightyapp.com/mightys-secret-plan-to-invent-the-future-of-computing/">plan to “reignite the future of desktop computing”</a>. This vision of the future got a lot of pushback.</p>
+        <p><a href="https://twitter.com/cmuratori/status/1387126330961981441">
+            <img
+                src="blog/the-mighty-pushback-isnt-all-about-mighty/cmuratori_tweet.png"
+                alt="@cmuratori: Running a browser to connect to the cloud to run a browser to connect to the cloud to retrieve the contents of a single 2D page to recompress and send back to the original browser is now &quotthe future of computing&quot."
+            />
+        </a></p>
+        <p>There are many, many other critical tweets and comments, but I think this one is fairly representative.</p>
+        <p>Venture capitalist and Mighty backer <a href="http://paulgraham.com/index.html">Paul Graham</a> wrote an thinly-veiled response, <a href="http://paulgraham.com/newideas.html">Crazy New Ideas</a>, in which he argues that Mighty’s critics are stuck in a conventional way of thinking. This is true for some of Mighty’s critics, but there are others who are instead raging against the status quo of bad web performance. For them, this fight isn't really about Mighty.</p>
+        <p>There’s a faction of developers – many of whom make games – who love to talk about how bad modern web performance is. (For what it’s worth, I largely agree with this crowd even though I work on web stuff.) When you look at what they do, it’s easy to see why. Game developers push hardware to its limits: they’re rendering high resolution frames with hundreds of thousands to millions of triangles, with enormous textures, with complex lighting, with all sorts of post-processing – and they’re often doing this for 60+ frames every second.</p>
+        <p><img class="img-really-no-pad" src="blog/the-mighty-pushback-isnt-all-about-mighty/screenshot.jpg" alt="screenshot of the witness"/></p>
+        <div class="img-note" style="margin-top: 0.5em;">
+            screenshot of <a href="http://the-witness.net/">The Witness</a>
+        </div>
+
+        <p>To hit these targets, game developers need to have a strong understanding of computer architecture, and they need to have access to their hardware at a low level. They optimize data layout on disk to make reads faster, and they pack data in memory as densely as possible to minimize cache misses.</p>
+        <p>When someone works with these standards, and they see a website that’s just text and images but takes a full second to render, they’re understandably incredulous. 1000 ms to do a 2D page layout? What kind of idiot needs 1000 ms to render a 2D image? <a href="https://twitter.com/Jonathan_Blow/status/1387520980029829120">How many web developers understand that a low-end integrated GPU on a laptop can draw full 4k screens of pixels at 3000 frames per second?</a></p>
+        <p>So with all this in mind, let’s take a look at what <a href="https://twitter.com/Jonathan_Blow">Jonathan Blow</a>, creator of <a href="http://braid-game.com/">Braid</a> and <a href="http://the-witness.net/">The Witness</a>, has to say about Mighty:</p>
+        <p><a href="https://twitter.com/Jonathan_Blow/status/1387094702139142145">
+            <img
+                src="blog/the-mighty-pushback-isnt-all-about-mighty/jonathan_blow_tweet.png"
+                alt="@Jonathan_Blow: Very hard to describe how embarrassing this is for everyone involved in the Web and, sort of, software more generally."
+            />
+        </a></p>
+        <p>Okay, so in context, this is a clear indictment of web stuff and low software quality in general more than it is condemnation of Mighty. “Look at how terrible the web is,” the games crowd says. “Their ecosystem is so bad that they need to stream 2D pages on powerful computers to make them usable.”</p>
+        <p>And I’m far from the only one who saw this! Web developers understood that they were the target. Here’s <a href="https://macwright.com">Tom MacWright</a> addressing the games crowd the day Mighty discourse hit its peak:</p>
+        <p><a href="https://twitter.com/tmcw/status/1387105535376314373">
+            <img
+                src="blog/the-mighty-pushback-isnt-all-about-mighty/tmcw_tweet.png"
+                alt="@tmcw: game developers dunking on web performance is, ahem, not great. 1. if everyone browsed the web on PS5 hardware, it'd be pretty good. game consoles are powerful and fairly homogenous! 2. the web solves for instant distribution + security for untrusted code. no other platform does"
+            />
+        </a></p>
+        <p>Tom is half right here – the web makes distribution easy. But PC is not a homogenous target. It might be more homogenous than the sum of all web targets, but it can’t be called homogenous in any absolute way – PC game developers work hard to target a huge range of hardware. I played Jonathan Blow’s The Witness on a laptop-grade machine and found that it ran at 60 frames per second (though at low resolution).</p>
+        <p>This cuts to the heart of the issue: it <em>is</em> possible to make software that runs well on heterogenous hardware. Mighty's existence, on the other hand, shows that web software is slow. In the eyes of the games crowd, so accustomed to stringent performance targets, this amounts to total failure.</p>
+        <p><br></p>
+        <p><em>In the future, I'm going to write about the pushback against Mighty that really is about Mighty as a product and about why Mighty could really work.</em></p>
+        <p class="footer">Ivan Echevarria - July 5, 2021</p>
+      </div>
+    </div>
+  </div>
+  <script data-goatcounter="https://ivan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
