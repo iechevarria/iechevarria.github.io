@@ -95,16 +95,39 @@ img {
   padding-top: 3em;
 }
 
-.post-info {
+.post-list {
   display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 0.5em;
   grid-template-columns: 1fr max-content;
-  padding-bottom: 0.5em;
 }
 
-.post-info .link {
+.book-list {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 0.75fr min-content 70px;
+}
+
+.book-list .link,
+.book-list .author,
+.post-list .link {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.post-list .date,
+.book-list .date {
+  padding-right: 0.25em;
+  font-variant-numeric: tabular-nums;
+}
+
+.star {
+  width: 13px;
+  height: 12px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYuMzA5IDkuMjJMMi40MDkgMTJsMS40NC00LjU2N0wwIDQuNTgzbDQuNzg4LS4wNDJMNi4zMDggMCA3LjgzIDQuNTRsNC43ODkuMDQ0LTMuODUgMi44NDlMMTAuMjA5IDEyeiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
 }
 
 .blog-post img {
