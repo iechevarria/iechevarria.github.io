@@ -95,6 +95,10 @@ img {
   padding-top: 3em;
 }
 
+.notes-link {
+  padding-bottom: 2em;
+}
+
 .post-list {
   display: grid;
   grid-column-gap: 5px;
