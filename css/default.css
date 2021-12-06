@@ -92,41 +92,32 @@ img {
 
 .content {
   flex: 1;
+  padding-top: 2em;
   padding-bottom: 6em;
 }
 
-.notes-link {
-  padding-bottom: 2em;
-}
-
-.post-list, 
+.post-list,
 .book-list {
+  line-height: 150%;
   display: grid;
+  grid-template-columns: 1fr;
   grid-column-gap: 5px;
-  grid-row-gap: 0.5em;
-  grid-template-columns: 1fr max-content;
-}
-
-.post-list {
-  grid-template-columns: 1fr max-content;
-}
-
-.book-list {
-  grid-template-columns: 1fr 0.75fr min-content 70px;
+  grid-row-gap: 0em;
 }
 
 .book-list .link,
 .book-list .author,
 .post-list .link {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .post-list .date,
-.book-list .date {
-  padding-right: 0.25em;
-  font-variant-numeric: tabular-nums;
+.book-list .rating {
+  margin-bottom: 0.75em;
+}
+
+.notes-link {
+  padding-bottom: 2em;
 }
 
 .star {
@@ -356,5 +347,37 @@ td {
   .content {
     padding-top: 5em;
     padding-left: 1em;
+  }
+
+  .post-list, 
+  .book-list {
+    grid-row-gap: 0.1em;
+  }
+
+  .post-list {
+    grid-template-columns: 1fr max-content;
+  }
+
+  .book-list {
+    grid-template-columns: 1fr 0.75fr max-content 70px;
+  }
+
+  .book-list .link,
+  .book-list .author,
+  .post-list .link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .post-list .date,
+  .book-list .date {
+    padding-right: 0.25em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .post-list .date,
+  .book-list .rating {
+    margin-bottom: 0em;
   }
 }
