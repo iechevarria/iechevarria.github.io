@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>An interesting way to pack bytes into a MIDI SYSEX message - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="blog/index.html">writing</a>
+      <a href="reading/index.html">reading</a>
+      <a href="code/index.html">projects</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+      <div class="blog-post">
+        <h1>An interesting way to pack bytes into a MIDI SYSEX message</h1>
+        <p>Here’s a little thought experiment: how would you transmit 8-bit bytes via messages that let you encode only 7 bits at a time?</p>
+        <p>The engineers at <a href="https://www.digitech.com/">DigiTech</a> handled this exact problem on their DHP-55 effects unit in the 1990s. They needed to transmit 8-bit bytes to the unit via a MIDI SYSEX message. Every byte in a SYSEX message must have its most significant bit set to 0, so there are only 7 bits available per byte for sending data.</p>
+        <p>This is how they describe their approach in the DHP-55 manual:</p>
+        <p><img alt="todo2" src="blog/midi-sysex/scan1.png" /></p>
+        <p>(For clarity, I'm going to call the 8-bit bytes we want to transmit the "real" bytes and the bytes with 7 bits available that we have to use the "send" bytes.)</p>
+        <p>The engineers chose to do the following: pack 7 "real" bytes into 8 "send" bytes at a time. Take the most significant bit of each of the "real" bytes and put them into the first "send" byte. Then take the remaining 7 bits of each of the "real" bytes and put them in each of the remaining "send" bytes.</p>
+        <p>I've illustrated an example of this packing below:</p>
+        <p><img alt="todo" src="blog/midi-sysex/midi-bits.svg" /></p>
+        <div class="img-caption">
+          <li>
+            <b>Left</b>: The 7 (8-bit) "real" bytes we want to transmit
+          </li>
+          <li>
+            <b>Right</b>: The 8 "send" bytes. The first byte contains 0 and the most significant bit of each of the 7 "real" bytes. The following 7 "send" bytes contain 0 and the 7 remaining bits of each of the 7 "real" bytes.
+          </li>
+        </div>
+
+        <p>I find this a pretty interesting solution to the problem. It's not my first instinct – I would have just mashed the bytes together instead of sending the most significant bits separately.</p>
+        <p>So why the engineers at DigiTech separate the most significant bits? One reason might be that it makes hex dumps a lot easier to read.</p>
+        <p>If you take a look at the manual, you can see that much of the data that's being transmitted is small integers (less than 128) where the most significant bit is already 0. This means that many of the "send" bytes will have identical values to those in the "real" bytes.</p>
+        <p>Bank number, preset number, number of effects, effect number, number of parameters, effect version – all of these will likely be less than 128.</p>
+        <p><img alt="todo3" src="blog/midi-sysex/scan2.png" /></p>
+        <p>If the DigiTech engineers had gone with my approach, "send" bytes would not resemble "real" bytes, and they wouldn't be able to use hex dumps for spot checks.</p>
+        <p><em>If you know another reason, please reach out!</em></p>
+        <p class="footer"><a href="https://twitter.com/ivn_echvrria">@ivn_echvrria</a> - December 21, 2021</p>
+      </div>
+    </div>
+  </div>
+  <script data-goatcounter="https://ivan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
