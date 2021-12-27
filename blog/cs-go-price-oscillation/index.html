@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Consistent daily price oscillations on the Steam Community Market - echevarria.io</title>
+  <base href="../../"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="blog/index.html">writing</a>
+      <a href="reading/index.html">reading</a>
+      <a href="code/index.html">projects</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+      <div class="blog-post">
+        <h1>Consistent daily price oscillations on the Steam Community Market</h1>
+        <p><a href="blog/cs-go-price-oscillation/steam.png">
+          <img class="img-really-no-pad" src="blog/cs-go-price-oscillation/steam.png" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market"/>
+        </a></p>
+        <div class="img-note">click the image above to see a full-size version</div>
+
+        <p>This is a chart of median sale prices of the most-sold item on the <a href="https://steamcommunity.com/market/">Steam Community Market</a>, an <a href="https://steamcommunity.com/market/listings/730/Operation%20Riptide%20Case">Operation Riptide Case</a> for Counter-Strike: Global Offensive (CS:GO).</p>
+        <p>The extremely regular oscillations in price jumped out to me immediately. You don't typically see this in other markets because it's a sign that money is being left on the table.</p>
+        <p>My first instinct was that this pattern was somehow related to CS:GO player count, so I pulled historical price and volume data from Steam and historical player counts from <a href="https://steamcharts.com/">steamcharts.com</a> to made this chart:</p>
+        <p><a href="blog/cs-go-price-oscillation/chart.svg">
+          <img class="img-really-no-pad" src="blog/cs-go-price-oscillation/chart.svg" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market, player count, and transaction count"/>
+        </a></p>
+        <div class="img-note">click the image above to see a full-size version</div>
+        <div class="img-caption">
+          <li>
+            <b>Top</b>: median sale price in dollars
+          </li>
+          <li>
+            <b>Middle</b>: CS:GO player count
+          </li>
+          <li>
+            <b>Bottom</b>: count of Operation Riptide Cases sold
+          </li>
+        </div>
+
+        <p>It does look like it has something to do with player count. So what's happening? These cases are randomly given to players when they play the game, and some players immediately sell their cases for cash at market price. (If sellers cared about making a few extra cents, they could submit offers to sell above the current market price instead of selling at market price when prices are low.)</p>
+        <p>I suspect the oscillations are caused by different regions buying/selling/keeping cases at different rates. To illustrate, it might be the case that players in Europe sell more cases and buy fewer cases than players in the Americas, so the market price for cases is lower during European hours than American hours.</p>
+        <p>I don't see the same pattern in other CS:GO items. Only the Operation Riptide Case exhibits it, and that makes sense because it's the only item that is currently being distributed to players for simply playing the game.</p>
+        <p>But why aren't there other market participants who flatten these oscillations out? Someone could buy cases cheap during European hours and sell for a profit during American hours.</p>
+        <p>The culprit here is fees on Steam Community Market transactions. CS:GO items on the Community Market are subject to a 15% fee on every transaction: 5% for Steam plus 10% for CS:GO specifically. This means that you can only make money on price swings greater than 15%.</p>
+        <p>If you look at the actual price daily swings, they're typically smaller than 15%.</p>
+        <p><img class="img-really-no-pad" src="blog/cs-go-price-oscillation/percents.svg" alt="Percentage difference between minimum hourly median and maximum hourly median sale price by day"/></p>
+        <div class="img-note">
+            Percentage difference between minimum hourly median and maximum hourly median sale price by day
+        </div>
+
+        <p>On some days, the percentage approaches 15%. I suspect that on these days, there <em>are</em> some market participants buying cheap, holding for a few hours, selling high, and making a cent or two per case after fees.</p>
+        <p>Note that the min and max values used in the chart are median hourly sale price, so some transactions happened at higher/lower values. Therefore individual cases may have been bought and then sold profitably after fees.</p>
+        <p class="footer"><a href="https://twitter.com/ivn_echvrria">@ivn_echvrria</a> - December 26, 2021</p>
+      </div>
+    </div>
+  </div>
+  <script data-goatcounter="https://ivan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>An interesting way to pack bytes into a MIDI SYSEX message - echevarria.io</title>
+  <title>An interesting way to pack bytes into a MIDI SysEx message - echevarria.io</title>
   <base href="../../"/>
   <link rel="stylesheet" type="text/css" href="css/default.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@
     </div>
     <div class="content">
       <div class="blog-post">
-        <h1>An interesting way to pack bytes into a MIDI SYSEX message</h1>
+        <h1>An interesting way to pack bytes into a MIDI SysEx message</h1>
         <p>Here’s a little thought experiment: how would you transmit 8-bit bytes via messages that let you encode only 7 bits at a time?</p>
-        <p>The engineers at <a href="https://www.digitech.com/">DigiTech</a> handled this exact problem on their DHP-55 effects unit in the 1990s. They needed to transmit 8-bit bytes to the unit via a MIDI SYSEX message. Every byte in a SYSEX message must have its most significant bit set to 0, so there are only 7 bits available per byte for sending data.</p>
+        <p>The engineers at <a href="https://www.digitech.com/">DigiTech</a> handled this exact problem on their DHP-55 effects unit in the 1990s. They needed to transmit 8-bit bytes to the unit via a MIDI SysEx message. Every byte in a SysEx message must have its most significant bit set to 0, so there are only 7 bits available per byte for sending data.</p>
         <p>This is how they describe their approach in the DHP-55 manual:</p>
         <p><img alt="todo2" src="blog/midi-sysex/scan1.png" /></p>
         <p>(For clarity, I'm going to call the 8-bit bytes we want to transmit the "real" bytes and the bytes with 7 bits available that we have to use the "send" bytes.)</p>
