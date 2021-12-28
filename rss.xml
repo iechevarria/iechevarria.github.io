@@ -5,16 +5,16 @@
   <link>https://www.echevarria.io</link>
   <item>
     <title>Consistent daily price oscillations on the Steam Community Market</title>
-    <description>&lt;p&gt;&lt;a href="blog/cs-go-price-oscillation/steam.png"&gt;
-  &lt;img class="img-really-no-pad" src="blog/cs-go-price-oscillation/steam.png" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market"/&gt;
+    <description>&lt;p&gt;&lt;a href="https://www.echevarria.io/blog/cs-go-price-oscillation/steam.png"&gt;
+  &lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/steam.png" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;div class="img-note"&gt;click the image above to see a full-size version&lt;/div&gt;
 
 &lt;p&gt;This is a chart of median sale prices of the most-sold item on the &lt;a href="https://steamcommunity.com/market/"&gt;Steam Community Market&lt;/a&gt;, an &lt;a href="https://steamcommunity.com/market/listings/730/Operation%20Riptide%20Case"&gt;Operation Riptide Case&lt;/a&gt; for Counter-Strike: Global Offensive (CS:GO).&lt;/p&gt;
 &lt;p&gt;The extremely regular oscillations in price jumped out to me immediately. You don't typically see this in other markets because it's a sign that money is being left on the table.&lt;/p&gt;
 &lt;p&gt;My first instinct was that this pattern was somehow related to CS:GO player count, so I pulled historical price and volume data from Steam and historical player counts from &lt;a href="https://steamcharts.com/"&gt;steamcharts.com&lt;/a&gt; to made this chart:&lt;/p&gt;
-&lt;p&gt;&lt;a href="blog/cs-go-price-oscillation/chart.svg"&gt;
-  &lt;img class="img-really-no-pad" src="blog/cs-go-price-oscillation/chart.svg" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market, player count, and transaction count"/&gt;
+&lt;p&gt;&lt;a href="https://www.echevarria.io/blog/cs-go-price-oscillation/chart.svg"&gt;
+  &lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/chart.svg" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market, player count, and transaction count"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;div class="img-note"&gt;click the image above to see a full-size version&lt;/div&gt;
 &lt;div class="img-caption"&gt;
@@ -35,7 +35,7 @@
 &lt;p&gt;But why aren't there other market participants who flatten these oscillations out? Someone could buy cases cheap during European hours and sell for a profit during American hours.&lt;/p&gt;
 &lt;p&gt;The culprit here is fees on Steam Community Market transactions. CS:GO items on the Community Market are subject to a 15% fee on every transaction: 5% for Steam plus 10% for CS:GO specifically. This means that you can only make money on price swings greater than 15%.&lt;/p&gt;
 &lt;p&gt;If you look at the actual price daily swings, they're typically smaller than 15%.&lt;/p&gt;
-&lt;p&gt;&lt;img class="img-really-no-pad" src="blog/cs-go-price-oscillation/percents.svg" alt="Percentage difference between minimum hourly median and maximum hourly median sale price by day"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/percents.svg" alt="Percentage difference between minimum hourly median and maximum hourly median sale price by day"/&gt;&lt;/p&gt;
 &lt;div class="img-note"&gt;
     Percentage difference between minimum hourly median and maximum hourly median sale price by day
 &lt;/div&gt;
@@ -51,11 +51,11 @@
     <description>&lt;p&gt;Here’s a little thought experiment: how would you transmit 8-bit bytes via messages that let you encode only 7 bits at a time?&lt;/p&gt;
 &lt;p&gt;The engineers at &lt;a href="https://www.digitech.com/"&gt;DigiTech&lt;/a&gt; handled this exact problem on their DHP-55 effects unit in the 1990s. They needed to transmit 8-bit bytes to the unit via a MIDI SysEx message. Every byte in a SysEx message must have its most significant bit set to 0, so there are only 7 bits available per byte for sending data.&lt;/p&gt;
 &lt;p&gt;This is how they describe their approach in the DHP-55 manual:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="todo2" src="blog/midi-sysex/scan1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="todo2" src="https://www.echevarria.io/blog/midi-sysex/scan1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(For clarity, I'm going to call the 8-bit bytes we want to transmit the "real" bytes and the bytes with 7 bits available that we have to use the "send" bytes.)&lt;/p&gt;
 &lt;p&gt;The engineers chose to do the following: pack 7 "real" bytes into 8 "send" bytes at a time. Take the most significant bit of each of the "real" bytes and put them into the first "send" byte. Then take the remaining 7 bits of each of the "real" bytes and put them in each of the remaining "send" bytes.&lt;/p&gt;
 &lt;p&gt;I've illustrated an example of this packing below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="todo" src="blog/midi-sysex/midi-bits.svg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="todo" src="https://www.echevarria.io/blog/midi-sysex/midi-bits.svg" /&gt;&lt;/p&gt;
 &lt;div class="img-caption"&gt;
   &lt;li&gt;
     &lt;b&gt;Left&lt;/b&gt;: The 7 (8-bit) "real" bytes we want to transmit
@@ -69,7 +69,7 @@
 &lt;p&gt;So why the engineers at DigiTech separate the most significant bits? One reason might be that it makes hex dumps a lot easier to read.&lt;/p&gt;
 &lt;p&gt;If you take a look at the manual, you can see that much of the data that's being transmitted is small integers (less than 128) where the most significant bit is already 0. This means that many of the "send" bytes will have identical values to those in the "real" bytes.&lt;/p&gt;
 &lt;p&gt;Bank number, preset number, number of effects, effect number, number of parameters, effect version – all of these will likely be less than 128.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="todo3" src="blog/midi-sysex/scan2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="todo3" src="https://www.echevarria.io/blog/midi-sysex/scan2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;If the DigiTech engineers had gone with my approach, "send" bytes would not resemble "real" bytes, and they wouldn't be able to use hex dumps for spot checks.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;If you know another reason, please reach out!&lt;/em&gt;&lt;/p&gt;</description>
     <pubDate>Tue, 21 Dec 2021 00:00:00 -0000</pubDate>
@@ -78,7 +78,7 @@
   </item>
   <item>
     <title>Casting pig iron at the Iroquois smelter</title>
-    <description>&lt;p&gt;&lt;img alt="Pig iron smelter" src="blog/casting-pig-iron-at-the-iroquois-smelter/pig-iron.jpg" /&gt;&lt;/p&gt;
+    <description>&lt;p&gt;&lt;img alt="Pig iron smelter" src="https://www.echevarria.io/blog/casting-pig-iron-at-the-iroquois-smelter/pig-iron.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;High-resolution scans of this image are available at the &lt;a href="https://www.loc.gov/resource/det.4a08071/"&gt;Library of Congress website&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This photograph shows men making pig iron at a place called the Iroquois smelter in Chicago sometime between 1890 and 1901. Molten iron was poured via a central channel to fill the small, regular trenches on the ground to form ingots. Once cooled, the ingots were broken apart from one another and readied for transport or storage.&lt;/p&gt;
 &lt;p&gt;The smelter's brick structure has church-like arches, and the beams of light flowing through smoke suggest burning incense. The beauty is undeniable.&lt;/p&gt;
@@ -148,7 +148,7 @@
 &lt;p&gt;This is why speed matters so much in HFT: if you’re a market maker and you don’t cancel your stale quotes fast enough, a liquidity taker will execute on them and eat your lunch.&lt;/p&gt;
 &lt;h4&gt;Building the adversary in-house&lt;/h4&gt;
 &lt;p&gt;Other than raw speed, how else can makers avoid getting picked off by takers? One interesting answer is that HFT firms doing market making should also have an in-house team running a taking strategy.&lt;/p&gt;
-&lt;p&gt;The taking team hunts for stale quotes from any market participant. When they find a quote they can pick off for a profit, and it comes from outside the firm, they execute against the order and make some money. If the quote comes from inside the firm, they tell the market making team to cancel it so it won’t be picked off by a competitor &lt;a href="blog/value-of-in-house-adversary/index.html#note"&gt;[1]&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The taking team hunts for stale quotes from any market participant. When they find a quote they can pick off for a profit, and it comes from outside the firm, they execute against the order and make some money. If the quote comes from inside the firm, they tell the market making team to cancel it so it won’t be picked off by a competitor &lt;a href="https://www.echevarria.io/blog/value-of-in-house-adversary/index.html#note"&gt;[1]&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.sps.ed.ac.uk/staff/donald-mackenzie"&gt;Donald MacKenzie&lt;/a&gt; describes the (unintended) results of such an approach in his book &lt;a href="https://press.princeton.edu/books/hardcover/9780691211381/trading-at-the-speed-of-light"&gt;Trading at the Speed of Light&lt;/a&gt; (p 195):&lt;/p&gt;
 &lt;p class="quote"&gt;
 “Attempts to take ... had the unintended, emergent consequence of increasing the profitability of the firm's market making algorithms. The latter would be to a degree protected from taking algorithms in the wider market by the fact that one of the firm's own taking algorithms might well cause the cancellation of a making order before it could be picked off"
@@ -242,7 +242,7 @@ This is a slightly inaccurate simplification – I didn’t want to muddy the ex
   </item>
   <item>
     <title>Flowers make a nice gift</title>
-    <description>&lt;p&gt;&lt;img alt="photograph of sunflowers" src="blog/flowers-make-a-nice-gift/sunflowers.jpg" /&gt;&lt;/p&gt;
+    <description>&lt;p&gt;&lt;img alt="photograph of sunflowers" src="https://www.echevarria.io/blog/flowers-make-a-nice-gift/sunflowers.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;When I was younger, I didn’t understand giving flowers as a gift. Flowers don’t last very long – wouldn’t it be better to get a gift that lasts a lifetime? It seemed wasteful to me.&lt;/p&gt;
 &lt;p&gt;But now I appreciate flowers. Flowers don’t take any effort on your part to be enjoyed. You don’t have to use them, or read them, or find a permanent place on a shelf or in a drawer for them. Flowers never sit unused in a cardboard box that you packed two moves ago. And when you open that box by chance, you don't need to make any fraught decisions about whether or not to keep them.&lt;/p&gt;
 &lt;p&gt;Flowers come without any obligations. They come into your home, and they bring beauty for a time, and then they’re gone. And that’s nice.&lt;/p&gt;</description>
