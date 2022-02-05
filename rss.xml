@@ -4,6 +4,26 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>January 2022</title>
+    <description>&lt;p&gt;January was fun. I published a &lt;a href="https://www.echevarria.io/blog/the-matrix-looks-different-hulu-hbo-max/index.html"&gt;blog post about streaming versions of the Matrix&lt;/a&gt;, and it unexpectedly blew up. I got a ton of traffic from Google – I'm still not quite sure what people were searching for that brought them to my site. A Japanese website published &lt;a href="https://gigazine.net/news/20220108-matrix-hulu-hbo-max-color/"&gt;a translation&lt;/a&gt; and called me a computer scientist. Delightful.&lt;/p&gt;
+&lt;p&gt;I also continued the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;. January covered computer networking, and it was, as Bradfield always is, excellent. I'm very eagerly looking forward to February's module: distributed systems.&lt;/p&gt;
+&lt;h2&gt;Reading&lt;/h2&gt;
+&lt;p&gt;The &lt;a href="https://leadelimination.org/"&gt;Lead Exposure Elimination Project&lt;/a&gt; published &lt;a href="https://leadelimination.org/annual-review-2020-21/"&gt;a review of their first year&lt;/a&gt;. Such incredible progress! I encourage you to &lt;a href="https://leadelimination.org/donate/"&gt;donate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.noemamag.com/chinas-inclusive-authoritarianism/"&gt;China's Inclusive Authoritarianism&lt;/a&gt; was a super interesting article about the way China's authoritarian surveillance state actually makes it more democratically responsive to its citizens. I think it's bad to be an authoritarian surveillance state (hot take, I know), but it's plausible citizens could become attached because of the real utility they get from it. In the past year, I've become interested in understanding how systems that harm people still have appeal and utility. I've mostly focused on neoliberal capitalism from the 1970s until COVID, but this lens is fruitful when looking at present-day China too.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://moxie.org/stories/money-machine/"&gt;The Money Machine&lt;/a&gt; is a short anecdote about when the winning move is not to play. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://palladiummag.com/2022/01/06/quit-your-job/"&gt;Quit Your Job&lt;/a&gt; makes me want to quit my job. Not soon, but someday.&lt;/p&gt;
+&lt;h2&gt;Watching&lt;/h2&gt;
+&lt;p&gt;I did my annual get-HBO-for-a-month-and-then-cancel in mid-December, so I watched some HBO shows.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;How To with John Wilson&lt;/em&gt; season 2 was more &lt;em&gt;How To with John Wilson&lt;/em&gt;, so it was great. The episode about Bang Energy drink was the highlight of the season for me.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Succession&lt;/em&gt; was okay. Maybe just stick to season 1? After finishing season 3, I was hit with an inescapable feeling that I had wasted a lot of time. The &lt;a href="https://www.newyorker.com/magazine/2021/12/13/on-succession-jeremy-strong-doesnt-get-the-joke"&gt;New Yorker article about how weird actor Jeremy Strong is&lt;/a&gt; is a lot more compelling than the show itself.&lt;/p&gt;
+&lt;h2&gt;Listening&lt;/h2&gt;
+&lt;p&gt;Vegyn released  &lt;a href="https://vegyn.bandcamp.com/album/dont-follow-me-because-im-lost-too"&gt;Don't Follow Me Because I'm Lost Too!!&lt;/a&gt;, and I listened to it all the way through as soon as it came out. It made my day. Here's one of the many tracks I liked:&lt;/p&gt;
+&lt;iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3767420141/size=small/bgcol=ffffff/linkcol=0687f5/track=3027248650/transparent=true/" seamless&gt;&lt;a href="https://vegyn.bandcamp.com/album/dont-follow-me-because-im-lost-too"&gt;Don&amp;#39;t Follow Me Because I&amp;#39;m Lost Too!! by Vegyn&lt;/a&gt;&lt;/iframe&gt;</description>
+    <pubDate>Sat, 05 Feb 2022 00:00:00 -0000</pubDate>
+    <link>blog/january-2022/index.html</link>
+  <guid isPermaLink="true">blog/january-2022/index.html</guid>
+  </item>
+  <item>
     <title>The Matrix looks dramatically different on Hulu versus on HBO Max</title>
     <description>&lt;p&gt;&lt;img alt="Comparison of HBO Max and Hulu " src="https://www.echevarria.io/blog/the-matrix-looks-different-hulu-hbo-max/split.jpg" /&gt;&lt;/p&gt;
 &lt;div class="img-note"&gt;Hulu on the left, HBO Max on the right&lt;/div&gt;
@@ -257,23 +277,6 @@ This is a slightly inaccurate simplification – I didn’t want to muddy the ex
     <pubDate>Fri, 08 Oct 2021 00:00:00 -0000</pubDate>
     <link>blog/september-2021/index.html</link>
   <guid isPermaLink="true">blog/september-2021/index.html</guid>
-  </item>
-  <item>
-    <title>Give now, not later</title>
-    <description>&lt;p&gt;If you’re interested in giving to charity, you should give now instead of later.&lt;/p&gt;
-&lt;p&gt;I give at least 10% of my income to charity each month. When a friend found out that I do this, he said that a better approach would be to save and invest that money, and then bequeath the compounded sum to charity after death. I disagree – giving now instead of giving later is better for a few reasons.&lt;/p&gt;
-&lt;h4&gt;Prevention instead of mitigation&lt;/h4&gt;
-&lt;p&gt;First, many charitable organizations focus on preventing harm instead of mitigating it. This matters because many harms compound faster than money does in an investment account. For example, the &lt;a href="https://leadelimination.org/"&gt;Lead Exposure Elimination Project&lt;/a&gt; (LEEP) works to prevent lead exposure, which is known to cause an array of harms. Because LEEP focuses on prevention instead of mitigation, they’re able to be orders of magnitude more cost-effective than the alternative. You’re a lot better off just keeping lead out of kids’ blood than you are trying to fix the problems some decades down the line.&lt;/p&gt;
-&lt;p&gt;When I think about giving, I think about giant sequoia stumps. In the 1800s, people cut down giant sequoias that had grown for thousands of years. Once they were cut, there was no going back – no amount of prioritization or mitigation brings those ancient trees back to life. Many things work the same way, where harm is easy to cause (and prevent) but difficult or impossible to reverse.&lt;/p&gt;
-&lt;h4&gt;Are you sure you’ll give in the future?&lt;/h4&gt;
-&lt;p&gt;Another reason to give now is just to have certainty that you actually will give. Are you &lt;em&gt;sure&lt;/em&gt; you’ll give in the future? You don’t know how you’ll change. If you care about giving now, it’s smart to hedge against the possibility of a less enthusiastic future self, or worse, the possibility that you’ll turn into a bona fide asshole. It happens to a lot of people!&lt;/p&gt;
-&lt;h4&gt;Building a habit of giving&lt;/h4&gt;
-&lt;p&gt;Giving regularly now also helps build a habit of giving.  When you make giving a habit, you’re not just hedging against some future self that won’t give, you’re actively changing yourself into a person who does give in the future.&lt;/p&gt;
-&lt;p&gt;There are secondary benefits to having a habit of giving. I personally have gotten better at finding promising organizations (like LEEP). I’m also more thoughtful about the way I spend money, and I find that I’m now on average happier with the things I do buy.&lt;/p&gt;
-&lt;p&gt;If you’re interested in giving now and building a habit of giving, you can join &lt;a href="https://www.givingwhatwecan.org/"&gt;Giving What We Can&lt;/a&gt;. I joined in 2019, and I’ve been very happy with the decision.&lt;/p&gt;</description>
-    <pubDate>Sat, 18 Sep 2021 00:00:00 -0000</pubDate>
-    <link>blog/give-now-not-later/index.html</link>
-  <guid isPermaLink="true">blog/give-now-not-later/index.html</guid>
   </item>
   </channel>
 </rss>
