@@ -4,19 +4,83 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>Bradfield School of Computer Science is phenomenal</title>
+    <description>&lt;p&gt;&lt;em&gt;Nobody asked me to write this, and I don't benefit materially from you joining.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Choosing to take courses at &lt;a href="https://bradfieldcs.com/"&gt;Bradfield School of Computer Science&lt;/a&gt; is probably the best decision I've made for my career and my craft. If you're a software engineer, you should consider applying.&lt;/p&gt;
+&lt;p&gt;This is a loose collection of thoughts about my time in the &lt;a href="https://bradfieldcs.com/csi/"&gt;Computer Science Intensive (CSI)&lt;/a&gt; and at Bradfield generally. I wrote this to make a slightly more personal case for taking courses at Bradfield and to fill in some gaps in existing information. If you're totally unfamiliar with Bradfield, go read the &lt;a href="https://bradfieldcs.com/"&gt;official site&lt;/a&gt; first.&lt;/p&gt;
+&lt;p&gt;Contents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#who-takes-bradfield-courses"&gt;Who takes Bradfield courses?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#quality-of-instruction"&gt;Quality of instruction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#workload"&gt;Workload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#value-in-interviews"&gt;Value in interviews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#value-on-the-job"&gt;Value on the job&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#community"&gt;Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#money"&gt;Money&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#accreditation"&gt;Accreditation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#my-background-and-why-i-started-taking-bradfield-courses"&gt;My background and why I started taking Bradfield courses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.echevarria.io/blog/bradfield-is-phenomenal/index.html#closing-thoughts"&gt;Closing thoughts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="who-takes-bradfield-courses"&gt;Who takes Bradfield courses?&lt;/h2&gt;
+&lt;p&gt;Students at Bradfield come from a broad range of backgrounds. Most are people who did coding bootcamps and have been working for at least a few years. Others studied computer science at university – some of my classmates at Bradfield have undergraduate degrees from the best computer science departments in the world. All of my classmates have gotten enormous value from Bradfield, I think in approximately equal measure.&lt;/p&gt;
+&lt;h2 id="quality-of-instruction"&gt;Quality of instruction&lt;/h2&gt;
+&lt;p&gt;Oz and Elliott, the instructors at Bradfield, are phenomenal teachers. Their knowledge of the subject matter is encyclopedic, but they also take teaching seriously as its own skill. Oz seems to read &lt;em&gt;a lot&lt;/em&gt; of pedagogical theory, and Elliott continuously hones his courses. &lt;/p&gt;
+&lt;p&gt;The most important thing that Oz and Elliott teach is a mindset: that everything on a computer is knowable with a bit of effort. Need to figure out what's going on with a network? Open &lt;a href="https://www.wireshark.org/"&gt;Wireshark&lt;/a&gt; and capture some packets. Not sure what a certain system call is doing? Check the &lt;a href="https://en.wikipedia.org/wiki/Man_page"&gt;man page&lt;/a&gt;. Don't know how a protocol works? Read the &lt;a href="https://www.rfc-editor.org/"&gt;RFC&lt;/a&gt;. Want to figure out how this language feature works? Go to the source code. When a student asks something and the instructor says "huh, I don't know," they find out and in the process show the rest of us how to answer our own questions.&lt;/p&gt;
+&lt;p&gt;A small list of other things I like about instruction at Bradfield:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A strong emphasis on learning by doing. Most class pre-work involves a hands-on exercise.&lt;/li&gt;
+&lt;li&gt;Historical motivation as a teaching method. The instructors will take us back to a historical context and ask us how we'd solve a problem to help us understand how the world ended up as it is.&lt;/li&gt;
+&lt;li&gt;Tangents/rants. Get ready to hear about how programmers ought to be more like woodworkers and make more of their own tools, why the space / time complexity tradeoff is kind of a lie, and why microservices are not a great fit for most organizations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="workload"&gt;Workload&lt;/h2&gt;
+&lt;p&gt;The CSI workload is heavy, there's no getting around that. You have two to three hour classes twice a week plus optional hour-long check-ins. Every class has pre-work. Expect to spend ten hours a week on CSI at minimum.&lt;/p&gt;
+&lt;p&gt;Should you join CSI, you should expect to fall behind at some point. Don't let it psych you out. Keep showing up to class. Oz and Elliott won't get mad at you.&lt;/p&gt;
+&lt;p&gt;If you're thorough, you can easily spend as much time on Bradfield as you do at a full-time job. It's absolutely not necessary, though – I only say this because a some people in my cohort did this for a few months.&lt;/p&gt;
+&lt;h2 id="value-in-interviews"&gt;Value in interviews&lt;/h2&gt;
+&lt;p&gt;Taking Bradfield courses makes you a stronger candidate when interviewing for jobs. Some of my classmates have interviewed for jobs at level &lt;em&gt;X&lt;/em&gt; and done so well that they received offers at level &lt;em&gt;X&lt;/em&gt; + 1. I got offers I previously would previously have been unattainable.&lt;/p&gt;
+&lt;p&gt;An example: I interviewed at an autonomous vehicle company last year. One of my interviewers was clearly perplexed when our session started and said outright that someone must have made a mistake. I had previously only worked with Python, and his interview was about high-performance systems. "What's a Python programmer doing here," he said.&lt;/p&gt;
+&lt;p&gt;I said that while my experience was only Python and that I liked Python, I did care about performance and I understood why Python was slow. He said, fine, explain. So I used what I learned in Bradfield: I talked about how cache utilization in Python is bad for a few reasons (pointer-heavy data structures, everything is an object so takes more space, etc.). I was able to rattle off latency numbers to argue why this was so harmful.&lt;/p&gt;
+&lt;p&gt;My interviewer’s demeanor changed completely. “It’s unusual for a Python programmer to think about caches at all.” He tested my knowledge a bit more, but the rest of the interview felt more like a friendly conversation than an interrogation. I had a great time, and I ended up with a good offer.&lt;/p&gt;
+&lt;p&gt;I don’t think I would have passed this interview if not for my time at Bradfield. I was able to speak comfortably and confidently because I put the work in at Bradfield. I did the reading, and more importantly, the exercises, and that gave me a strong intuition for this stuff.&lt;/p&gt;
+&lt;p&gt;None of this is to say that you can just sign up for Bradfield and never have to study Leetcode-style problems again, but it makes you a lot stronger for everything else.&lt;/p&gt;
+&lt;h2 id="value-on-the-job"&gt;Value on the job&lt;/h2&gt;
+&lt;p&gt;Bradfield's biggest benefit for me on the job has been simply having confidence that everything on a computer is knowable with a bit of effort. I can't give a dramatic example like I can with interviewing because real work isn't like interviewing, but I can tell you I'm faster and more capable, and that I have stronger engineering instincts.&lt;/p&gt;
+&lt;p&gt;There are some benefits more immediately related to class material. Just last week, I debugged some microservices by reading network activity directly. One of my classmates sped up a critical process by at least a factor of 2 (maybe a lot more?) by applying knowledge straight from a course. Another upgraded his whole company from HTTP/1 to HTTP/2.&lt;/p&gt;
+&lt;h2 id="community"&gt;Community&lt;/h2&gt;
+&lt;p&gt;Bradfield is the community of programmers I've been searching for. Students at Bradfield are serious in a low-ego, genuinely-trying-to-help-each-other way. It's energizing to be around other people with so much enthusiasm for the subject matter. I like being around everyone in my cohort without exception.&lt;/p&gt;
+&lt;p&gt;I've tried joining other programming communities in the past, but they weren't what I was looking for. I found an undercurrent of insecurity and sweat that ruined the vibes for me. There's none of that at Bradfield.&lt;/p&gt;
+&lt;h2 id="money"&gt;Money&lt;/h2&gt;
+&lt;p&gt;The year-long CSI is $19,500. The shorter 9-week course, &lt;a href="https://bradfieldcs.com/courses/ssba/"&gt;Software Systems: Behind the Abstractions&lt;/a&gt;, is $3,600. Either is worth it, easily. Sure, that's nothing to sneeze at, but it's cheap for what you get.&lt;/p&gt;
+&lt;p&gt;I'm confident that if the CSI's price tag feels like too much, the program can get you to a place career-wise where it doesn't. Many students in CSI cohorts switch jobs, and some make twice as much as they did before. Recently, one quadrupled his income. I paid for CSI with a fraction of the signing bonus I got when I joined my current employer – a job I got thanks in large part to Bradfield courses.&lt;/p&gt;
+&lt;p&gt;Obligatory disclaimer: the labor market is unusually hot right now so maybe don't count on doubling your income next year, but maybe don't count it out either.&lt;/p&gt;
+&lt;h2 id="accreditation"&gt;Accreditation&lt;/h2&gt;
+&lt;p&gt;Bradfield is not an accredited school. I think you can get a certificate of completion if you ask for one? I don't know, whatever. That's not why you do Bradfield. You do Bradfield to attain mastery, to actually get better in real life. You do Bradfield because &lt;a href="https://twitter.com/oznova_/status/1479254530470518786"&gt;this stuff works&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Seriously, though, we're lucky to work in an industry that &lt;a href="https://ozwrites.com/masters/"&gt;cares less about credentials than most others&lt;/a&gt;. There's some advantage to having a formal degree in computer science, but that largely ends after you get your first job.&lt;/p&gt;
+&lt;h2 id="my-background-and-why-i-started-taking-bradfield-courses"&gt;My background and why I started taking Bradfield courses&lt;/h2&gt;
+&lt;p&gt;I studied computer science and math at &lt;a href="https://www.wm.edu/"&gt;William &amp;amp; Mary&lt;/a&gt;, a public university in Virginia. I did well in school – I graduated &lt;em&gt;summa cum laude&lt;/em&gt;, was inducted into Phi Beta Kappa, and got a computer science department award.&lt;/p&gt;
+&lt;p&gt;But I graduated with a lot of gaps in my computer science knowledge. I couldn't tell you how a computer physically worked, or how a database worked, or what an operating system's responsibilities were, or anything at all about computer networks. Some of this was because I was unlucky with course selection. The bigger reason is that I didn't absorb as much because I was learning to program at the same time I was learning computer science. These are different skills. Fighting to get a grip on language syntax and conventions occupied most of my attention.&lt;/p&gt;
+&lt;p&gt;After a few years of working, I was a much better programmer, but I started feeling the gaps in my computer science knowledge more acutely. I wondered why my code was slow and didn't have a good answer. I found out about Bradfield, and I signed up for a standalone course. It was more than I hoped it would be. I’ve now taken three standalone courses, and as of writing, I'm three modules into the CSI. &lt;/p&gt;
+&lt;h2 id="closing-thoughts"&gt;Closing thoughts&lt;/h2&gt;
+&lt;p&gt;If you're a software engineer, you'll likely benefit tremendously from courses at Bradfield. This stuff works.&lt;/p&gt;
+&lt;p&gt;If you have questions about Bradfield, you should reach out to them via their contact information on the &lt;a href="https://bradfieldcs.com/"&gt;Bradfield website&lt;/a&gt;. If you're looking for a student perspective, I'm happy to answer any questions via email at &lt;a href="https://www.echevarria.io/sendto:ivan@echevarria.io"&gt;ivan@echevarria.io&lt;/a&gt;.&lt;/p&gt;</description>
+    <pubDate>Sun, 06 Feb 2022 00:00:00 -0000</pubDate>
+    <link>blog/bradfield-is-phenomenal/index.html</link>
+  <guid isPermaLink="true">blog/bradfield-is-phenomenal/index.html</guid>
+  </item>
+  <item>
     <title>January 2022</title>
     <description>&lt;p&gt;January was fun. I published a &lt;a href="https://www.echevarria.io/blog/the-matrix-looks-different-hulu-hbo-max/index.html"&gt;blog post about streaming versions of the Matrix&lt;/a&gt;, and it unexpectedly blew up. I got a ton of traffic from Google – I'm still not quite sure what people were searching for that brought them to my site. A Japanese website published &lt;a href="https://gigazine.net/news/20220108-matrix-hulu-hbo-max-color/"&gt;a translation&lt;/a&gt; and called me a computer scientist. Delightful.&lt;/p&gt;
 &lt;p&gt;I also continued the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;. January covered computer networking, and it was, as Bradfield always is, excellent. I'm very eagerly looking forward to February's module: distributed systems.&lt;/p&gt;
-&lt;h2&gt;Reading&lt;/h2&gt;
+&lt;h2 id="reading"&gt;Reading&lt;/h2&gt;
 &lt;p&gt;The &lt;a href="https://leadelimination.org/"&gt;Lead Exposure Elimination Project&lt;/a&gt; published &lt;a href="https://leadelimination.org/annual-review-2020-21/"&gt;a review of their first year&lt;/a&gt;. Such incredible progress! I encourage you to &lt;a href="https://leadelimination.org/donate/"&gt;donate&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.noemamag.com/chinas-inclusive-authoritarianism/"&gt;China's Inclusive Authoritarianism&lt;/a&gt; was a super interesting article about the way China's authoritarian surveillance state actually makes it more democratically responsive to its citizens. I think it's bad to be an authoritarian surveillance state (hot take, I know), but it's plausible citizens could become attached because of the real utility they get from it. In the past year, I've become interested in understanding how systems that harm people still have appeal and utility. I've mostly focused on neoliberal capitalism from the 1970s until COVID, but this lens is fruitful when looking at present-day China too.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://moxie.org/stories/money-machine/"&gt;The Money Machine&lt;/a&gt; is a short anecdote about when the winning move is not to play. &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://palladiummag.com/2022/01/06/quit-your-job/"&gt;Quit Your Job&lt;/a&gt; makes me want to quit my job. Not soon, but someday.&lt;/p&gt;
-&lt;h2&gt;Watching&lt;/h2&gt;
+&lt;h2 id="watching"&gt;Watching&lt;/h2&gt;
 &lt;p&gt;I did my annual get-HBO-for-a-month-and-then-cancel in mid-December, so I watched some HBO shows.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;How To with John Wilson&lt;/em&gt; season 2 was more &lt;em&gt;How To with John Wilson&lt;/em&gt;, so it was great. The episode about Bang Energy drink was the highlight of the season for me.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Succession&lt;/em&gt; was okay. Maybe just stick to season 1? After finishing season 3, I was hit with an inescapable feeling that I had wasted a lot of time. The &lt;a href="https://www.newyorker.com/magazine/2021/12/13/on-succession-jeremy-strong-doesnt-get-the-joke"&gt;New Yorker article about how weird actor Jeremy Strong is&lt;/a&gt; is a lot more compelling than the show itself.&lt;/p&gt;
-&lt;h2&gt;Listening&lt;/h2&gt;
+&lt;h2 id="listening"&gt;Listening&lt;/h2&gt;
 &lt;p&gt;Vegyn released  &lt;a href="https://vegyn.bandcamp.com/album/dont-follow-me-because-im-lost-too"&gt;Don't Follow Me Because I'm Lost Too!!&lt;/a&gt;, and I listened to it all the way through as soon as it came out. It made my day. Here's one of the many tracks I liked:&lt;/p&gt;
 &lt;iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3767420141/size=small/bgcol=ffffff/linkcol=0687f5/track=3027248650/transparent=true/" seamless&gt;&lt;a href="https://vegyn.bandcamp.com/album/dont-follow-me-because-im-lost-too"&gt;Don&amp;#39;t Follow Me Because I&amp;#39;m Lost Too!! by Vegyn&lt;/a&gt;&lt;/iframe&gt;</description>
     <pubDate>Sat, 05 Feb 2022 00:00:00 -0000</pubDate>
@@ -67,16 +131,16 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <title>November / December 2021</title>
     <description>&lt;p&gt;Happy belated New Year! I skipped November's update because I added a bunch of &lt;a href="https://www.echevarria.io/reading/https://www.echevarria.io/index.html"&gt;book reviews&lt;/a&gt; to this site.&lt;/p&gt;
 &lt;p&gt;2021 was great. I gave a killer speech as best man at a wedding, I worked at three different companies (&lt;a href="https://www.setsail.co/"&gt;1&lt;/a&gt;, &lt;a href="https://www.ladderlife.com/"&gt;2&lt;/a&gt;, &lt;a href="https://robinhood.com/"&gt;3&lt;/a&gt;), I did &lt;a href="https://www.recurse.com/"&gt;Recurse Center&lt;/a&gt;, I took three courses at &lt;a href="https://bradfieldcs.com/"&gt;Bradfield&lt;/a&gt;, I was admitted to and started the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;, I &lt;a href="https://github.com/iechevarria/reading-notes/tree/master/2021"&gt;read more&lt;/a&gt; than I have since I was a child, and I &lt;a href="https://www.echevarria.io/blog/https://www.echevarria.io/index.html"&gt;wrote more&lt;/a&gt; in public than I ever have.&lt;/p&gt;
-&lt;h4&gt;Site updates&lt;/h4&gt;
+&lt;h4 id="site-updates"&gt;Site updates&lt;/h4&gt;
 &lt;p&gt;I made a few updates to this site in the past two months. First, like I mentioned above, I added more than a dozen &lt;a href="https://www.echevarria.io/reading/https://www.echevarria.io/index.html"&gt;book reviews&lt;/a&gt;. I'm still working through my backlog. I also updated this site's &lt;a href="https://www.echevarria.io/index.html"&gt;home page&lt;/a&gt;, and there's now a section for popular posts. Finally, after a reader request, I added &lt;a href="https://www.echevarria.io/rss.xml"&gt;RSS&lt;/a&gt; support.&lt;/p&gt;
-&lt;h4&gt;Reading&lt;/h4&gt;
+&lt;h4 id="reading"&gt;Reading&lt;/h4&gt;
 &lt;p&gt;I read &lt;em&gt;The Poverty of Historicism&lt;/em&gt; by Karl Popper in November. It was an odd book because it's so clearly of its time, making an impassioned argument in a dead debate I never knew existed. But there are gems in it, little pieces of common sense wisdom. I'll write about it more in the future, but for now you can read my &lt;a href="https://github.com/iechevarria/reading-notes/blob/master/2021/the-poverty-of-historicism-popper-1957.md"&gt;personal notes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Slaughterhouse-Five&lt;/em&gt; lived up to its reputation. It was very good.&lt;/p&gt;
 &lt;p&gt;I read a New Yorker article, &lt;a href="https://www.newyorker.com/magazine/2015/08/10/a-ghost-in-the-family"&gt;A Ghost in the Family&lt;/a&gt;, about artists Clare Rojas, Margaret Kilgallen, and Barry McGee after seeing a piece by Rojas in SFO. What a strange story.&lt;/p&gt;
 &lt;p&gt;Jeff Vogel of &lt;a href="https://www.spiderwebsoftware.com/"&gt;Spiderweb Software&lt;/a&gt; wrote &lt;a href="https://bottomfeeder.substack.com/p/six-truths-about-video-game-stories"&gt;a piece about video game stories&lt;/a&gt;. Basically, narratives in games are typically terrible, and it doesn't take much to stand out. If you like this post, you might also enjoy his memorable GDC talk, &lt;a href="https://www.youtube.com/watch?v=stxVBJem3Rs"&gt;Failing to Fail&lt;/a&gt;.&lt;/p&gt;
-&lt;h4&gt;Watching&lt;/h4&gt;
+&lt;h4 id="watching"&gt;Watching&lt;/h4&gt;
 &lt;p&gt;I got an HBO Max subscription for just this month to watch &lt;em&gt;The Matrix Resurrections&lt;/em&gt;. It's a big mess that mostly makes fun of itself and Warner Brothers (by name) for existing. What a novelty it is to see so much money get lit on fire. I ended up watching &lt;em&gt;The Matrix&lt;/em&gt; (1999) again, and I like it more every time I see it.&lt;/p&gt;
-&lt;h4&gt;Playing&lt;/h4&gt;
+&lt;h4 id="playing"&gt;Playing&lt;/h4&gt;
 &lt;p&gt;I played the &lt;em&gt;Halo Infinite&lt;/em&gt; campaign the day it came out. &lt;a href="blog/october-2020/https://www.echevarria.io/index.html"&gt;I'm a big Halo fan&lt;/a&gt;. This one was ... pretty alright! It still has some of the problems that &lt;em&gt;Halo 4&lt;/em&gt; and &lt;em&gt;Halo 5&lt;/em&gt; did: tedious indoor combat and way too many buttons that need to be pressed. I'm thinking about doing a supercut of all the stupid buttons &lt;em&gt;Halo Infinite&lt;/em&gt;. But the open world is great, and the sandbox is super fun. I hope we'll see some updates to the single player that extend the open world and add new biomes like desert and jungle.&lt;/p&gt;</description>
     <pubDate>Sun, 02 Jan 2022 00:00:00 -0000</pubDate>
     <link>blog/december-2021/index.html</link>
@@ -176,13 +240,13 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <title>October 2021</title>
     <description>&lt;p&gt;I spent most of October studying and working. I'm currently in the Advanced Programming module of the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt; which covers the Go programming language in depth. Learning the guts behind some of Go's core features – goroutines, channels, the scheduler – has been rewarding.&lt;/p&gt;
 &lt;p&gt;October was my second month working at a large tech company, and it's still good. One of the best parts of working at a larger-but-not-quite-enormous tech company is that I'm finally working hands-on with technologies that I only knew by name before. I've been having a lot of moments where I go something like &lt;em&gt;"oh that's what Airflow is for."&lt;/em&gt; It's not just that I have more tools, it's that I've seen how other people use them effectively.&lt;/p&gt;
-&lt;h4&gt;Reading&lt;/h4&gt;
+&lt;h4 id="reading"&gt;Reading&lt;/h4&gt;
 &lt;p class="quote"&gt;
 "There is always a subjective aspect in landscape art, something in the picture that tells us as much about who is behind the camera as about what is in front of it."
 &lt;/p&gt;
 
 &lt;p&gt;I did my annual re-read of Robert Adams's &lt;a href="https://aperture.org/books/beauty-in-photography/"&gt;Beauty in Photography&lt;/a&gt; in October. It's short – just eight brief essays in fewer than 100 pages of text – but it is so full of insight. It's probably the book that means the most to me. I first read it at an important time, and it was enormously clarifying for my own work. In particular, Adams's insistence that great landscape photographs must have an autobiographical element led me to my best photographs.&lt;/p&gt;
-&lt;h4&gt;Watching&lt;/h4&gt;
+&lt;h4 id="watching"&gt;Watching&lt;/h4&gt;
 &lt;div class="youtube-embed-container"&gt;        
   &lt;iframe
     src="https://www.youtube-nocookie.com/embed/qfyEstdwWIE"
@@ -195,7 +259,7 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
 &lt;p&gt;This short film about an diver who maintains Mexico City's sewage system is excellent. I'm not sure how I ended up on it, but I'm glad I did!&lt;/p&gt;
 &lt;p&gt;I saw Dune and thought it was great. I like everything Denis Villeneuve does, so that's not much of surprise.&lt;/p&gt;
 &lt;p&gt;James Bond: New Sequel was not great. The first half was good, but the second half was bloated with a videogame-like body count and cloying ending. Also the big maguffin was NANOMACHINES. Stupid! I yearn for the days when 007's big mission is getting ahold of a special typewriter like in &lt;em&gt;From Russia with Love&lt;/em&gt;.&lt;/p&gt;
-&lt;h4&gt;Listening&lt;/h4&gt;
+&lt;h4 id="listening"&gt;Listening&lt;/h4&gt;
 &lt;p&gt;&lt;a href="https://grouper.bandcamp.com/"&gt;Grouper&lt;/a&gt; released an album, &lt;a href="https://grouper.bandcamp.com/album/shade"&gt;Shade&lt;/a&gt;, in October. I particularly like the song Unclean Mind:&lt;/p&gt;
 &lt;iframe style="border: 0; width: 100%; height: 42px;" class="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=3927818988/size=small/bgcol=ffffff/linkcol=0687f5/track=2090522723/transparent=true/" seamless&gt;&lt;a href="https://grouper.bandcamp.com/album/shade"&gt;Shade by Grouper&lt;/a&gt;&lt;/iframe&gt;
 
@@ -221,11 +285,11 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <title>The value of running your adversary's strategy in-house</title>
     <description>&lt;p&gt;&lt;em&gt;This is written with the assumption that you know what a market maker is and what an order book is. For a solid primer, check out the &lt;a href="https://a16z.com/2021/02/17/payment-for-order-flow/"&gt;first three sections of this opinion piece&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;If I should make any corrections to this post, please reach out.&lt;/em&gt;&lt;/p&gt;
-&lt;h4&gt;Market making versus liquidity taking&lt;/h4&gt;
+&lt;h4 id="market-making-versus-liquidity-taking"&gt;Market making versus liquidity taking&lt;/h4&gt;
 &lt;p&gt;High frequency trading (HFT) firms run strategies that broadly fall into two categories: making and taking. Market making strategies add bids and asks to trading venues’ order books, making it possible for other market participants to quickly convert a security into cash and vice-versa. Conversely, liquidity-taking strategies execute on existing bids or asks, removing them from order books.&lt;/p&gt;
 &lt;p&gt;When you make markets, one of your biggest risks is failing to cancel stale quotes. If the price of the security moves, your offers to sell could now be too low, or your quotes to buy could now be too high. Then when someone executes against those stale quotes, you lose money, and they make some. This is called being “picked off.” When you’re running a taking strategy, you’re actively looking for quotes that you can pick off: too-high bids and too-low asks are what you want to execute against.&lt;/p&gt;
 &lt;p&gt;This is why speed matters so much in HFT: if you’re a market maker and you don’t cancel your stale quotes fast enough, a liquidity taker will execute on them and eat your lunch.&lt;/p&gt;
-&lt;h4&gt;Building the adversary in-house&lt;/h4&gt;
+&lt;h4 id="building-the-adversary-in-house"&gt;Building the adversary in-house&lt;/h4&gt;
 &lt;p&gt;Other than raw speed, how else can makers avoid getting picked off by takers? One interesting answer is that HFT firms doing market making should also have an in-house team running a taking strategy.&lt;/p&gt;
 &lt;p&gt;The taking team hunts for stale quotes from any market participant. When they find a quote they can pick off for a profit, and it comes from outside the firm, they execute against the order and make some money. If the quote comes from inside the firm, they tell the market making team to cancel it so it won’t be picked off by a competitor &lt;a href="https://www.echevarria.io/blog/value-of-in-house-adversary/index.html#note"&gt;[1]&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.sps.ed.ac.uk/staff/donald-mackenzie"&gt;Donald MacKenzie&lt;/a&gt; describes the (unintended) results of such an approach in his book &lt;a href="https://press.princeton.edu/books/hardcover/9780691211381/trading-at-the-speed-of-light"&gt;Trading at the Speed of Light&lt;/a&gt; (p 195):&lt;/p&gt;
@@ -243,40 +307,6 @@ This is a slightly inaccurate simplification – I didn’t want to muddy the ex
     <pubDate>Sat, 06 Nov 2021 00:00:00 -0000</pubDate>
     <link>blog/value-of-in-house-adversary/index.html</link>
   <guid isPermaLink="true">blog/value-of-in-house-adversary/index.html</guid>
-  </item>
-  <item>
-    <title>September 2021</title>
-    <description>&lt;p&gt;My cohort of the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt; started in earnest last month, and it has been exceptional as Bradfield always is. So far the most mind-blowing part has been learning about and doing low-level optimization – doing loop unrolling, inlining functions, exploiting microarchitecture. It feels like black magic.&lt;/p&gt;
-&lt;p&gt;I also joined a &lt;a href="https://robinhood.com/"&gt;larger tech company&lt;/a&gt; (&lt;a href="https://careers.robinhood.com/"&gt;hiring&lt;/a&gt;) in September, and so far my experience has been good. Coming from startups, there’s a lot to like – mature engineering practices, formalized onboarding, incredible scale, and, let’s face it, better pay. In hindsight, I shouldn’t have been as apprehensive as I was to join a bigger company.&lt;/p&gt;
-&lt;h4&gt;Watching&lt;/h4&gt;
-&lt;p&gt;Chris at Clickspring is back with more videos about the Antikythera mechanism. In this one, he speculates about what the workshop where the mechanism was built was like.&lt;/p&gt;
-&lt;div class="youtube-embed-container"&gt;        
-  &lt;iframe
-    src="https://www.youtube-nocookie.com/embed/BLBDKmFG90U"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  &gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h4&gt;Reading&lt;/h4&gt;
-&lt;p&gt;Matthew C. Klein wrote two solid free posts this month in &lt;a href="https://theovershoot.co/"&gt;The Overshoot&lt;/a&gt;, his newsletter about macroeconomics. In &lt;a href="https://theovershoot.co/p/the-federal-reserve-wonders-what"&gt;The Federal Reserve Wonders What "Maximum Employment" Means&lt;/a&gt;, he examines the Fed consistently underestimated maximum employment in the wake of the Great Recession and how that’s interacting with Fed policy today. In &lt;a href="https://theovershoot.co/p/americas-inflation-story-is-entering"&gt;America's Inflation Story Is Entering a New Phase&lt;/a&gt;, Klein looks at where and why inflation is showing up. For example:&lt;/p&gt;
-&lt;p class="quote"&gt;
-“The possibility that some hotels, airlines, and car rental agencies increased prices too much over the summer in the expectation of a snapback of price-insensitive business travel, and are now reversing course”
-&lt;/p&gt;
-
-&lt;p&gt;I love this kind of thinking about inflation – the focus on very specific mechanisms instead of “quantity of money go up, inflation do up.” That’s not to say that the quantity of money doesn’t affect inflation. But it’s important to lay out channels and mechanisms to make plausible hypotheses about when and where it will appear.&lt;/p&gt;
-&lt;p&gt;Dan Luu wrote &lt;a href="https://danluu.com/in-house/"&gt;another winner&lt;/a&gt; this month, this time on the value of in-house expertise. Why does Twitter have a kernel team? Because at a certain scale, you run into kernel problems.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.penguinrandomhouse.com/books/234730/zero-to-one-by-peter-thiel-with-blake-masters/"&gt;Zero to One&lt;/a&gt; by Peter Thiel was excellent. What I like most is his disdain for competition (informed by philospher René Girard).&lt;/p&gt;
-&lt;p class="quote"&gt;
-"More than anything else, competition is an ideology––the ideology––that pervades our society and distorts our thinking. We preach competition, internalize its necessity, and enact its commandments; and as a result, we trap ourselves within it––even though the more we compete, the less we gain."
-&lt;/p&gt;
-
-&lt;p&gt;So how do you avoid competition? You differentiate yourself by choosing a path, making a plan, and committing to it. Optimizing for optionality is a great way to get stuck in a highly competitive profession that makes you miserable and dulls your achievement.&lt;/p&gt;
-&lt;p&gt;(On a similar note, I re-read Byrne Hobart’s piece &lt;a href="https://byrnehobart.medium.com/reasoning-from-first-principles-the-dumbest-thing-smart-people-do-46ff1cbba867"&gt;Reasoning From First Principles: The Dumbest Thing Smart People Do&lt;/a&gt;. You can see a lot of Thiel’s influence there.)&lt;/p&gt;</description>
-    <pubDate>Fri, 08 Oct 2021 00:00:00 -0000</pubDate>
-    <link>blog/september-2021/index.html</link>
-  <guid isPermaLink="true">blog/september-2021/index.html</guid>
   </item>
   </channel>
 </rss>
