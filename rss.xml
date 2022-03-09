@@ -4,6 +4,20 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>February 2022</title>
+    <description>&lt;p&gt;I spent many of my weekends and evenings working on the Data Structures for Storage and Retrieval module of the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;. I think this may have been my favorite yet. Unlike your typical data structures class, the Bradfield one focused on practical applications of data structures and is centered around implementing a key-value database from scratch. In the process, I learned about skip lists, SSTables, and Bloom filters.&lt;/p&gt;
+&lt;h2 id="vacuuming"&gt;Vacuuming&lt;/h2&gt;
+&lt;p&gt;I don't like sweeping, so looked for and bought a vacuum that does a good job with hard floor pickup. In the process of searching, I fell deep into the rabbit hole of vacuum YouTube. Some videos have vacuum reviewers running vacuums through precise and reproducible vacuum tests. Others have vacuum enthusiasts demonstrating old vacuums and lecturing about vacuum history.&lt;/p&gt;
+&lt;p&gt;It's all amazing. The enthusiasm is contagious. I had tickets for a concert on one Friday night, but I stayed home and skipped it because I wanted to read about vacuums instead.&lt;/p&gt;
+&lt;p&gt;I ended up with a Dyson V7 with a fluffy cleaner head, and I've been really enjoying it.&lt;/p&gt;
+&lt;h2 id="watching"&gt;Watching&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Bill and Ted's Excellent Adventure&lt;/em&gt; was excellent, and it was a more cutting satire I was expecting. I think it's extremely pessimistic about art's ability to change the world, a perspective I'm sympathetic to. I intend to write more about this.&lt;/p&gt;
+&lt;p&gt;I also saw &lt;em&gt;La La Land&lt;/em&gt; for the first time this month. I initially thought it was a story about weak-willed people and that if the two leads were so in love, they should have made more of an effort to be together. But my girlfriend changed my mind a bit by pointing out how short-lived the central relationship is and that the movie sort of subverts the typical Hollywood romance.&lt;/p&gt;</description>
+    <pubDate>Tue, 08 Mar 2022 00:00:00 -0000</pubDate>
+    <link>blog/february-2022/index.html</link>
+  <guid isPermaLink="true">blog/february-2022/index.html</guid>
+  </item>
+  <item>
     <title>Bradfield School of Computer Science is phenomenal</title>
     <description>&lt;p&gt;&lt;em&gt;Nobody asked me to write this, and I don't benefit materially from you joining.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Choosing to take courses at &lt;a href="https://bradfieldcs.com/"&gt;Bradfield School of Computer Science&lt;/a&gt; is probably the best decision I've made for my career and my craft. If you're a software engineer, you should consider applying.&lt;/p&gt;
@@ -293,33 +307,6 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <pubDate>Sun, 07 Nov 2021 00:00:00 -0000</pubDate>
     <link>blog/integrity-makes-an-impression/index.html</link>
   <guid isPermaLink="true">blog/integrity-makes-an-impression/index.html</guid>
-  </item>
-  <item>
-    <title>The value of running your adversary's strategy in-house</title>
-    <description>&lt;p&gt;&lt;em&gt;This is written with the assumption that you know what a market maker is and what an order book is. For a solid primer, check out the &lt;a href="https://a16z.com/2021/02/17/payment-for-order-flow/"&gt;first three sections of this opinion piece&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;If I should make any corrections to this post, please reach out.&lt;/em&gt;&lt;/p&gt;
-&lt;h4 id="market-making-versus-liquidity-taking"&gt;Market making versus liquidity taking&lt;/h4&gt;
-&lt;p&gt;High frequency trading (HFT) firms run strategies that broadly fall into two categories: making and taking. Market making strategies add bids and asks to trading venues’ order books, making it possible for other market participants to quickly convert a security into cash and vice-versa. Conversely, liquidity-taking strategies execute on existing bids or asks, removing them from order books.&lt;/p&gt;
-&lt;p&gt;When you make markets, one of your biggest risks is failing to cancel stale quotes. If the price of the security moves, your offers to sell could now be too low, or your quotes to buy could now be too high. Then when someone executes against those stale quotes, you lose money, and they make some. This is called being “picked off.” When you’re running a taking strategy, you’re actively looking for quotes that you can pick off: too-high bids and too-low asks are what you want to execute against.&lt;/p&gt;
-&lt;p&gt;This is why speed matters so much in HFT: if you’re a market maker and you don’t cancel your stale quotes fast enough, a liquidity taker will execute on them and eat your lunch.&lt;/p&gt;
-&lt;h4 id="building-the-adversary-in-house"&gt;Building the adversary in-house&lt;/h4&gt;
-&lt;p&gt;Other than raw speed, how else can makers avoid getting picked off by takers? One interesting answer is that HFT firms doing market making should also have an in-house team running a taking strategy.&lt;/p&gt;
-&lt;p&gt;The taking team hunts for stale quotes from any market participant. When they find a quote they can pick off for a profit, and it comes from outside the firm, they execute against the order and make some money. If the quote comes from inside the firm, they tell the market making team to cancel it so it won’t be picked off by a competitor &lt;a href="https://www.echevarria.io/blog/value-of-in-house-adversary/index.html#note"&gt;[1]&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.sps.ed.ac.uk/staff/donald-mackenzie"&gt;Donald MacKenzie&lt;/a&gt; describes the (unintended) results of such an approach in his book &lt;a href="https://press.princeton.edu/books/hardcover/9780691211381/trading-at-the-speed-of-light"&gt;Trading at the Speed of Light&lt;/a&gt; (p 195):&lt;/p&gt;
-&lt;p class="quote"&gt;
-“Attempts to take ... had the unintended, emergent consequence of increasing the profitability of the firm's market making algorithms. The latter would be to a degree protected from taking algorithms in the wider market by the fact that one of the firm's own taking algorithms might well cause the cancellation of a making order before it could be picked off"
-&lt;/p&gt;
-
-&lt;p&gt;The taking team protected the whole firm’s profitability not by directly looking for flaws in the making team’s strategy – it was a black box to them – but simply by trying to pick off any market participant. Having a taking mindset and taking incentives helped the team find and plug holes in the firm’s making strategy that the making team didn’t know about.&lt;/p&gt;
-&lt;p&gt;The HFT maker/taker relationship is inherently adversarial, and having both sides within the same firm partially insulates it from outside competitors.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;[1]&lt;i id="note"&gt;
-This is a slightly inaccurate simplification – I didn’t want to muddy the explanation. The taking team doesn’t directly tell the making team to cancel their order because the taking team doesn't actually know which orders belong to them. The taking team just sees an order they want to execute against and a separate system within the firm decides whether to execute against it (another firm’s order) or cancel it (the firm's order).
-&lt;/i&gt;&lt;/p&gt;</description>
-    <pubDate>Sat, 06 Nov 2021 00:00:00 -0000</pubDate>
-    <link>blog/value-of-in-house-adversary/index.html</link>
-  <guid isPermaLink="true">blog/value-of-in-house-adversary/index.html</guid>
   </item>
   </channel>
 </rss>
