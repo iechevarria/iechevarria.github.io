@@ -4,6 +4,31 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>Bill and Ted and what art is for</title>
+    <description>&lt;p&gt;&lt;em&gt;Bill and Ted's Excellent Adventure&lt;/em&gt; is funny, stylish, and imaginative. I think it's close to perfect. It's also, at least in part, an ironic reflection on how ineffective art is as a tool for social change.&lt;/p&gt;
+&lt;p&gt;The film ends with a character explaining how Bill and Ted's band shapes the course of history:&lt;/p&gt;
+&lt;p class="quote"&gt;
+"Wyld Stallyns' music has become the foundation of our whole society... eventually your music will help put an end to war and poverty. It will align the planets and bring them into universal harmony, allowing meaningful contact with all forms of life, from extraterrestrial beings to common household pets. And... it's excellent for dancing."
+&lt;/p&gt;
+
+&lt;p&gt;It's so overblown – aligning the planets? The hyperbole is funny on its face. But this absurd grandeur also invites us to consider the real ambitions of those who forgot that art &lt;a href="http://mason.gmu.edu/~rnanian/Auden-InMemoryofYeats.html"&gt;makes nothing happen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recent history is littered with such failure. Kurt Vonnegut said this about artists' efforts to stop the Vietnam War:&lt;/p&gt;
+&lt;p class="quote"&gt;
+"[E]very artist worth a damn in this country, every serious writer, painter, stand-up comedian, musician, actor and actress, you name it, came out against [our war in Vietnam]. We formed what might be described as a laser beam of protest, with everybody aimed in the same direction, focused and intense. This weapon proved to have the power of a banana-cream pie three feet in diameter when dropped from a stepladder five-feet high."
+&lt;/p&gt;
+
+&lt;p&gt;If your highest priority is solving a concrete problem like hunger or poverty, art is the wrong tool. "[P]oems and pictures cannot by themselves save anyone." &lt;a href="https://www.echevarria.io/blog/bill-and-ted-on-art/index.html#note-1"&gt;[1]&lt;/a&gt; At some point, you need to actually move food or money or whatever else.&lt;/p&gt;
+&lt;p&gt;None of this is to say that art is useless or not worthwhile &lt;a href="https://www.echevarria.io/blog/bill-and-ted-on-art/index.html#note-2"&gt;[2]&lt;/a&gt;. Others have written better than I can about art's value &lt;a href="https://www.echevarria.io/blog/bill-and-ted-on-art/index.html#note-3"&gt;[3]&lt;/a&gt;, but put simply, art reveals beauty that clarifies life, and it helps us endure. The best art is made with knowledge of its power – and its limits.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;[1]&lt;i id="note-1"&gt; Robert Adams in his essay Photographing Evil&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;[2]&lt;i id="note-2"&gt; I'm writing this because of how seriously I take art, not because I want to diminish it.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;[3]&lt;i id="note-3"&gt; Robert Adams's book &lt;a href="https://aperture.org/books/beauty-in-photography/"&gt;Beauty in Photography&lt;/a&gt; &lt;a href="https://github.com/iechevarria/reading-notes/blob/master/2021/beauty-in-photography-adams-1981.md"&gt;(my notes)&lt;/a&gt; contains my favorite writing about art's purpose and limits.&lt;/i&gt;&lt;/p&gt;</description>
+    <pubDate>Sun, 01 May 2022 00:00:00 -0000</pubDate>
+    <link>blog/bill-and-ted-on-art/index.html</link>
+  <guid isPermaLink="true">blog/bill-and-ted-on-art/index.html</guid>
+  </item>
+  <item>
     <title>February 2022</title>
     <description>&lt;p&gt;I spent many of my weekends and evenings working on the Data Structures for Storage and Retrieval module of the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;. I think this may have been my favorite yet. Unlike your typical data structures class, the Bradfield one focused on practical applications of data structures and is centered around implementing a key-value database from scratch. In the process, I learned about skip lists, SSTables, and Bloom filters.&lt;/p&gt;
 &lt;h2 id="vacuuming"&gt;Vacuuming&lt;/h2&gt;
@@ -295,18 +320,6 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <pubDate>Fri, 12 Nov 2021 00:00:00 -0000</pubDate>
     <link>blog/october-2021/index.html</link>
   <guid isPermaLink="true">blog/october-2021/index.html</guid>
-  </item>
-  <item>
-    <title>A brief anecdote about a good leader</title>
-    <description>&lt;p&gt;A lifetime ago, I worked on products at an early stage startup. One of these was an offering for live chat agents, the people who you message in the chat bubbles that pop up on web pages.&lt;/p&gt;
-&lt;p&gt;My team was a few weeks from launching a prototype with our first customer, and we presented our progress at a company all-hands. During that meeting, a coworker suggested that we go to the customer’s website and send a message to one of the chat agents live to show everyone how such a system usually works.&lt;/p&gt;
-&lt;p&gt;One of the co-founders immediately shot the idea down. “How would you like it if someone showed up unannounced and interrupted your work?”&lt;/p&gt;
-&lt;p&gt;What I like most about the co-founder’s response is that he went straight for the moral reason. He didn’t say it could be bad for the business (it probably wouldn’t have been). To him, the biggest issue is that it wasn’t considerate – we shouldn’t waste a chat agent’s time.&lt;/p&gt;
-&lt;p&gt;I still think about this brief exchange. When I left that company, I had an exit interview with that co-founder where I mentioned how much of an impression his response made on me. He didn’t remember it at all, even after I recounted it in detail. I realized his response was just a reflex for him, and I think that’s more evidence of his integrity.&lt;/p&gt;
-&lt;p&gt;This is the kind of person I want to work for or with: ethical and conscientious without even having to try.&lt;/p&gt;</description>
-    <pubDate>Sun, 07 Nov 2021 00:00:00 -0000</pubDate>
-    <link>blog/integrity-makes-an-impression/index.html</link>
-  <guid isPermaLink="true">blog/integrity-makes-an-impression/index.html</guid>
   </item>
   </channel>
 </rss>
