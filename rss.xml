@@ -4,6 +4,16 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>Caltrain ridership</title>
+    <description>&lt;p&gt;Caltrain's ridership numbers are a pain to get a hold of, so I made &lt;a href="https://caltrainridership.com"&gt;caltrainridership.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you go to Caltrain's official &lt;a href="https://web.archive.org/web/20220629064038/https://www.caltrain.com/about-caltrain/statistics-reports/ridership"&gt;ridership page&lt;/a&gt;, you get links to three different sources, only one of which, the Caltrain Board of Directors monthly meeting agendas, is up-to-date. Each agenda PDF has at most a year of ridership numbers, but some only have the actual average weekday ridership number for that specific month. The format has changed several times, so it's not even doable to programmatically extract ridership numbers. It shouldn't be this hard.&lt;/p&gt;
+&lt;p&gt;So I read through old meeting agendas and found individual months' average weekday ridership back to July 2017. I dropped these numbers in a CSV which you can go get for yourself in the &lt;a href="https://github.com/iechevarria/caltrain-ridership"&gt;project GitHub repo&lt;/a&gt;. And I picked up the &lt;a href="https://caltrainridership.com"&gt;caltrainridership.com&lt;/a&gt; domain and made a little site with graphs and a table.&lt;/p&gt;
+&lt;p&gt;It took effort to collect these numbers in the real world – distributing them should be the easy part. If Caltrain won't, I will.&lt;/p&gt;</description>
+    <pubDate>Mon, 20 Feb 2023 00:00:00 -0000</pubDate>
+    <link>blog/caltrain-ridership/index.html</link>
+  <guid isPermaLink="true">blog/caltrain-ridership/index.html</guid>
+  </item>
+  <item>
     <title>Bill and Ted and what art is for</title>
     <description>&lt;p&gt;&lt;em&gt;Bill and Ted's Excellent Adventure&lt;/em&gt; is funny, stylish, and imaginative. I think it's close to perfect. It's also, at least in part, an ironic reflection on how ineffective art is as a tool for social change.&lt;/p&gt;
 &lt;p&gt;The film ends with a character explaining how Bill and Ted's band shapes the course of history:&lt;/p&gt;
@@ -287,39 +297,6 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <pubDate>Sun, 21 Nov 2021 00:00:00 -0000</pubDate>
     <link>blog/casting-pig-iron-at-the-iroquois-smelter/index.html</link>
   <guid isPermaLink="true">blog/casting-pig-iron-at-the-iroquois-smelter/index.html</guid>
-  </item>
-  <item>
-    <title>October 2021</title>
-    <description>&lt;p&gt;I spent most of October studying and working. I'm currently in the Advanced Programming module of the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt; which covers the Go programming language in depth. Learning the guts behind some of Go's core features – goroutines, channels, the scheduler – has been rewarding.&lt;/p&gt;
-&lt;p&gt;October was my second month working at a large tech company, and it's still good. One of the best parts of working at a larger-but-not-quite-enormous tech company is that I'm finally working hands-on with technologies that I only knew by name before. I've been having a lot of moments where I go something like &lt;em&gt;"oh that's what Airflow is for."&lt;/em&gt; It's not just that I have more tools, it's that I've seen how other people use them effectively.&lt;/p&gt;
-&lt;h4 id="reading"&gt;Reading&lt;/h4&gt;
-&lt;p class="quote"&gt;
-"There is always a subjective aspect in landscape art, something in the picture that tells us as much about who is behind the camera as about what is in front of it."
-&lt;/p&gt;
-
-&lt;p&gt;I did my annual re-read of Robert Adams's &lt;a href="https://aperture.org/books/beauty-in-photography/"&gt;Beauty in Photography&lt;/a&gt; in October. It's short – just eight brief essays in fewer than 100 pages of text – but it is so full of insight. It's probably the book that means the most to me. I first read it at an important time, and it was enormously clarifying for my own work. In particular, Adams's insistence that great landscape photographs must have an autobiographical element led me to my best photographs.&lt;/p&gt;
-&lt;h4 id="watching"&gt;Watching&lt;/h4&gt;
-&lt;div class="youtube-embed-container"&gt;        
-  &lt;iframe
-    src="https://www.youtube-nocookie.com/embed/qfyEstdwWIE"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  &gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This short film about an diver who maintains Mexico City's sewage system is excellent. I'm not sure how I ended up on it, but I'm glad I did!&lt;/p&gt;
-&lt;p&gt;I saw Dune and thought it was great. I like everything Denis Villeneuve does, so that's not much of surprise.&lt;/p&gt;
-&lt;p&gt;James Bond: New Sequel was not great. The first half was good, but the second half was bloated with a videogame-like body count and cloying ending. Also the big maguffin was NANOMACHINES. Stupid! I yearn for the days when 007's big mission is getting ahold of a special typewriter like in &lt;em&gt;From Russia with Love&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id="listening"&gt;Listening&lt;/h4&gt;
-&lt;p&gt;&lt;a href="https://grouper.bandcamp.com/"&gt;Grouper&lt;/a&gt; released an album, &lt;a href="https://grouper.bandcamp.com/album/shade"&gt;Shade&lt;/a&gt;, in October. I particularly like the song Unclean Mind:&lt;/p&gt;
-&lt;iframe style="border: 0; width: 100%; height: 42px;" class="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=3927818988/size=small/bgcol=ffffff/linkcol=0687f5/track=2090522723/transparent=true/" seamless&gt;&lt;a href="https://grouper.bandcamp.com/album/shade"&gt;Shade by Grouper&lt;/a&gt;&lt;/iframe&gt;
-
-&lt;p&gt;I've also been listening to &lt;a href="https://djseinfeld.bandcamp.com/"&gt;DJ Seinfeld&lt;/a&gt;'s new album, &lt;a href="https://djseinfeld.bandcamp.com/album/mirrors"&gt;Mirrors&lt;/a&gt;. I listened to this track a lot:&lt;/p&gt;
-&lt;iframe style="border: 0; width: 100%; height: 42px;" class="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=2742410761/size=small/bgcol=ffffff/linkcol=0687f5/track=2607348065/transparent=true/" seamless&gt;&lt;a href="https://djseinfeld.bandcamp.com/album/mirrors"&gt;Mirrors by DJ Seinfeld &amp;amp; Teira&lt;/a&gt;&lt;/iframe&gt;</description>
-    <pubDate>Fri, 12 Nov 2021 00:00:00 -0000</pubDate>
-    <link>blog/october-2021/index.html</link>
-  <guid isPermaLink="true">blog/october-2021/index.html</guid>
   </item>
   </channel>
 </rss>
