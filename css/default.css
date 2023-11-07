@@ -33,7 +33,7 @@ a:hover {
 }
 
 h1 {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.2em;
 }
 
 h2 {
@@ -160,6 +160,10 @@ img {
 
 .blog-post p {
   margin-bottom: 1em;
+}
+
+.blog-post .date {
+  margin-bottom: 2em;
 }
 
 ul {

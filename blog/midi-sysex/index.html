@@ -30,6 +30,7 @@
     <div class="content">
       <div class="blog-post">
         <h1>An interesting way to pack bytes into a MIDI SysEx message</h1>
+        <p class="date">December 21, 2021</p>
         <p>Here’s a little thought experiment: how would you transmit 8-bit bytes via messages that let you encode only 7 bits at a time?</p>
         <p>The engineers at <a href="https://www.digitech.com/">DigiTech</a> handled this exact problem on their DHP-55 effects unit in the 1990s. They needed to transmit 8-bit bytes to the unit via a MIDI SysEx message. Every byte in a SysEx message must have its most significant bit set to 0, so there are only 7 bits available per byte for sending data.</p>
         <p>This is how they describe their approach in the DHP-55 manual:</p>
@@ -54,7 +55,6 @@
         <p><img alt="todo3" src="blog/midi-sysex/scan2.png" /></p>
         <p>If the DigiTech engineers had gone with my approach, "send" bytes would not resemble "real" bytes, and they wouldn't be able to use hex dumps for spot checks.</p>
         <p><em>If you know another reason, please reach out!</em></p>
-        <p class="footer"><a href="https://twitter.com/ivn_echvrria">@ivn_echvrria</a> - December 21, 2021</p>
       </div>
     </div>
   </div>
