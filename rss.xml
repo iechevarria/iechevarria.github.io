@@ -4,6 +4,29 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>"Grilling" / helping a friend out of a rut</title>
+    <description>&lt;p&gt;&lt;img alt="photograph of a fallen tree in Half Moon Bay, CA" src="https://www.echevarria.io/blog/grilling/fallen-tree.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;It's early 2022. My close friend has been unemployed and unhappy about it for several months. At some point he moves back in with his parents.&lt;/p&gt;
+&lt;p&gt;We talk while we play video games. Every so often he talks about his situation, how much he wants to have a job again. I'll ask if he's applied to any jobs, and his answer's sometimes yeah one or two, but usually no. As the months go on, he gets more worried about how the gap in his resume will play.&lt;/p&gt;
+&lt;p&gt;I realize this is going to take him a while on his own. I suspect he's avoiding the prospect of rejection and experiencing paralyzing urgency. I know the feeling. So I decide to intervene in a small way.&lt;/p&gt;
+&lt;p&gt;I tell him to come over, I tell him that we'll grill in my backyard. I tell him to bring his computer over, too, we can maybe play some games. When my friend arrives, I tell him we're not grilling right now. No, he's applying to jobs. I sit across from him in my kitchen, searching for jobs where he might be a fit and adding them to a list while he fills out applications.&lt;/p&gt;
+&lt;p&gt;By the end of the afternoon, he's applied to a few dozen. My friend is tired. We don't grill that day.&lt;/p&gt;
+&lt;p&gt;Within a few days, some companies reach out and schedule some interviews. A few weeks later and my friend is choosing between multiple offers. He lands a job in the sciences despite having a humanities degree and zero experience in the field. He does well. Within a year, the company recognizes his ability, promotes him, gives him a substantial raise, and ships him off to another state to run a large project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;~ ~ ~&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Helping my friend get this job he's done so well at was one of my proudest moments of 2022. And it took so little effort on my end – he had everything he needed.&lt;/p&gt;
+&lt;p&gt;I have even more contempt for the concept of &lt;a href="https://twitter.com/vebaccount/status/1509169026173444101"&gt;revealed preferences&lt;/a&gt; than before &lt;a href="https://www.echevarria.io/blog/grilling/index.html#note-1"&gt;[1]&lt;/a&gt;. Did my friend &lt;em&gt;actually&lt;/em&gt; want to be unemployed and living with his parents? No! He's considerably happier working at a company that recognizes his work, and he enjoys having his own place.&lt;/p&gt;
+&lt;p&gt;I'm left with a lot of questions. How many other places do I have this much leverage? Why did it work so well this time? Are there problems in my own life that would benefit from a similar intervention?&lt;/p&gt;
+&lt;p&gt;I have no clean answers. This is where I've landed for now: these moments of extreme leverage rarely just drop in your lap, and I got lucky. You can't force someone to be &lt;a href="https://csprimer.com/articles/consistency/"&gt;motivated&lt;/a&gt; or to &lt;a href="https://www.benkuhn.net/abyss/"&gt;stare into the abyss&lt;/a&gt;. But if someone has the urgency, as my friend did, and their actions still don't line up with their stated goals, they may need only a small push to move things along.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;[1]&lt;i id="note-1"&gt; Okay, before any economics nerds email me, I'll caveat that I'm talking about revealed preferences in the context of normal life, e.g., around people's employment or fitness or whatever. I'm not talking about consumer demand stuff.&lt;/p&gt;
+&lt;p&gt;Anyway, applying revealed preferences broadly betrays reflexive distrust, an underlying belief that people are stupid or liars. It suggests an incuriosity about the inner lives of others.&lt;/p&gt;
+&lt;p&gt;It is far more fruitful to approach contradictions between stated goals and real actions by taking people at their word and trying to bridge the gap rather than saying "oh you must actually want your crappy situation."&lt;/i&gt;&lt;/p&gt;</description>
+    <pubDate>Sun, 31 Dec 2023 00:00:00 -0000</pubDate>
+    <link>blog/grilling/index.html</link>
+  <guid isPermaLink="true">blog/grilling/index.html</guid>
+  </item>
+  <item>
     <title>Crust Lightning Bolt Canti build</title>
     <description>&lt;p&gt;&lt;img alt="Bicycle in front of the San Francisco Bay" src="https://www.echevarria.io/blog/crust-lightning-bolt-canti-build/bay-sunset.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;This August, I bought a Crust Lightning Bolt frame and had it built up at my &lt;a href="https://www.straightwheelcycling.com/"&gt;local bike shop&lt;/a&gt; (thanks Christian!). I have a good number of miles on it across road, trail, and even a bit of chunky singletrack. I'm very happy with the bike.&lt;/p&gt;
@@ -424,49 +447,6 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <pubDate>Sun, 02 Jan 2022 00:00:00 -0000</pubDate>
     <link>blog/december-2021/index.html</link>
   <guid isPermaLink="true">blog/december-2021/index.html</guid>
-  </item>
-  <item>
-    <title>Consistent daily price oscillations on the Steam Community Market</title>
-    <description>&lt;p&gt;&lt;a href="https://www.echevarria.io/blog/cs-go-price-oscillation/steam.png"&gt;
-  &lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/steam.png" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market"/&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;div class="img-note"&gt;click the image above to see a full-size version&lt;/div&gt;
-
-&lt;p&gt;This is a chart of median sale prices of the most-sold item on the &lt;a href="https://steamcommunity.com/market/"&gt;Steam Community Market&lt;/a&gt;, an &lt;a href="https://steamcommunity.com/market/listings/730/Operation%20Riptide%20Case"&gt;Operation Riptide Case&lt;/a&gt; for Counter-Strike: Global Offensive (CS:GO).&lt;/p&gt;
-&lt;p&gt;The extremely regular oscillations in price jumped out to me immediately. You don't typically see this in other markets because it's a sign that money is being left on the table.&lt;/p&gt;
-&lt;p&gt;My first instinct was that this pattern was somehow related to CS:GO player count, so I pulled historical price and volume data from Steam and historical player counts from &lt;a href="https://steamcharts.com/"&gt;steamcharts.com&lt;/a&gt; to made this chart:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.echevarria.io/blog/cs-go-price-oscillation/chart.svg"&gt;
-  &lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/chart.svg" alt="chart of CS:GO Operation Riptide Case median sales prices on Steam Community Market, player count, and transaction count"/&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;div class="img-note"&gt;click the image above to see a full-size version&lt;/div&gt;
-&lt;div class="img-caption"&gt;
-  &lt;li&gt;
-    &lt;b&gt;Top&lt;/b&gt;: median sale price in dollars
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;b&gt;Middle&lt;/b&gt;: CS:GO player count
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;b&gt;Bottom&lt;/b&gt;: count of Operation Riptide Cases sold
-  &lt;/li&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It does look like it has something to do with player count. So what's happening? These cases are randomly given to players when they play the game, and some players immediately sell their cases for cash at market price. (If sellers cared about making a few extra cents, they could submit offers to sell above the current market price instead of selling at market price when prices are low.)&lt;/p&gt;
-&lt;p&gt;I suspect the oscillations are caused by different regions buying/selling/keeping cases at different rates. To illustrate, it might be the case that players in Europe sell more cases and buy fewer cases than players in the Americas, so the market price for cases is lower during European hours than American hours.&lt;/p&gt;
-&lt;p&gt;I don't see the same pattern in other CS:GO items. Only the Operation Riptide Case exhibits it, and that makes sense because it's the only item that is currently being distributed to players for simply playing the game.&lt;/p&gt;
-&lt;p&gt;But why aren't there other market participants who flatten these oscillations out? Someone could buy cases cheap during European hours and sell for a profit during American hours.&lt;/p&gt;
-&lt;p&gt;The culprit here is fees on Steam Community Market transactions. CS:GO items on the Community Market are subject to a 15% fee on every transaction: 5% for Steam plus 10% for CS:GO specifically. This means that you can only make money on price swings greater than 15%.&lt;/p&gt;
-&lt;p&gt;If you look at the actual price daily swings, they're typically smaller than 15%.&lt;/p&gt;
-&lt;p&gt;&lt;img class="img-really-no-pad" src="https://www.echevarria.io/blog/cs-go-price-oscillation/percents.svg" alt="Percentage difference between minimum hourly median and maximum hourly median sale price by day"/&gt;&lt;/p&gt;
-&lt;div class="img-note"&gt;
-    Percentage difference between minimum hourly median and maximum hourly median sale price by day
-&lt;/div&gt;
-
-&lt;p&gt;On some days, the percentage approaches 15%. I suspect that on these days, there &lt;em&gt;are&lt;/em&gt; some market participants buying cheap, holding for a few hours, selling high, and making a cent or two per case after fees.&lt;/p&gt;
-&lt;p&gt;Note that the min and max values used in the chart are median hourly sale price, so some transactions happened at higher/lower values. Therefore individual cases may have been bought and then sold profitably after fees.&lt;/p&gt;</description>
-    <pubDate>Sun, 26 Dec 2021 00:00:00 -0000</pubDate>
-    <link>blog/cs-go-price-oscillation/index.html</link>
-  <guid isPermaLink="true">blog/cs-go-price-oscillation/index.html</guid>
   </item>
   </channel>
 </rss>
