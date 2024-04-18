@@ -4,6 +4,21 @@
   <description>Ivan Echevarria's blog</description>
   <link>https://www.echevarria.io</link>
   <item>
+    <title>Some Semblance of Clarity: a zine (email me for a free copy)</title>
+    <description>&lt;p&gt;&lt;img alt="photo of zine and 3 prints" src="https://www.echevarria.io/blog/some-semblance-of-clarity/img1.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;In 2017, I made &lt;em&gt;Some Semblance of Clarity&lt;/em&gt;, a zine, for a photography class. I made this zine probably around the height of my interest in the intersection of art and technology. I still like each but prefer them mostly separate now.&lt;/p&gt;
+&lt;p&gt;The zine consists of &lt;a href="https://en.wikipedia.org/wiki/Dag_Hammarskj%C3%B6ld"&gt;Dag Hammarskjöld&lt;/a&gt;'s poem "August 24, 1961" thrown through Google Translate several times as well as 7 photographs with &lt;a href="https://en.wikipedia.org/wiki/Inceptionv3"&gt;Inception v3&lt;/a&gt;'s top 5 classes for those images. I made 25 copies, put them in a box, and forgot about them until this week.&lt;/p&gt;
+&lt;p&gt;I'm not going to pretend it's great work, but I do think it's somewhat interesting inasmuch the zine's main concern – the difficulty of identifying / maintaining / representing arbitrary meaning using computers – has largely been solved with LLMs. There are also a few flourishes in the zine's construction like some translucent pages, careful text alignment, and bits that are handwritten.&lt;/p&gt;
+&lt;p&gt;Send me an email or Instagram / Twitter DM or whatever else with your address, and I'll mail you a copy. I'll also send a few small prints I made around the same time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of page in zine" src="https://www.echevarria.io/blog/some-semblance-of-clarity/img2.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of page in zine" src="https://www.echevarria.io/blog/some-semblance-of-clarity/img3.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of page in zine" src="https://www.echevarria.io/blog/some-semblance-of-clarity/img4.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="photo of page in zine" src="https://www.echevarria.io/blog/some-semblance-of-clarity/img5.jpeg" /&gt;&lt;/p&gt;</description>
+    <pubDate>Thu, 18 Apr 2024 00:00:00 -0000</pubDate>
+    <link>blog/some-semblance-of-clarity/index.html</link>
+  <guid isPermaLink="true">blog/some-semblance-of-clarity/index.html</guid>
+  </item>
+  <item>
     <title>"Grilling" / helping a friend out of a rut</title>
     <description>&lt;p&gt;&lt;img alt="photograph of a fallen tree in Half Moon Bay, CA" src="https://www.echevarria.io/blog/grilling/fallen-tree.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;It's early 2022. My close friend has been unemployed and unhappy about it for several months. At some point he moves back in with his parents.&lt;/p&gt;
@@ -428,25 +443,6 @@ It seems like a lot of you are searching "the matrix hulu" and ending up on this
     <pubDate>Sun, 02 Jan 2022 00:00:00 -0000</pubDate>
     <link>blog/the-matrix-looks-different-hulu-hbo-max/index.html</link>
   <guid isPermaLink="true">blog/the-matrix-looks-different-hulu-hbo-max/index.html</guid>
-  </item>
-  <item>
-    <title>November / December 2021</title>
-    <description>&lt;p&gt;Happy belated New Year! I skipped November's update because I added a bunch of &lt;a href="https://www.echevarria.io/reading/https://www.echevarria.io/index.html"&gt;book reviews&lt;/a&gt; to this site.&lt;/p&gt;
-&lt;p&gt;2021 was great. I gave a killer speech as best man at a wedding, I worked at three different companies (&lt;a href="https://www.setsail.co/"&gt;1&lt;/a&gt;, &lt;a href="https://www.ladderlife.com/"&gt;2&lt;/a&gt;, &lt;a href="https://robinhood.com/"&gt;3&lt;/a&gt;), I did &lt;a href="https://www.recurse.com/"&gt;Recurse Center&lt;/a&gt;, I took three courses at &lt;a href="https://bradfieldcs.com/"&gt;Bradfield&lt;/a&gt;, I was admitted to and started the &lt;a href="https://bradfieldcs.com/csi/"&gt;Bradfield CSI&lt;/a&gt;, I &lt;a href="https://github.com/iechevarria/reading-notes/tree/master/2021"&gt;read more&lt;/a&gt; than I have since I was a child, and I &lt;a href="https://www.echevarria.io/blog/https://www.echevarria.io/index.html"&gt;wrote more&lt;/a&gt; in public than I ever have.&lt;/p&gt;
-&lt;h4 id="site-updates"&gt;Site updates&lt;/h4&gt;
-&lt;p&gt;I made a few updates to this site in the past two months. First, like I mentioned above, I added more than a dozen &lt;a href="https://www.echevarria.io/reading/https://www.echevarria.io/index.html"&gt;book reviews&lt;/a&gt;. I'm still working through my backlog. I also updated this site's &lt;a href="https://www.echevarria.io/index.html"&gt;home page&lt;/a&gt;, and there's now a section for popular posts. Finally, after a reader request, I added &lt;a href="https://www.echevarria.io/rss.xml"&gt;RSS&lt;/a&gt; support.&lt;/p&gt;
-&lt;h4 id="reading"&gt;Reading&lt;/h4&gt;
-&lt;p&gt;I read &lt;em&gt;The Poverty of Historicism&lt;/em&gt; by Karl Popper in November. It was an odd book because it's so clearly of its time, making an impassioned argument in a dead debate I never knew existed. But there are gems in it, little pieces of common sense wisdom. I'll write about it more in the future, but for now you can read my &lt;a href="https://github.com/iechevarria/reading-notes/blob/master/2021/the-poverty-of-historicism-popper-1957.md"&gt;personal notes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Slaughterhouse-Five&lt;/em&gt; lived up to its reputation. It was very good.&lt;/p&gt;
-&lt;p&gt;I read a New Yorker article, &lt;a href="https://www.newyorker.com/magazine/2015/08/10/a-ghost-in-the-family"&gt;A Ghost in the Family&lt;/a&gt;, about artists Clare Rojas, Margaret Kilgallen, and Barry McGee after seeing a piece by Rojas in SFO. What a strange story.&lt;/p&gt;
-&lt;p&gt;Jeff Vogel of &lt;a href="https://www.spiderwebsoftware.com/"&gt;Spiderweb Software&lt;/a&gt; wrote &lt;a href="https://bottomfeeder.substack.com/p/six-truths-about-video-game-stories"&gt;a piece about video game stories&lt;/a&gt;. Basically, narratives in games are typically terrible, and it doesn't take much to stand out. If you like this post, you might also enjoy his memorable GDC talk, &lt;a href="https://www.youtube.com/watch?v=stxVBJem3Rs"&gt;Failing to Fail&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id="watching"&gt;Watching&lt;/h4&gt;
-&lt;p&gt;I got an HBO Max subscription for just this month to watch &lt;em&gt;The Matrix Resurrections&lt;/em&gt;. It's a big mess that mostly makes fun of itself and Warner Brothers (by name) for existing. What a novelty it is to see so much money get lit on fire. I ended up watching &lt;em&gt;The Matrix&lt;/em&gt; (1999) again, and I like it more every time I see it.&lt;/p&gt;
-&lt;h4 id="playing"&gt;Playing&lt;/h4&gt;
-&lt;p&gt;I played the &lt;em&gt;Halo Infinite&lt;/em&gt; campaign the day it came out. &lt;a href="blog/october-2020/https://www.echevarria.io/index.html"&gt;I'm a big Halo fan&lt;/a&gt;. This one was ... pretty alright! It still has some of the problems that &lt;em&gt;Halo 4&lt;/em&gt; and &lt;em&gt;Halo 5&lt;/em&gt; did: tedious indoor combat and way too many buttons that need to be pressed. I'm thinking about doing a supercut of all the stupid buttons &lt;em&gt;Halo Infinite&lt;/em&gt;. But the open world is great, and the sandbox is super fun. I hope we'll see some updates to the single player that extend the open world and add new biomes like desert and jungle.&lt;/p&gt;</description>
-    <pubDate>Sun, 02 Jan 2022 00:00:00 -0000</pubDate>
-    <link>blog/december-2021/index.html</link>
-  <guid isPermaLink="true">blog/december-2021/index.html</guid>
   </item>
   </channel>
 </rss>
