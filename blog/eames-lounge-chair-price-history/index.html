@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Eames Lounge Chair was always expensive – echevarria.io</title>
+  <base href="../../">
+  <link rel="icon" type="image/x-icon" href="favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link href="https://www.echevarria.io/rss.xml" rel="alternate" type="application/rss+xml" title="echevarria.io">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:site_name" content="echevarria.io">
+  <meta property="og:title" content="The Eames Lounge Chair was always expensive">
+  <meta property="og:description" content="The Eames Lounge Chair was always expensive">
+  <meta property="og:type" content="blog">
+  <meta name="twitter:title" content="The Eames Lounge Chair was always expensive">
+  <meta name="twitter:creator" content="@ivn_echvrria">
+  <meta property="og:image" content="https://www.echevarria.io/blog/eames-lounge-chair-price-history/chart.png">
+  <meta name="twitter:image" content="https://www.echevarria.io/blog/eames-lounge-chair-price-history/chart.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div class="wrapper" id="main-wrapper">
+    <div class="nav">
+      <a class="home" href="index.html">Ivan Echevarria</a>
+      <div class="spacer"></div>
+      <a href="photos/index.html">photos</a>
+      <a href="blog/index.html">writing</a>
+      <a href="reading/index.html">reading</a>
+      <a href="code/index.html">projects</a>
+      <a href="about.html">about</a>
+    </div>
+    <div class="content">
+      <div class="blog-post">
+        <h1>The Eames Lounge Chair was always expensive</h1>
+        <p class="date">October 12, 2025</p>
+        <style>
+        .eames-chart * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .eames-chart {
+            background: white;
+            color: black;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+
+        .eames-chart h2 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .eames-chart h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0 10px 0;
+        }
+
+        .eames-chart .subtitle {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .eames-chart .controls {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .eames-chart .button-group {
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+        }
+
+        .eames-chart button {
+            font-size: 12px;
+            padding: 10px 15px;
+            background: white;
+            border: 2px solid black;
+            border-right: none;
+            cursor: pointer;
+            margin: 0;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .eames-chart button:last-child {
+            border-right: 2px solid black;
+        }
+
+        .eames-chart button:hover {
+            background: black;
+            color: white;
+        }
+
+        .eames-chart button.active {
+            background: black;
+            color: white;
+        }
+
+        .eames-chart .stats {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .eames-chart .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 2px solid black;
+            margin-top: 10px;
+            margin-bottom: 2em;
+        }
+
+        .eames-chart .stat-box {
+            border-right: 2px solid black;
+            padding: 15px
+        }
+
+        .eames-chart .stat-box:last-child {
+            border-right: none;
+        }
+
+        .eames-chart .stat-label {
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .eames-chart .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .eames-chart .stat-detail {
+            font-size: 10px;
+        }
+
+        .eames-chart .chart-container {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .eames-chart .findings {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .eames-chart .findings ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .eames-chart .findings li {
+            margin-bottom: 8px;
+            font-size: 13px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .eames-chart .findings li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+        }
+
+        .eames-chart .footer {
+            font-size: 10px;
+            border-top: 2px solid black;
+            padding-top: 15px;
+        }
+
+        .eames-chart .footer p {
+            margin-bottom: 5px;
+        }
+
+        .eames-chart .tooltip {
+            position: absolute;
+            background: white;
+            border: 2px solid black;
+            padding: 8px;
+            font-size: 11px;
+            pointer-events: none;
+            display: none;
+            z-index: 1000;
+        }
+
+        .eames-chart .tooltip.show {
+            display: block;
+        }
+
+        .eames-chart .legend {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .eames-chart .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .eames-chart .legend-line {
+            width: 30px;
+            height: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .eames-chart .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .eames-chart .stat-box {
+                border-right: none;
+                border-bottom: 2px solid black;
+            }
+
+            .eames-chart .stat-box:last-child {
+                border-bottom: none;
+            }
+
+            .eames-chart .button-group {
+                flex-direction: column;
+            }
+
+            .eames-chart button {
+                min-width: 100%;
+                border-right: 2px solid black;
+                border-bottom: none;
+            }
+
+            .eames-chart button:last-child {
+                border-bottom: 2px solid black;
+            }
+        }
+        </style>
+
+        <div class="eames-chart" data-rss-exclude>
+            <div class="chart-container">
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-line" style="background: #000;"></div>
+                        <span>Nominal Price</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-line" style="background: #00f; height: 3px;"></div>
+                        <span id="eames-adjusted-label">Inflation Adjusted (2025$)</span>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <svg id="eames-svg" width="600" height="300"></svg>
+                </div>
+                <div id="eames-tooltip" class="tooltip"></div>
+            </div>
+
+            <div class="controls">
+                <h2>Adjustment Method</h2>
+                <div class="button-group">
+                    <button onclick="eamesChart.setAdjustment('none')">Nominal (no adjustment)</button>
+                    <button onclick="eamesChart.setAdjustment('inflation')" class="active">CPI Inflation (general prices)</button>
+                    <button onclick="eamesChart.setAdjustment('median')">Median Income (HH 50th percentile)</button>
+                    <button onclick="eamesChart.setAdjustment('furniture')">Furniture CPI (furniture-specific)</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-label">1957 Price</div>
+                    <div class="stat-value" id="eames-price-1957">$0</div>
+                    <div class="stat-detail" id="eames-detail-1957"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">2025 Price</div>
+                    <div class="stat-value" id="eames-price-2025">$0</div>
+                    <div class="stat-detail" id="eames-detail-2025"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Change</div>
+                    <div class="stat-value" id="eames-change">0%</div>
+                    <div class="stat-detail" id="eames-change-type"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        (function() {
+            const cpiData = {
+                1957: 28.1, 1958: 28.9, 1959: 29.2, 1961: 29.9, 1962: 30.3, 1963: 30.6,
+                1964: 31.0, 1966: 32.5, 1969: 36.7, 1978: 65.2, 1979: 72.6, 1980: 82.4,
+                1981: 90.9, 1982: 96.5, 1993: 144.5, 1995: 152.4, 2000: 172.2, 2025: 322.3
+            };
+
+            const furnitureCpiData = {
+                1957: 42.0, 1958: 41.9, 1959: 41.8, 1961: 42.2, 1962: 42.5, 1963: 42.7,
+                1964: 42.9, 1966: 44.1, 1969: 51.5, 1978: 74.2, 1979: 79.8, 1980: 86.7,
+                1981: 92.4, 1982: 97.2, 1993: 122.9, 1995: 130.3, 2000: 135.8, 2025: 130.731
+            };
+
+            const medianIncomeData = {
+                1957: 4971, 1958: 5087, 1959: 5417, 1961: 5737, 1962: 5956, 1963: 6249,
+                1964: 6569, 1966: 7436, 1969: 9433, 1978: 17640, 1979: 19587, 1980: 21023,
+                1981: 22388, 1982: 23433, 1993: 31241, 1995: 34076, 2000: 41990, 2025: 83592
+            };
+
+            const priceData = [
+                { date: 'Jan 1957', year: 1957, price670: 404, price671: 174 },
+                { date: 'Jun 1958', year: 1958, price670: 386, price671: 170 },
+                { date: 'Jun 1959', year: 1959, price670: 414, price671: 158 },
+                { date: 'Jan 1961', year: 1961, price670: 414, price671: 158 },
+                { date: 'Jan 1962', year: 1962, price670: 432, price671: 166 },
+                { date: 'Jun 1963', year: 1963, price670: 320, price671: 120 },
+                { date: 'Mar 1964', year: 1964, price670: 340, price671: 125 },
+                { date: 'Aug 1966', year: 1966, price670: 392, price671: 143 },
+                { date: 'Sep 1969', year: 1969, price670: 492, price671: 180 },
+                { date: 'Mar 1978', year: 1978, price670: 1176, price671: 428 },
+                { date: 'Jun 1979', year: 1979, price670: 1390, price671: 507 },
+                { date: 'Jul 1980', year: 1980, price670: 1529, price671: 558 },
+                { date: 'Jan 1981', year: 1981, price670: 1676, price671: 612 },
+                { date: 'Feb 1982', year: 1982, price670: 1676, price671: 612 },
+                { date: 'Mar 1993', year: 1993, combined: 3224 },
+                { date: 'Jun 1995', year: 1995, combined: 3350 },
+                { date: 'Aug 2000', year: 2000, combined: 3685 },
+                { date: 'Oct 2025', year: 2025, combined: 7045 }
+            ];
+
+            let currentAdjustment = 'inflation';
+            let chartData = [];
+
+            function calculateData(method) {
+                const referenceYear = 2025;
+                const referenceCPI = cpiData[referenceYear];
+                const referenceFurnitureCPI = furnitureCpiData[referenceYear];
+                const referenceMedianIncome = medianIncomeData[referenceYear];
+
+                return priceData.map(item => {
+                    const nominalPrice = item.combined || (item.price670 + item.price671);
+                    let adjustedPrice = nominalPrice;
+
+                    if (method === 'inflation') {
+                        adjustedPrice = nominalPrice * (referenceCPI / cpiData[item.year]);
+                    } else if (method === 'furniture') {
+                        adjustedPrice = nominalPrice * (referenceFurnitureCPI / furnitureCpiData[item.year]);
+                    } else if (method === 'median') {
+                        adjustedPrice = nominalPrice * (referenceMedianIncome / medianIncomeData[item.year]);
+                    }
+
+                    const medianPct = (nominalPrice / medianIncomeData[item.year]) * 100;
+
+                    return {
+                        date: item.date,
+                        year: item.year,
+                        nominal: nominalPrice,
+                        adjusted: Math.round(adjustedPrice),
+                        medianPct: medianPct.toFixed(1),
+                    };
+                });
+            }
+
+            function updateStats(data) {
+                const firstYear = data[0];
+                const lastYear = data[data.length - 1];
+                const percentChange = ((lastYear.adjusted - firstYear.adjusted) / firstYear.adjusted * 100).toFixed(1);
+
+                document.getElementById('eames-price-1957').textContent = `$${firstYear.adjusted.toLocaleString()}`;
+                document.getElementById('eames-detail-1957').textContent = `(${firstYear.medianPct}% of median income)`;
+
+                document.getElementById('eames-price-2025').textContent = `$${lastYear.adjusted.toLocaleString()}`;
+                document.getElementById('eames-detail-2025').textContent = `(${lastYear.medianPct}% of median income)`;
+
+                document.getElementById('eames-change').textContent = `${percentChange > 0 ? '+' : ''}${percentChange}%`;
+                document.getElementById('eames-change-type').textContent = currentAdjustment === 'none' ? 'nominal' : 'adjusted';
+
+                const adjustmentLabels = {
+                    'none': 'Nominal',
+                    'inflation': 'Inflation Adjusted',
+                    'furniture': 'Furniture CPI Adjusted',
+                    'median': 'Median Income Adjusted',
+                };
+                document.getElementById('eames-adjusted-label').textContent = `${adjustmentLabels[currentAdjustment]} (2025$)`;
+            }
+
+            function drawChart(data) {
+                const svg = document.getElementById('eames-svg');
+                const tooltip = document.getElementById('eames-tooltip');
+
+                // Clear SVG
+                svg.innerHTML = '';
+
+                const width = 600;
+                const height = 300;
+                const padding = { top: 20, right: 20, bottom: 40, left: 60 };
+                const chartWidth = width - padding.left - padding.right;
+                const chartHeight = height - padding.top - padding.bottom;
+
+                // Find min/max for scaling
+                const nominalValues = data.map(d => d.nominal);
+                const adjustedValues = data.map(d => d.adjusted);
+                const allValues = [...nominalValues, ...adjustedValues];
+                const minPrice = 0;
+                const maxPrice = Math.max(...allValues) * 1.1;
+
+                const years = data.map(d => d.year);
+                const minYear = Math.min(...years);
+                const maxYear = Math.max(...years);
+
+                // Scale functions
+                function scaleX(year) {
+                    return padding.left + ((year - minYear) / (maxYear - minYear)) * chartWidth;
+                }
+
+                function scaleY(price) {
+                    return padding.top + chartHeight - ((price - minPrice) / (maxPrice - minPrice)) * chartHeight;
+                }
+
+                // Draw grid lines
+                const numYTicks = 5;
+                for (let i = 0; i <= numYTicks; i++) {
+                    const price = minPrice + (maxPrice - minPrice) * (i / numYTicks);
+                    const y = scaleY(price);
+
+                    // Grid line
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    line.setAttribute('x1', padding.left);
+                    line.setAttribute('y1', y);
+                    line.setAttribute('x2', width - padding.right);
+                    line.setAttribute('y2', y);
+                    line.setAttribute('stroke', '#ddd');
+                    line.setAttribute('stroke-width', '1');
+                    svg.appendChild(line);
+
+                    // Y-axis label
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', padding.left - 10);
+                    text.setAttribute('y', y + 4);
+                    text.setAttribute('text-anchor', 'end');
+                    text.setAttribute('font-family', 'monospace');
+                    text.setAttribute('font-size', '11');
+                    text.textContent = '$' + (price / 1000).toFixed(0) + 'k';
+                    svg.appendChild(text);
+                }
+
+                // Draw X-axis labels
+                const yearStep = Math.ceil((maxYear - minYear) / 10);
+                for (let year = minYear; year <= maxYear; year += yearStep) {
+                    const x = scaleX(year);
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', x);
+                    text.setAttribute('y', height - padding.bottom + 20);
+                    text.setAttribute('text-anchor', 'middle');
+                    text.setAttribute('font-family', 'monospace');
+                    text.setAttribute('font-size', '11');
+                    text.textContent = year;
+                    svg.appendChild(text);
+                }
+
+                // Draw axes
+                const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                xAxis.setAttribute('x1', padding.left);
+                xAxis.setAttribute('y1', height - padding.bottom);
+                xAxis.setAttribute('x2', width - padding.right);
+                xAxis.setAttribute('y2', height - padding.bottom);
+                xAxis.setAttribute('stroke', 'black');
+                xAxis.setAttribute('stroke-width', '2');
+                svg.appendChild(xAxis);
+
+                const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                yAxis.setAttribute('x1', padding.left);
+                yAxis.setAttribute('y1', padding.top);
+                yAxis.setAttribute('x2', padding.left);
+                yAxis.setAttribute('y2', height - padding.bottom);
+                yAxis.setAttribute('stroke', 'black');
+                yAxis.setAttribute('stroke-width', '2');
+                svg.appendChild(yAxis);
+
+                // Axis labels
+                const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                xLabel.setAttribute('x', padding.left + chartWidth / 2);
+                xLabel.setAttribute('y', height - 5);
+                xLabel.setAttribute('text-anchor', 'middle');
+                xLabel.setAttribute('font-family', 'monospace');
+                xLabel.setAttribute('font-size', '12');
+                xLabel.setAttribute('font-weight', 'bold');
+                xLabel.textContent = 'Year';
+                svg.appendChild(xLabel);
+
+                const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                yLabel.setAttribute('x', 15);
+                yLabel.setAttribute('y', padding.top + chartHeight / 2);
+                yLabel.setAttribute('text-anchor', 'middle');
+                yLabel.setAttribute('font-family', 'monospace');
+                yLabel.setAttribute('font-size', '12');
+                yLabel.setAttribute('font-weight', 'bold');
+                yLabel.setAttribute('transform', `rotate(-90, 15, ${padding.top + chartHeight / 2})`);
+                yLabel.textContent = 'Price ($)';
+                svg.appendChild(yLabel);
+
+                // Draw lines
+                function drawLine(values, color, width) {
+                    let pathData = '';
+                    values.forEach((value, i) => {
+                        const x = scaleX(data[i].year);
+                        const y = scaleY(value);
+                        pathData += (i === 0 ? 'M' : 'L') + x + ',' + y + ' ';
+                    });
+
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    path.setAttribute('d', pathData);
+                    path.setAttribute('stroke', color);
+                    path.setAttribute('stroke-width', width);
+                    path.setAttribute('fill', 'none');
+                    svg.appendChild(path);
+                }
+
+                drawLine(nominalValues, '#000', 2);
+                drawLine(adjustedValues, '#00f', 3);
+
+                // Draw points with hover
+                function drawPoints(values, color, radius) {
+                    values.forEach((value, i) => {
+                        const x = scaleX(data[i].year);
+                        const y = scaleY(value);
+
+                        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        circle.setAttribute('cx', x);
+                        circle.setAttribute('cy', y);
+                        circle.setAttribute('r', radius);
+                        circle.setAttribute('fill', color);
+                        circle.setAttribute('stroke', 'white');
+                        circle.setAttribute('stroke-width', '1');
+                        circle.style.cursor = 'pointer';
+
+                        circle.addEventListener('mouseenter', function(e) {
+                            const d = data[i];
+                            tooltip.innerHTML = `
+                                <div style="font-weight: bold; margin-bottom: 4px;">${d.date}</div>
+                                <div style="font-size: 11px;">Nominal: $${d.nominal.toLocaleString()}</div>
+                                <div style="font-size: 11px; font-weight: bold;">Adjusted: $${d.adjusted.toLocaleString()}</div>
+                                <div style="font-size: 10px; margin-top: 4px; color: #000;">${d.medianPct}% of median income</div>
+                            `;
+                            tooltip.classList.add('show');
+
+                            const rect = svg.getBoundingClientRect();
+                            const tooltipWidth = tooltip.offsetWidth;
+                            const spaceOnRight = rect.width - (e.clientX - rect.left);
+
+                            // If not enough space on right, position to the left
+                            const leftPos = spaceOnRight < tooltipWidth + 20
+                                ? (e.clientX - rect.left - 110)
+                                : (e.clientX - rect.left + 10);
+
+                            tooltip.style.left = leftPos + 'px';
+                            tooltip.style.top = (e.clientY - rect.top - 10) + 'px';
+                        });
+
+                        circle.addEventListener('mouseleave', function() {
+                            tooltip.classList.remove('show');
+                        });
+
+                        svg.appendChild(circle);
+                    });
+                }
+
+                drawPoints(nominalValues, '#000', 3);
+                drawPoints(adjustedValues, '#00f', 4);
+            }
+
+            function updateChart() {
+                chartData = calculateData(currentAdjustment);
+                updateStats(chartData);
+                drawChart(chartData);
+            }
+
+            window.eamesChart = {
+                setAdjustment: function(method) {
+                    currentAdjustment = method;
+
+                    document.querySelectorAll('.eames-chart button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    event.target.classList.add('active');
+
+                    updateChart();
+                }
+            };
+
+            // Initialize on load
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', updateChart);
+            } else {
+                updateChart();
+            }
+        })();
+        </script>
+
+        <p>A misconception I've seen with some frequency is that the <a href="https://en.wikipedia.org/wiki/Eames_Lounge_Chair">Eames Lounge Chair</a> started out as an affordable piece of furniture that only over time became a luxury good. While Ray and Charles Eames typically designed mass-produced, affordable furniture, the Eames Lounge Chair was explicitly a high-end product from its introduction in 1956.</p>
+        <p>If you actually look at old <a href="https://eames.com/en/library/documents/category/HM-Brochures">Herman Miller price lists</a>, you'll find that the Eames Lounge Chair's price has remained surprisingly consistent since 1957 when adjusted for CPI inflation or median household income. Adjusting the 1957 list price of $578 for general inflation gets us to $6,630 in 2025 dollars, only ~6% higher than today's list price (and that's before factoring in the common 20% discount).</p>
+        <h2 id="but-why-does-it-feel-so-expensive-now">But why does it <em>feel</em> so expensive now?</h2>
+        <p>Furniture as a category actually experienced deflation from the late 1990s until the late 2010s – you got ~20% more furniture per dollar in 2019 than you did in 1999. The mechanism was offshoring, which substantially reduced costs – and which also hollowed out America furniture manufacturing.</p>
+        <div class="eames-chart" data-rss-exclude>
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <svg id="furniture-cpi-svg" width="600" height="300"></svg>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 10px; padding-bottom: 1em;">
+                <a href="https://data.bls.gov/timeseries/CUUR0000SEHJ">Furniture and bedding consumer price index via BLS</a>
+            </div>
+        </div>
+
+        <script>
+        (function() {
+            const furnitureCpiHistory = [
+                {year: 1956, value: 40.4}, {year: 1957, value: 42.0}, {year: 1958, value: 41.9},
+                {year: 1959, value: 41.8}, {year: 1960, value: 41.9}, {year: 1961, value: 42.2},
+                {year: 1962, value: 42.5}, {year: 1963, value: 42.7}, {year: 1964, value: 42.9},
+                {year: 1965, value: 43.1}, {year: 1966, value: 43.5}, {year: 1967, value: 45.4},
+                {year: 1968, value: 47.5}, {year: 1969, value: 49.3}, {year: 1970, value: 52.0},
+                {year: 1971, value: 53.6}, {year: 1972, value: 54.9}, {year: 1973, value: 55.8},
+                {year: 1974, value: 59.3}, {year: 1975, value: 65.1}, {year: 1976, value: 68.6},
+                {year: 1977, value: 70.9}, {year: 1978, value: 73.1}, {year: 1979, value: 78.7},
+                {year: 1980, value: 84.3}, {year: 1981, value: 90.1}, {year: 1982, value: 96.0},
+                {year: 1983, value: 98.0}, {year: 1984, value: 100.6}, {year: 1985, value: 102.7},
+                {year: 1986, value: 106.6}, {year: 1987, value: 108.3}, {year: 1988, value: 110.5},
+                {year: 1989, value: 115.0}, {year: 1990, value: 115.5}, {year: 1991, value: 115.6},
+                {year: 1992, value: 116.8}, {year: 1993, value: 122.1}, {year: 1994, value: 126.7},
+                {year: 1995, value: 128.2}, {year: 1996, value: 133.6}, {year: 1997, value: 133.3},
+                {year: 1998, value: 133.0}, {year: 1999, value: 135.0}, {year: 2000, value: 134.4},
+                {year: 2001, value: 133.4}, {year: 2002, value: 129.4}, {year: 2003, value: 128.3},
+                {year: 2004, value: 127.4}, {year: 2005, value: 126.5}, {year: 2006, value: 127.0},
+                {year: 2007, value: 126.0}, {year: 2008, value: 123.8}, {year: 2009, value: 123.8},
+                {year: 2010, value: 123.0}, {year: 2011, value: 117.4}, {year: 2012, value: 119.6},
+                {year: 2013, value: 118.9}, {year: 2014, value: 117.0}, {year: 2015, value: 114.5},
+                {year: 2016, value: 114.1}, {year: 2017, value: 111.8}, {year: 2018, value: 110.8},
+                {year: 2019, value: 112.3}, {year: 2020, value: 113.5}, {year: 2021, value: 115.2},
+                {year: 2022, value: 134.7}, {year: 2023, value: 137.7}, {year: 2024, value: 133.7},
+                {year: 2025, value: 130.1}
+            ];
+
+            function drawFurnitureCpiChart() {
+                const svg = document.getElementById('furniture-cpi-svg');
+                if (!svg) return;
+
+                svg.innerHTML = '';
+
+                const width = 600;
+                const height = 300;
+                const padding = { top: 20, right: 20, bottom: 40, left: 60 };
+                const chartWidth = width - padding.left - padding.right;
+                const chartHeight = height - padding.top - padding.bottom;
+
+                const years = furnitureCpiHistory.map(d => d.year);
+                const values = furnitureCpiHistory.map(d => d.value);
+                const minYear = Math.min(...years);
+                const maxYear = Math.max(...years);
+                const minValue = 0;
+                const maxValue = Math.max(...values) * 1.1;
+
+                function scaleX(year) {
+                    return padding.left + ((year - minYear) / (maxYear - minYear)) * chartWidth;
+                }
+
+                function scaleY(value) {
+                    return padding.top + chartHeight - ((value - minValue) / (maxValue - minValue)) * chartHeight;
+                }
+
+                // Draw grid lines
+                const numYTicks = 5;
+                for (let i = 0; i <= numYTicks; i++) {
+                    const value = minValue + (maxValue - minValue) * (i / numYTicks);
+                    const y = scaleY(value);
+
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    line.setAttribute('x1', padding.left);
+                    line.setAttribute('y1', y);
+                    line.setAttribute('x2', width - padding.right);
+                    line.setAttribute('y2', y);
+                    line.setAttribute('stroke', '#ddd');
+                    line.setAttribute('stroke-width', '1');
+                    svg.appendChild(line);
+
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', padding.left - 10);
+                    text.setAttribute('y', y + 4);
+                    text.setAttribute('text-anchor', 'end');
+                    text.setAttribute('font-family', 'monospace');
+                    text.setAttribute('font-size', '11');
+                    text.textContent = value.toFixed(0);
+                    svg.appendChild(text);
+                }
+
+                // Draw X-axis labels
+                const yearStep = 10;
+                for (let year = Math.ceil(minYear / yearStep) * yearStep; year <= maxYear; year += yearStep) {
+                    const x = scaleX(year);
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', x);
+                    text.setAttribute('y', height - padding.bottom + 20);
+                    text.setAttribute('text-anchor', 'middle');
+                    text.setAttribute('font-family', 'monospace');
+                    text.setAttribute('font-size', '11');
+                    text.textContent = year;
+                    svg.appendChild(text);
+                }
+
+                // Draw axes
+                const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                xAxis.setAttribute('x1', padding.left);
+                xAxis.setAttribute('y1', height - padding.bottom);
+                xAxis.setAttribute('x2', width - padding.right);
+                xAxis.setAttribute('y2', height - padding.bottom);
+                xAxis.setAttribute('stroke', 'black');
+                xAxis.setAttribute('stroke-width', '2');
+                svg.appendChild(xAxis);
+
+                const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                yAxis.setAttribute('x1', padding.left);
+                yAxis.setAttribute('y1', padding.top);
+                yAxis.setAttribute('x2', padding.left);
+                yAxis.setAttribute('y2', height - padding.bottom);
+                yAxis.setAttribute('stroke', 'black');
+                yAxis.setAttribute('stroke-width', '2');
+                svg.appendChild(yAxis);
+
+                // Axis labels
+                const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                xLabel.setAttribute('x', padding.left + chartWidth / 2);
+                xLabel.setAttribute('y', height - 5);
+                xLabel.setAttribute('text-anchor', 'middle');
+                xLabel.setAttribute('font-family', 'monospace');
+                xLabel.setAttribute('font-size', '12');
+                xLabel.setAttribute('font-weight', 'bold');
+                xLabel.textContent = 'Year';
+                svg.appendChild(xLabel);
+
+                const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                yLabel.setAttribute('x', 15);
+                yLabel.setAttribute('y', padding.top + chartHeight / 2);
+                yLabel.setAttribute('text-anchor', 'middle');
+                yLabel.setAttribute('font-family', 'monospace');
+                yLabel.setAttribute('font-size', '12');
+                yLabel.setAttribute('font-weight', 'bold');
+                yLabel.setAttribute('transform', `rotate(-90, 15, ${padding.top + chartHeight / 2})`);
+                yLabel.textContent = 'Furniture and bedding CPI';
+                svg.appendChild(yLabel);
+
+                // Draw shaded region for deflation period
+                const deflationStart = 1999;
+                const deflationEnd = 2019;
+
+                const xStart = scaleX(deflationStart);
+                const xEnd = scaleX(deflationEnd);
+
+                const shadedRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                shadedRect.setAttribute('x', xStart);
+                shadedRect.setAttribute('y', padding.top);
+                shadedRect.setAttribute('width', xEnd - xStart);
+                shadedRect.setAttribute('height', chartHeight);
+                shadedRect.setAttribute('fill', 'red');
+                shadedRect.setAttribute('opacity', '0.05');
+                svg.appendChild(shadedRect);
+
+                // Draw vertical lines for deflation period
+                [deflationStart, deflationEnd].forEach(year => {
+                    const x = scaleX(year);
+                    const verticalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    verticalLine.setAttribute('x1', x);
+                    verticalLine.setAttribute('y1', padding.top);
+                    verticalLine.setAttribute('x2', x);
+                    verticalLine.setAttribute('y2', height - padding.bottom);
+                    verticalLine.setAttribute('stroke', 'red');
+                    verticalLine.setAttribute('stroke-width', '2');
+                    verticalLine.setAttribute('stroke-dasharray', '5,5');
+                    svg.appendChild(verticalLine);
+                });
+
+                // Draw line
+                let pathData = '';
+                furnitureCpiHistory.forEach((d, i) => {
+                    const x = scaleX(d.year);
+                    const y = scaleY(d.value);
+                    pathData += (i === 0 ? 'M' : 'L') + x + ',' + y + ' ';
+                });
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', pathData);
+                path.setAttribute('stroke', '#00f');
+                path.setAttribute('stroke-width', '2');
+                path.setAttribute('fill', 'none');
+                svg.appendChild(path);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', drawFurnitureCpiChart);
+            } else {
+                drawFurnitureCpiChart();
+            }
+        })();
+        </script>
+
+        <p>So by merely tracking general inflation, the price of the Eames Lounge Chair has grown much more quickly than the typical piece of furniture over the past 70 years. If you adjust its 1957 price using furniture-specific CPI instead of general CPI, you end up around $1800 2025 dollars. When you assume the Eames Lounge Chair is a generic piece of furniture, it currently costs 4x more than you'd expect based on its 1957 price.</p>
+        <p>But the Eames Lounge Chair is not a generic piece of furniture. It's an icon, and it's a luxury good. And critically, it's <em>still</em> manufactured in the United States. That dramatic reduction in costs from offshoring never applied to the Eames Lounge Chair.</p>
+        <p>Let's imagine a parallel universe where the Eames Lounge Chair's manufacturing was moved somewhere cheaper. What would that look like? Thanks to the world of Eames knockoffs, we don't have to wonder: a high-end dupe costs $1200-$2000, right in line with the $1800 that furniture-specific CPI indicates.</p>
+      </div>
+    </div>
+  </div>
+  <script data-goatcounter="https://ivan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
