@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heli Sim</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+    /* !important so SDL's own style writes can't shrink the canvas out of fullscreen */
+    canvas { display: block; width: 100vw !important; height: 100vh !important; outline: none; }
+    #status {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      color: #9ab; font: 16px/1.4 monospace; text-align: center; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="status">loading…</div>
+  <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+  <script>
+    var statusEl = document.getElementById('status');
+    var query = new URLSearchParams(window.location.search);
+    var Module = {
+      canvas: document.getElementById('canvas'),
+      // Repeat ?arg=... to drive the same deterministic --shot/--strip staging
+      // used by the native verification binary (handy for headless WebGL captures).
+      arguments: query.getAll('arg'),
+      setStatus: function (t) { statusEl.textContent = t; },
+      onRuntimeInitialized: function () { statusEl.remove(); }
+    };
+  </script>
+  <script type="module" src="net.js"></script>
+  {{{ SCRIPT }}}
+</body>
+</html>
